@@ -1,0 +1,1836 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "rNdHJ",
+      "x": -336.1812297734628,
+      "y": 300,
+      "name": "Isla Dorada - Luxury Travel Lanzarote 2",
+      "width": 1440,
+      "fill": "#2A2624",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "H9vEC",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PiuR0",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FDJOV",
+                  "name": "logoMark",
+                  "width": 36,
+                  "height": 36,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#C9A962",
+                        "position": 0
+                      },
+                      {
+                        "color": "#8B7845",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 18,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qdVda",
+                      "name": "logoInner",
+                      "fill": "#1E1A18",
+                      "content": "ID",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 14,
+                      "fontWeight": "600",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qYbhJ",
+                  "name": "logoText",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tOa8V",
+                      "name": "logoName",
+                      "fill": "#F5F5F0",
+                      "content": "ISLA DORADA",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                      "letterSpacing": 4
+                    },
+                    {
+                      "type": "text",
+                      "id": "OL9pi",
+                      "name": "logoSubt",
+                      "fill": "#C9A962",
+                      "content": "Bespoke Travel",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal",
+                      "letterSpacing": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eVWEC",
+              "name": "Nav",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FfycJ",
+                  "name": "nav1",
+                  "fill": "#7A7674",
+                  "content": "Experiences",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "DKoKA",
+                  "name": "nav2",
+                  "fill": "#7A7674",
+                  "content": "Lanzarote",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "vRiSA",
+                  "name": "nav3",
+                  "fill": "#7A7674",
+                  "content": "About",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "30Qh9",
+                  "name": "nav4",
+                  "fill": "#7A7674",
+                  "content": "Journal",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "R8CLe",
+                  "name": "ctaBtn",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#C9A962"
+                  },
+                  "padding": [
+                    12,
+                    28
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "G46KK",
+                      "name": "ctaText",
+                      "fill": "#C9A962",
+                      "content": "ENQUIRE NOW",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "500",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FPNtF",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "height": 780,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ncaeF",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "xeniaweb",
+                "link": "https://unsplash.com/@xeniaweb",
+                "author": "Oksana Bürki"
+              },
+              "clip": true,
+              "width": 1440,
+              "height": 780,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1588613877465-89cb8a91d363",
+                "mode": "fill"
+              },
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                0,
+                0,
+                80,
+                120
+              ],
+              "justifyContent": "end"
+            },
+            {
+              "type": "rectangle",
+              "id": "OxdDV",
+              "x": 0,
+              "y": 0,
+              "name": "Overlay",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 0,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#2A262400",
+                    "position": 0
+                  },
+                  {
+                    "color": "#2A262480",
+                    "position": 0.5
+                  },
+                  {
+                    "color": "#2A2624E0",
+                    "position": 0.8
+                  },
+                  {
+                    "color": "#2A2624",
+                    "position": 1
+                  }
+                ]
+              },
+              "width": 1440,
+              "height": 780
+            },
+            {
+              "type": "frame",
+              "id": "X4jYr",
+              "x": 120,
+              "y": 340,
+              "name": "Hero Content",
+              "width": 700,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "c0BKK",
+                  "name": "heroLabel",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "FLXeQ",
+                      "name": "heroLabelLine",
+                      "fill": "#C9A962",
+                      "width": 40,
+                      "height": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "yNLUv",
+                      "name": "heroLabelText",
+                      "fill": "#C9A962",
+                      "content": "LANZAROTE, CANARY ISLANDS",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "500",
+                      "letterSpacing": 3
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "pHPcz",
+                  "name": "heroHeadline",
+                  "fill": "#F5F5F0",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Your journey,\nentirely yours",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 72,
+                  "fontWeight": "300",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "2jDUf",
+                  "name": "heroSubline",
+                  "fill": "#AAA6A2",
+                  "textGrowth": "fixed-width",
+                  "width": 540,
+                  "content": "Bespoke travel experiences crafted around your desires. Private villas, hidden coves, volcanic trails, and Michelin-starred dining - all curated by those who call this island home.",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "frame",
+                  "id": "elsHp",
+                  "name": "heroCtas",
+                  "gap": 20,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kLKLL",
+                      "name": "heroPrimary",
+                      "fill": "#C9A962",
+                      "gap": 10,
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "7DcK4",
+                          "name": "heroPrimaryText",
+                          "fill": "#1E1A18",
+                          "content": "BEGIN YOUR JOURNEY",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "p6Mse",
+                      "name": "heroSecondary",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#F5F5F050"
+                      },
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yI3oB",
+                          "name": "heroSecondaryText",
+                          "fill": "#F5F5F0",
+                          "content": "VIEW EXPERIENCES",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PMS4j",
+          "name": "How We Work",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": 120,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "2ftVB",
+              "name": "processHeader",
+              "layout": "vertical",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "o4gCC",
+                  "name": "processLabel",
+                  "fill": "#C9A962",
+                  "content": "THE EXPERIENCE",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "fNRJ9",
+                  "name": "processTitle",
+                  "fill": "#F5F5F0",
+                  "content": "Tailored to perfection",
+                  "textAlign": "center",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 48,
+                  "fontWeight": "300",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "bXmvc",
+                  "name": "processSub",
+                  "fill": "#7A7674",
+                  "textGrowth": "fixed-width",
+                  "width": 560,
+                  "content": "Every journey begins with a conversation. We listen, we understand, and then we create something extraordinary.",
+                  "lineHeight": 1.8,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "300"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5X75B",
+              "name": "stepsRow",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hfyV6",
+                  "name": "Step 1",
+                  "width": "fill_container",
+                  "fill": "#4A2E2A",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#5E3E3A"
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "O1CZ1",
+                      "name": "step1Num",
+                      "fill": "#C9A96240",
+                      "content": "01",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "q78Vj",
+                      "name": "step1Title",
+                      "fill": "#F5F5F0",
+                      "content": "Consult",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "h28SO",
+                      "name": "step1Desc",
+                      "fill": "#B8A09A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Share your vision with our travel architects. We want to know what excites you, what moves you, and what you dream about.",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "4yfrX",
+                      "name": "step1Icon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "message-circle",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A962"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Lt2oX",
+                  "name": "Step 2",
+                  "width": "fill_container",
+                  "fill": "#4A2E2A",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#5E3E3A"
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OXLKh",
+                      "name": "step2Num",
+                      "fill": "#C9A96240",
+                      "content": "02",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Yf0lU",
+                      "name": "step2Title",
+                      "fill": "#F5F5F0",
+                      "content": "Curate",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dCIMt",
+                      "name": "step2Desc",
+                      "fill": "#B8A09A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Our local experts design a bespoke itinerary - from private yacht charters to wine cave dinners - every detail considered.",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "Qt85i",
+                      "name": "step2Icon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "compass",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A962"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9Bi9K",
+                  "name": "Step 3",
+                  "width": "fill_container",
+                  "fill": "#4A2E2A",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#5E3E3A"
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "undBW",
+                      "name": "step3Num",
+                      "fill": "#C9A96240",
+                      "content": "03",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rYUBt",
+                      "name": "step3Title",
+                      "fill": "#F5F5F0",
+                      "content": "Experience",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bckzh",
+                      "name": "step3Desc",
+                      "fill": "#B8A09A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Arrive and let go. Your dedicated concierge handles everything while you immerse yourself in the magic of Lanzarote.",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "izo9o",
+                      "name": "step3Icon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "sparkles",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A962"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bzl1l",
+          "name": "Experiences Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 60,
+          "padding": 120,
+          "children": [
+            {
+              "type": "frame",
+              "id": "dMBkn",
+              "name": "expHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "n1YSU",
+                  "name": "expLeft",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AuSnN",
+                      "name": "expLabel",
+                      "fill": "#C9A962",
+                      "content": "SIGNATURE EXPERIENCES",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "500",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "vzx6c",
+                      "name": "expTitle",
+                      "fill": "#F5F5F0",
+                      "textGrowth": "fixed-width",
+                      "width": 500,
+                      "content": "Curated for the\ndiscerning traveler",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 48,
+                      "fontWeight": "300",
+                      "letterSpacing": -1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4KbCq",
+                  "name": "expViewAll",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zNgCJ",
+                      "name": "expViewText",
+                      "fill": "#C9A962",
+                      "content": "View all experiences",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "y4pg6",
+                      "name": "expViewArrow",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "arrow-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A962"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fJhQp",
+              "name": "expGrid",
+              "width": "fill_container",
+              "height": 460,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z95OR",
+                  "name": "expLeft",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Utumq",
+                      "name": "Exp - Volcanic Trails",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "cornerRadius": 20,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "s8rna",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card1Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "sofia_velgosh",
+                            "link": "https://unsplash.com/@sofia_velgosh",
+                            "author": "Sofia Velgosh"
+                          },
+                          "width": 700,
+                          "height": 460,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "CQKuf",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card1Overlay",
+                          "fill": {
+                            "type": "gradient",
+                            "gradientType": "linear",
+                            "enabled": true,
+                            "rotation": 0,
+                            "size": {
+                              "height": 1
+                            },
+                            "colors": [
+                              {
+                                "color": "#2A262400",
+                                "position": 0.3
+                              },
+                              {
+                                "color": "#2A2624CC",
+                                "position": 1
+                              }
+                            ]
+                          },
+                          "width": 700,
+                          "height": 460
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gpam0",
+                          "x": 32,
+                          "y": 350,
+                          "name": "card1Content",
+                          "width": 400,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4dbWO",
+                              "name": "card1Cat",
+                              "fill": "#C9A962",
+                              "content": "ADVENTURE",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "500",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "Zkcku",
+                              "name": "card1Title",
+                              "fill": "#F5F5F0",
+                              "textGrowth": "fixed-width",
+                              "width": 380,
+                              "content": "Volcanic Trails & Fire Mountains",
+                              "lineHeight": 1.15,
+                              "fontFamily": "Cormorant Garamond",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DxhbU",
+                  "name": "expRight",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rLKbX",
+                      "name": "Exp - Private Yacht",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "cornerRadius": 20,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mnw0O",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card2Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "franciscofrias77",
+                            "link": "https://unsplash.com/@franciscofrias77",
+                            "author": "Francisco de Frias"
+                          },
+                          "width": 700,
+                          "height": 218,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "Hz2ml",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card2Overlay",
+                          "fill": {
+                            "type": "gradient",
+                            "gradientType": "linear",
+                            "enabled": true,
+                            "rotation": 0,
+                            "size": {
+                              "height": 1
+                            },
+                            "colors": [
+                              {
+                                "color": "#2A262400",
+                                "position": 0.2
+                              },
+                              {
+                                "color": "#2A2624CC",
+                                "position": 1
+                              }
+                            ]
+                          },
+                          "width": 700,
+                          "height": 218
+                        },
+                        {
+                          "type": "frame",
+                          "id": "S51bf",
+                          "x": 32,
+                          "y": 148,
+                          "name": "card2Content",
+                          "width": 350,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8hbh0",
+                              "name": "card2Cat",
+                              "fill": "#C9A962",
+                              "content": "MARITIME",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "500",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "jWSMW",
+                              "name": "card2Title",
+                              "fill": "#F5F5F0",
+                              "content": "Private Fishing Trips",
+                              "fontFamily": "Cormorant Garamond",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nDeGm",
+                      "name": "Exp - Wine & Gastronomy",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "cornerRadius": 20,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "1P6HV",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card3Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "jontyson",
+                            "link": "https://unsplash.com/@jontyson",
+                            "author": "Jon Tyson"
+                          },
+                          "width": 700,
+                          "height": 218,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "TYSXQ",
+                          "x": 0,
+                          "y": 0,
+                          "name": "card3Overlay",
+                          "fill": {
+                            "type": "gradient",
+                            "gradientType": "linear",
+                            "enabled": true,
+                            "rotation": 0,
+                            "size": {
+                              "height": 1
+                            },
+                            "colors": [
+                              {
+                                "color": "#2A262400",
+                                "position": 0.4
+                              },
+                              {
+                                "color": "#2A2624AA",
+                                "position": 1
+                              }
+                            ]
+                          },
+                          "width": 700,
+                          "height": 218
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uPc8j",
+                          "x": 32,
+                          "y": 148,
+                          "name": "card3Content",
+                          "width": 350,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qLSpl",
+                              "name": "card3Cat",
+                              "fill": "#C9A962",
+                              "content": "GASTRONOMY",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "500",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "Sao5G",
+                              "name": "card3Title",
+                              "fill": "#F5F5F0",
+                              "content": "Wine Caves & Private Dining",
+                              "fontFamily": "Cormorant Garamond",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BGE7W",
+          "name": "Social Proof Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": 120,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "C8N2A",
+              "name": "statsRow",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "top": 1,
+                  "bottom": 1
+                },
+                "fill": "#4A4541"
+              },
+              "padding": [
+                40,
+                0
+              ],
+              "justifyContent": "space_around",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eBTac",
+                  "name": "stat1",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Npai9",
+                      "name": "stat1Val",
+                      "fill": "#C9A962",
+                      "content": "12+",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3qwO1",
+                      "name": "stat1Label",
+                      "fill": "#7A7674",
+                      "content": "Years of Excellence",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V63Ih",
+                  "name": "stat2",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K0RTD",
+                      "name": "stat2Val",
+                      "fill": "#C9A962",
+                      "content": "500+",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g9JbN",
+                      "name": "stat2Label",
+                      "fill": "#7A7674",
+                      "content": "Journeys Crafted",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dsoF3",
+                  "name": "stat3",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y9sSs",
+                      "name": "stat3Val",
+                      "fill": "#C9A962",
+                      "content": "98%",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XUOR9",
+                      "name": "stat3Label",
+                      "fill": "#7A7674",
+                      "content": "Return Guests",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JS9uh",
+                  "name": "stat4",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i0RJ6",
+                      "name": "stat4Val",
+                      "fill": "#C9A962",
+                      "content": "24/7",
+                      "lineHeight": 0.85,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 52,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LSOSU",
+                      "name": "stat4Label",
+                      "fill": "#7A7674",
+                      "content": "Concierge Service",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GfrUd",
+              "name": "testiRow",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "egzG8",
+                  "name": "testi1",
+                  "width": "fill_container",
+                  "fill": "#2A2624",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A4541"
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UILV2",
+                      "name": "testi1Quote",
+                      "fill": "#F5F5F0",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Isla Dorada transformed what could have been a simple holiday into the most meaningful week of our lives. Every detail felt personal.\"",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YJlxb",
+                      "name": "testi1Author",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3yVVs",
+                          "name": "testi1Name",
+                          "fill": "#F5F5F0",
+                          "content": "Victoria & James Ashworth",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "eSZvy",
+                          "name": "testi1From",
+                          "fill": "#7A7674",
+                          "content": "London, United Kingdom",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z1FW2",
+                  "name": "testi2",
+                  "width": "fill_container",
+                  "fill": "#2A2624",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#4A4541"
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9E8dq",
+                      "name": "testi2Quote",
+                      "fill": "#F5F5F0",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"The volcanic landscape dinner was something from another world. Our concierge knew exactly what we wanted before we did.\"",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nPgCt",
+                      "name": "testi2Author",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZOSBW",
+                          "name": "testi2Name",
+                          "fill": "#F5F5F0",
+                          "content": "Hans & Elise Mueller",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "SxOLQ",
+                          "name": "testi2From",
+                          "fill": "#7A7674",
+                          "content": "Zurich, Switzerland",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cEY6Z",
+          "name": "Final CTA Section",
+          "clip": true,
+          "width": "fill_container",
+          "height": 500,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "I5ulf",
+              "x": 0,
+              "y": 0,
+              "name": "ctaImg",
+              "metadata": {
+                "type": "unsplash",
+                "username": "jorgefdezsalas",
+                "link": "https://unsplash.com/@jorgefdezsalas",
+                "author": "Jorge Fernández Salas"
+              },
+              "width": 1440,
+              "height": 500,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1544957347-2c015a5024ac",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "rectangle",
+              "id": "CONN4",
+              "x": 0,
+              "y": 0,
+              "name": "ctaOverlay",
+              "fill": "#2A2624B0",
+              "width": 1440,
+              "height": 500
+            },
+            {
+              "type": "frame",
+              "id": "1hn3d",
+              "x": 420,
+              "y": 120,
+              "name": "CTA Content",
+              "width": 600,
+              "layout": "vertical",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uA3wO",
+                  "name": "ctaLabel",
+                  "fill": "#C9A962",
+                  "content": "YOUR JOURNEY AWAITS",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "Sd7nu",
+                  "name": "ctaTitle",
+                  "fill": "#F5F5F0",
+                  "textGrowth": "fixed-width",
+                  "width": 560,
+                  "content": "Let us craft something unforgettable",
+                  "lineHeight": 1.15,
+                  "textAlign": "center",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 48,
+                  "fontWeight": "300",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "vEjcd",
+                  "name": "ctaDesc",
+                  "fill": "#AAA6A2",
+                  "textGrowth": "fixed-width",
+                  "width": 440,
+                  "content": "Begin with a complimentary consultation. Tell us your dreams, and we will make them real.",
+                  "lineHeight": 1.8,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "frame",
+                  "id": "jTiaw",
+                  "name": "ctaButton",
+                  "fill": "#C9A962",
+                  "gap": 12,
+                  "padding": [
+                    18,
+                    44
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ReV3x",
+                      "name": "ctaBtnText",
+                      "fill": "#1E1A18",
+                      "content": "ENQUIRE NOW",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "FLSql",
+                      "name": "ctaBtnArrow",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "arrow-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#353130"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YGfaF",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#221E1C",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            120,
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "yO6Qo",
+              "name": "footerTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tWk4k",
+                  "name": "footerBrand",
+                  "width": 340,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "455Ak",
+                      "name": "footerLogoRow",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cWJjr",
+                          "name": "footerMark",
+                          "width": 28,
+                          "height": 28,
+                          "fill": {
+                            "type": "gradient",
+                            "gradientType": "linear",
+                            "enabled": true,
+                            "rotation": 135,
+                            "size": {
+                              "height": 1
+                            },
+                            "colors": [
+                              {
+                                "color": "#C9A962",
+                                "position": 0
+                              },
+                              {
+                                "color": "#8B7845",
+                                "position": 1
+                              }
+                            ]
+                          },
+                          "cornerRadius": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IsDpt",
+                              "name": "footerMarkText",
+                              "fill": "#1E1A18",
+                              "content": "ID",
+                              "fontFamily": "Cormorant Garamond",
+                              "fontSize": 11,
+                              "fontWeight": "600",
+                              "letterSpacing": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "bjmhy",
+                          "name": "footerLogoName",
+                          "fill": "#F5F5F0",
+                          "content": "ISLA DORADA",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 16,
+                          "fontWeight": "500",
+                          "letterSpacing": 4
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "j3FN4",
+                      "name": "footerTagline",
+                      "fill": "#7A7674",
+                      "textGrowth": "fixed-width",
+                      "width": 320,
+                      "content": "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ESvTP",
+                  "name": "footerNav",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mvlZ8",
+                      "name": "col1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ubQ2V",
+                          "name": "col1Title",
+                          "fill": "#C9A962",
+                          "content": "EXPLORE",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "FzFrP",
+                          "name": "col1L1",
+                          "fill": "#7A7674",
+                          "content": "Experiences",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PVcGU",
+                          "name": "col1L2",
+                          "fill": "#7A7674",
+                          "content": "Lanzarote",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "seZ3M",
+                          "name": "col1L3",
+                          "fill": "#7A7674",
+                          "content": "Private Villas",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YL5V2",
+                          "name": "col1L4",
+                          "fill": "#7A7674",
+                          "content": "Journal",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YrEXp",
+                      "name": "col2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5eHYx",
+                          "name": "col2Title",
+                          "fill": "#C9A962",
+                          "content": "COMPANY",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "EZZve",
+                          "name": "col2L1",
+                          "fill": "#7A7674",
+                          "content": "About Us",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KVrFr",
+                          "name": "col2L2",
+                          "fill": "#7A7674",
+                          "content": "Our Team",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ByaCY",
+                          "name": "col2L3",
+                          "fill": "#7A7674",
+                          "content": "Partnerships",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kf1FS",
+                          "name": "col2L4",
+                          "fill": "#7A7674",
+                          "content": "Careers",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mKz4b",
+                      "name": "col3",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "k3FwE",
+                          "name": "col3Title",
+                          "fill": "#C9A962",
+                          "content": "CONTACT",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "zK12u",
+                          "name": "col3L1",
+                          "fill": "#7A7674",
+                          "content": "hello@isladorda.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MdB5m",
+                          "name": "col3L2",
+                          "fill": "#7A7674",
+                          "content": "+34 928 000 000",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jJfqi",
+                          "name": "col3L3",
+                          "fill": "#7A7674",
+                          "content": "Arrecife, Lanzarote",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6Vef5",
+                          "name": "col3L4",
+                          "fill": "#7A7674",
+                          "content": "Canary Islands, Spain",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "OlsgY",
+              "name": "divider",
+              "fill": "#3D3935",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "TndOK",
+              "name": "bottomBar",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Uve1Q",
+                  "name": "copyright",
+                  "fill": "#5A5654",
+                  "content": "2026 Isla Dorada. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "hkaLc",
+                  "name": "legal",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PYfQs",
+                      "name": "legalPrivacy",
+                      "fill": "#5A5654",
+                      "content": "Privacy",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s3Bn8",
+                      "name": "legalTerms",
+                      "fill": "#5A5654",
+                      "content": "Terms",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "40U88",
+                      "name": "legalCookies",
+                      "fill": "#5A5654",
+                      "content": "Cookies",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
