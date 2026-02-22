@@ -32,7 +32,7 @@ const footerColumns = [
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col gap-12 bg-footer-bg px-[120px] pt-[60px] pb-10">
+    <footer className="flex w-full flex-col gap-12 bg-dark-bg px-[120px] pt-[60px] pb-10">
       <div className="flex w-full justify-between">
         {/* Brand */}
         <div className="flex w-[340px] flex-col gap-5">

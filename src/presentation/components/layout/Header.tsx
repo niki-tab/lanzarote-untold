@@ -10,7 +10,7 @@ export function Header({ navigation }: HeaderProps) {
   const cta = navigation.find((item) => item.isCTA);
 
   return (
-    <header className="flex w-full items-center justify-between px-20 py-6">
+    <header className="flex w-full items-center justify-between bg-dark-bg px-20 py-6">
       <Link href="/" className="flex items-center gap-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-[18px] bg-gradient-to-br from-gold to-gold-end">
           <span className="font-cormorant text-sm font-semibold tracking-[1px] text-text-dark">
