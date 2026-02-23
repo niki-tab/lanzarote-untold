@@ -32,10 +32,10 @@ const footerColumns = [
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col gap-12 bg-dark-bg px-[120px] pt-[60px] pb-10">
-      <div className="flex w-full justify-between">
+    <footer className="flex w-full flex-col gap-8 bg-dark-bg px-5 pt-10 pb-6 lg:gap-12 lg:px-[120px] lg:pt-[60px] lg:pb-10">
+      <div className="flex w-full flex-col gap-8 lg:flex-row lg:justify-between">
         {/* Brand */}
-        <div className="flex w-[340px] flex-col gap-5">
+        <div className="flex w-full flex-col gap-5 lg:w-[340px]">
           <div className="flex items-center gap-3">
             <div className="flex h-7 w-7 items-center justify-center rounded-[14px] bg-gradient-to-br from-gold to-gold-end">
               <span className="font-cormorant text-xs font-semibold tracking-[1px] text-text-dark">
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
 
         {/* Nav Columns */}
-        <div className="flex gap-20">
+        <div className="grid grid-cols-3 gap-4 lg:flex lg:gap-20">
           {footerColumns.map((col) => (
             <div key={col.title} className="flex flex-col gap-4">
               <span className="font-inter text-[10px] font-medium tracking-[2px] text-gold">
@@ -63,7 +63,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-inter text-[13px] text-text-muted transition-colors hover:text-text-primary"
+                  className="font-inter text-[12px] text-text-muted transition-colors hover:text-text-primary lg:text-[13px]"
                 >
                   {link.label}
                 </Link>
@@ -77,7 +77,7 @@ export function Footer() {
       <div className="h-px w-full bg-footer-divider" />
 
       {/* Bottom Bar */}
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between md:gap-0">
         <span className="font-inter text-xs text-footer-legal">
           2026 Isla Dorada. All rights reserved.
         </span>

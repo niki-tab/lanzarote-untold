@@ -20,7 +20,7 @@ function ExperienceCard({
   return (
     <Link
       href={experience.slug}
-      className="group relative flex overflow-hidden rounded-[20px]"
+      className="group relative flex min-h-[200px] overflow-hidden rounded-[20px] lg:min-h-0"
       style={{ height: "100%" }}
     >
       <div
@@ -33,12 +33,12 @@ function ExperienceCard({
           background: `linear-gradient(to bottom, #2A262400 ${isLarge ? "30%" : "20%"}, ${isLarge ? "#2A2624CC" : "#2A2624CC"} 100%)`,
         }}
       />
-      <div className="relative mt-auto flex flex-col gap-2 p-8">
+      <div className="relative mt-auto flex flex-col gap-2 p-6 lg:p-8">
         <span className="font-inter text-[10px] font-medium tracking-[2px] text-gold">
           {experience.category}
         </span>
         <h3
-          className={`font-cormorant font-normal leading-[1.15] text-text-primary ${isLarge ? "text-[28px]" : "text-2xl"}`}
+          className={`font-cormorant font-normal leading-[1.15] text-text-primary ${isLarge ? "text-2xl lg:text-[28px]" : "text-xl lg:text-2xl"}`}
         >
           {experience.title}
         </h3>
@@ -51,14 +51,14 @@ export function ExperiencesSection({ experiences }: ExperiencesSectionProps) {
   const [main, ...rest] = experiences;
 
   return (
-    <section className="flex w-full flex-col gap-[60px] px-[120px] py-[120px]">
+    <section className="flex w-full flex-col gap-10 px-5 py-[60px] lg:gap-[60px] lg:px-[120px] lg:py-[120px]">
       {/* Header */}
-      <div className="flex w-full items-end justify-between">
-        <div className="flex flex-col gap-5">
+      <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-4 lg:gap-5">
           <span className="font-inter text-[11px] font-medium tracking-[3px] text-gold">
             SIGNATURE EXPERIENCES
           </span>
-          <h2 className="font-cormorant text-5xl font-light leading-[1.1] tracking-[-1px] text-text-primary">
+          <h2 className="font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
             Curated for the
             <br />
             discerning traveler
@@ -74,16 +74,18 @@ export function ExperiencesSection({ experiences }: ExperiencesSectionProps) {
       </div>
 
       {/* Grid */}
-      <div className="flex h-[460px] w-full gap-6">
+      <div className="flex h-auto w-full flex-col gap-4 lg:h-[460px] lg:flex-row lg:gap-6">
         {/* Left - Large Card */}
-        <div className="flex h-full flex-1 flex-col gap-6">
+        <div className="flex h-[280px] flex-col gap-4 lg:h-full lg:flex-1 lg:gap-6">
           <ExperienceCard experience={main} size="large" />
         </div>
 
         {/* Right - 2 Stacked Cards */}
-        <div className="flex h-full flex-1 flex-col gap-6">
+        <div className="flex flex-col gap-4 lg:h-full lg:flex-1 lg:gap-6">
           {rest.map((exp) => (
-            <ExperienceCard key={exp.id} experience={exp} size="small" />
+            <div key={exp.id} className="h-[200px] lg:h-full">
+              <ExperienceCard experience={exp} size="small" />
+            </div>
           ))}
         </div>
       </div>

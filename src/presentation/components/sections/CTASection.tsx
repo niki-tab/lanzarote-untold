@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function CTASection() {
   return (
-    <section className="relative h-[500px] w-full overflow-hidden">
+    <section className="relative h-[420px] w-full overflow-hidden lg:h-[500px]">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -20,7 +20,7 @@ export function CTASection() {
       {/* Content */}
       <div className="relative flex h-full items-center justify-center">
         <motion.div
-          className="flex w-[600px] flex-col items-center gap-8"
+          className="flex w-full flex-col items-center gap-6 px-5 lg:w-[600px] lg:gap-8 lg:px-0"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -29,10 +29,10 @@ export function CTASection() {
           <span className="font-inter text-[11px] font-medium tracking-[3px] text-gold">
             YOUR JOURNEY AWAITS
           </span>
-          <h2 className="text-center font-cormorant text-5xl font-light leading-[1.15] tracking-[-1px] text-text-primary">
+          <h2 className="text-center font-cormorant text-[32px] font-light leading-[1.15] tracking-[-1px] text-text-primary lg:text-5xl">
             Let us craft something unforgettable
           </h2>
-          <p className="w-[440px] text-center font-inter text-base font-light leading-[1.8] text-text-secondary">
+          <p className="max-w-[280px] text-center font-inter text-sm font-light leading-[1.8] text-text-secondary lg:max-w-[440px] lg:text-base">
             Begin with a complimentary consultation. Tell us your dreams, and we
             will make them real.
           </p>
