@@ -45,7 +45,7 @@ export function SocialProofSection({
   testimonials,
 }: SocialProofSectionProps) {
   return (
-    <section className="flex w-full flex-col items-center gap-10 px-5 py-[60px] lg:gap-20 lg:px-[120px] lg:py-[120px]">
+    <section className="flex w-full flex-col items-center gap-10 px-8 py-[60px] md:px-20 lg:gap-20 lg:px-20 lg:py-[120px]">
       {/* Stats Row */}
       <div className="grid w-full grid-cols-2 gap-6 border-y border-border py-8 lg:flex lg:justify-around lg:py-10">
         {stats.map((stat) => (

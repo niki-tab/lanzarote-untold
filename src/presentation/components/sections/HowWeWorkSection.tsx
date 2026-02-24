@@ -13,7 +13,7 @@ interface HowWeWorkSectionProps {
 
 export function HowWeWorkSection({ steps }: HowWeWorkSectionProps) {
   return (
-    <section className="flex w-full flex-col items-center gap-10 px-5 py-[60px] lg:gap-20 lg:px-[120px] lg:py-[120px]">
+    <section className="flex w-full flex-col items-center gap-10 px-8 py-[60px] md:px-20 lg:gap-20 lg:px-20 lg:py-[120px]">
       {/* Header */}
       <div className="flex flex-col items-center gap-5">
         <span className="font-inter text-[11px] font-medium tracking-[3px] text-gold">

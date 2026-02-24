@@ -51,7 +51,7 @@ export function ExperiencesSection({ experiences }: ExperiencesSectionProps) {
   const [main, ...rest] = experiences;
 
   return (
-    <section className="flex w-full flex-col gap-10 px-5 py-[60px] lg:gap-[60px] lg:px-[120px] lg:py-[120px]">
+    <section className="flex w-full flex-col gap-10 px-8 py-[60px] md:px-20 lg:gap-[60px] lg:px-20 lg:py-[120px]">
       {/* Header */}
       <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-4 lg:gap-5">
