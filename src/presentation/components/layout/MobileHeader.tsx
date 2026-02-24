@@ -2,19 +2,38 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { NavigationItem } from "@/domain/types";
 
-interface MobileNavProps {
+interface MobileHeaderProps {
   navigation: NavigationItem[];
 }
 
-export function MobileNav({ navigation }: MobileNavProps) {
+export function MobileHeader({ navigation }: MobileHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const links = navigation.filter((item) => !item.isCTA);
   const cta = navigation.find((item) => item.isCTA);
 
   return (
-    <div className="md:hidden">
+    <header className="relative flex w-full items-center justify-between bg-dark-bg px-5 py-4 md:hidden">
+      <Link href="/" className="flex items-center gap-3">
+        <Image
+          src="/img/logo.png"
+          alt="Lanzarote Untold"
+          width={70}
+          height={62}
+          className="object-contain"
+        />
+        <div className="flex flex-col">
+          <span className="font-cormorant text-base font-medium tracking-[3px] text-text-primary">
+            Lanzarote Untold
+          </span>
+          <span className="font-inter text-[6px] font-normal tracking-[2px] text-gold">
+            LUXURY EXPERIENCES
+          </span>
+        </div>
+      </Link>
+
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex h-10 w-10 flex-col items-center justify-center gap-[5px]"
@@ -51,6 +70,6 @@ export function MobileNav({ navigation }: MobileNavProps) {
           )}
         </div>
       )}
-    </div>
+    </header>
   );
 }

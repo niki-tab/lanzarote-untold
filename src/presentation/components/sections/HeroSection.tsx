@@ -26,7 +26,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative flex h-full flex-col justify-end pb-10 pl-5 lg:pb-20 lg:pl-[120px]">
+      <div className="relative flex h-full flex-col justify-end pb-10 pl-8 md:pl-20 lg:pb-20 lg:pl-20">
         <motion.div
           className="flex w-full flex-col gap-6 lg:w-[700px] lg:gap-8"
           initial={{ opacity: 0, y: 30 }}

@@ -31,46 +31,16 @@
               "alignItems": "center",
               "children": [
                 {
-                  "type": "frame",
-                  "id": "FDJOV",
-                  "name": "logoMark",
-                  "width": 36,
-                  "height": 36,
+                  "type": "rectangle",
+                  "id": "B5dbI",
                   "fill": {
-                    "type": "gradient",
-                    "gradientType": "linear",
+                    "type": "image",
                     "enabled": true,
-                    "rotation": 135,
-                    "size": {
-                      "height": 1
-                    },
-                    "colors": [
-                      {
-                        "color": "#C9A962",
-                        "position": 0
-                      },
-                      {
-                        "color": "#8B7845",
-                        "position": 1
-                      }
-                    ]
+                    "url": "./logo_mar_transparente.png",
+                    "mode": "fill"
                   },
-                  "cornerRadius": 18,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "qdVda",
-                      "name": "logoInner",
-                      "fill": "#1E1A18",
-                      "content": "ID",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 14,
-                      "fontWeight": "600",
-                      "letterSpacing": 1
-                    }
-                  ]
+                  "width": 85,
+                  "height": 50
                 },
                 {
                   "type": "frame",
@@ -1503,46 +1473,16 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "type": "frame",
-                          "id": "cWJjr",
-                          "name": "footerMark",
-                          "width": 28,
-                          "height": 28,
+                          "type": "rectangle",
+                          "id": "OGxaM",
                           "fill": {
-                            "type": "gradient",
-                            "gradientType": "linear",
+                            "type": "image",
                             "enabled": true,
-                            "rotation": 135,
-                            "size": {
-                              "height": 1
-                            },
-                            "colors": [
-                              {
-                                "color": "#C9A962",
-                                "position": 0
-                              },
-                              {
-                                "color": "#8B7845",
-                                "position": 1
-                              }
-                            ]
+                            "url": "./logo_mar_transparente.png",
+                            "mode": "fill"
                           },
-                          "cornerRadius": 14,
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "IsDpt",
-                              "name": "footerMarkText",
-                              "fill": "#1E1A18",
-                              "content": "ID",
-                              "fontFamily": "Cormorant Garamond",
-                              "fontSize": 11,
-                              "fontWeight": "600",
-                              "letterSpacing": 1
-                            }
-                          ]
+                          "width": 85,
+                          "height": 50
                         },
                         {
                           "type": "text",
