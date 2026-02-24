@@ -37,6 +37,7 @@ export default async function RootLayout({
       </head>
       <body
         className={`${cormorant.variable} ${inter.variable} bg-dark-bg text-text-primary antialiased`}
+        suppressHydrationWarning
       >
         <Header navigation={navigation} />
         {children}
