@@ -20,7 +20,7 @@ function ExperienceCard({
   return (
     <Link
       href={experience.slug}
-      className="group relative flex min-h-[200px] overflow-hidden rounded-[20px] lg:min-h-0"
+      className="group relative flex min-h-[200px] overflow-hidden lg:min-h-0"
       style={{ height: "100%" }}
     >
       <div
@@ -59,9 +59,9 @@ export function ExperiencesSection({ experiences }: ExperiencesSectionProps) {
             SIGNATURE EXPERIENCES
           </span>
           <h2 className="font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
-            Curated for the
+            Luxury Lanzarote experiences
             <br />
-            discerning traveler
+            for the discerning traveller
           </h2>
         </div>
         <Link

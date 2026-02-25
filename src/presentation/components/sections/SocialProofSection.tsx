@@ -58,7 +58,7 @@ export function SocialProofSection({
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className="flex flex-1 flex-col gap-4 rounded-[20px] border border-border bg-dark-bg p-6 lg:gap-6 lg:p-10"
+            className="flex flex-1 flex-col gap-4 border border-border bg-dark-bg p-6 lg:gap-6 lg:p-10"
           >
             <p className="font-cormorant text-lg italic leading-[1.6] text-text-primary lg:text-xl">
               &ldquo;{t.quote}&rdquo;

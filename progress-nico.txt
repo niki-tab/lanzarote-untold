@@ -1,0 +1,84 @@
+# Lanzarote Untold Development Progress
+# Updated: 2026-02-25
+# Read this file at the start of every session. Update it after completing features.
+
+## COMPLETED
+- Homepage with hexagonal architecture (domain types, use cases, static repository)
+- Header with navigation (server component)
+- Footer with 3-column nav, brand section, bottom bar
+- HeroSection with Framer Motion animation, background image, gradient overlay
+- HowWeWorkSection with 3 gold step cards (Consult, Curate, Experience)
+- ExperiencesSection with asymmetric card grid (1 large + 2 stacked)
+- SocialProofSection with animated stats + testimonial cards
+- CTASection with background image and overlay
+- Reusable components: Button, SectionLabel, StubPage
+- SEO: structured data (JSON-LD), metadata
+- Docker development environment
+- Unified header/footer background color with page content
+- Mobile responsive implementation (all components)
+- **All core pages built** (no more stubs except blog "coming soon")
+- **URL restructured**: experience pages under `/experiences/`, private at `/private-experiences/`, blog at `/blog`
+- **Branding unified to "Lanzarote Untold"** (layout, metadata, structured data, testimonials, footers)
+- **6 new reusable section components**: PageHero, ImageTextSection, FeatureGrid, TestimonialStrip, ContactForm, FAQSection
+- **SEO metadata per page**: title with target keywords, description ≤155 chars, keywords array, openGraph + twitter
+
+## ROUTES (10 total)
+- `/` — Homepage
+- `/experiences` — Experiences overview (category grid + social proof + CTA)
+- `/experiences/wine-gastronomy` — Wine & Gastronomy detail
+- `/experiences/sea-adventure` — Sea & Adventure detail
+- `/experiences/volcano-nature` — Volcano & Nature detail
+- `/private-experiences` — Private & Custom experiences
+- `/about` — About us
+- `/contact` — Contact form + FAQ
+- `/blog` — Journal placeholder (coming soon)
+
+## IN PROGRESS
+- (nothing currently in progress)
+
+## NEXT UP
+- Blog articles (actual content)
+- Multilingual (i18n) implementation
+- Experience detail pages with dynamic content
+- Real backend/form submission for contact form
+
+## RECENT CHANGES
+
+### Session 2026-02-25 (Core Pages Build)
+- **6 new section components created**:
+  - `PageHero` — shorter hero for inner pages with bg image, gradient, label, H1, subtitle
+  - `ImageTextSection` — side-by-side image + text block, reversible with `reversed` prop
+  - `FeatureGrid` — grid of title + description cards (1-3 cols responsive)
+  - `TestimonialStrip` — single large centered quote with gold dividers
+  - `ContactForm` — client component with form fields + contact details sidebar
+  - `FAQSection` — expandable accordion with chevron animation
+- **URL restructure**: deleted old flat routes, created nested `/experiences/` routes + `/private-experiences/` + `/blog/`
+- **Data files updated**: experiences.ts slugs, navigation.ts (removed Lanzarote link, added Journal → /blog), footer links in both Desktop and Mobile footers
+- **8 pages built**: experiences overview, wine-gastronomy, sea-adventure, volcano-nature, private-experiences, about, contact, blog
+- **Branding unified**: layout.tsx template → "Lanzarote Untold", page.tsx metadata updated, structuredData.ts name/url/email updated, testimonials updated
+- Build verified: `npx next build` passes with all 10 routes
+
+### Session 2026-02-23 (Mobile Responsive Implementation)
+- **Mobile-first responsive breakpoints** added to all 10 components
+- **New component: MobileNav** (`layout/MobileNav.tsx`) — client component with hamburger menu toggle, animated X icon, slide-down overlay nav
+- **Header**: mobile padding `px-5 py-4`, desktop nav hidden on mobile (`hidden md:flex`), hamburger visible on mobile (`md:hidden`)
+- **Footer**: single-column stack on mobile, `grid grid-cols-3` for nav columns, bottom bar centered then `md:flex-row`
+- **HeroSection**: `h-[520px]` mobile / `lg:h-[780px]` desktop, `text-[44px]` / `lg:text-[72px]`, full-width stacked CTAs on mobile
+- **HowWeWorkSection**: cards stack vertically on mobile (`flex-col` → `lg:flex-row`), smaller padding/gaps, gold background cards with dark text
+- **ExperiencesSection**: header stacks vertically, grid single-column with fixed heights, `text-[32px]` / `lg:text-5xl`
+- **SocialProofSection**: stats in 2-col grid on mobile, testimonials stack vertically, smaller text/padding
+- **CTASection**: `h-[420px]` / `lg:h-[500px]`, full-width content with `px-5` on mobile, `text-[32px]` / `lg:text-5xl`
+- **SectionLabel**: `text-[9px]` → `lg:text-[11px]`
+- **StubPage**: mobile padding/heading sizes
+- **Step card color fix**: Changed from dark `bg-card-bg` to `bg-gold` with dark text to match .pen design
+
+### Session 2026-02-22 (Initial Homepage Build)
+- **Hexagonal architecture setup**: domain types, application ports/use-cases, infrastructure adapters/data/config/seo
+- **All homepage sections**: Hero, How We Work, Experiences, Social Proof, CTA
+- **Layout**: Header with navigation, Footer with columns
+- **8 routes with stub pages**
+- **Docker + Tailwind v4 + Framer Motion setup**
+
+## KNOWN ISSUES
+- Contact form is UI-only (no backend submission)
+- Blog page is a "coming soon" placeholder

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
-  metadataBase: new URL("https://isladorda.com"),
+  metadataBase: new URL("https://lanzaroteuntold.com"),
   icons: {
     icon: "/img/logo.png",
     apple: "/img/logo.png",

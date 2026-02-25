@@ -5,9 +5,9 @@ export function getTravelAgencyStructuredData() {
     name: "Lanzarote Untold",
     description:
       "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
-    url: "https://isladorda.com",
+    url: "https://lanzaroteuntold.com",
     telephone: "+34 928 000 000",
-    email: "hello@isladorda.com",
+    email: "hello@lanzaroteuntold.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Arrecife",

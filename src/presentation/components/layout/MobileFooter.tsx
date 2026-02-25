@@ -6,24 +6,21 @@ const footerColumns = [
     title: "EXPLORE",
     links: [
       { label: "Experiences", href: "/experiences" },
-      { label: "Lanzarote", href: "/volcano-nature" },
-      { label: "Private Villas", href: "/private-custom" },
-      { label: "Journal", href: "/contact" },
+      { label: "Private Experiences", href: "/private-experiences" },
+      { label: "Journal", href: "/blog" },
     ],
   },
   {
     title: "COMPANY",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Our Team", href: "/about" },
-      { label: "Partnerships", href: "/about" },
-      { label: "Careers", href: "/about" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "CONTACT",
     links: [
-      { label: "hello@isladorda.com", href: "mailto:hello@isladorda.com" },
+      { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
       { label: "+34 928 000 000", href: "tel:+34928000000" },
       { label: "Arrecife, Lanzarote", href: "/contact" },
       { label: "Canary Islands, Spain", href: "/contact" },
