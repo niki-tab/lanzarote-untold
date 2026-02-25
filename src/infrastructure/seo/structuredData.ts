@@ -2,7 +2,7 @@ export function getTravelAgencyStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Isla Dorada",
+    name: "Lanzarote Untold",
     description:
       "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
     url: "https://isladorda.com",

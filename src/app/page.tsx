@@ -8,7 +8,7 @@ import { SocialProofSection } from "@/presentation/components/sections/SocialPro
 import { CTASection } from "@/presentation/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Isla Dorada | Luxury Lanzarote Experiences & Private Tours",
+  title: "Lanzarote Untold | Luxury Lanzarote Experiences & Private Tours",
   description:
     "Bespoke luxury travel experiences in Lanzarote. Private tours, volcanic trails, wine caves, yacht charters — all curated by local experts. Lanzarote untold.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "bespoke travel lanzarote",
   ],
   openGraph: {
-    title: "Isla Dorada | Luxury Lanzarote Experiences & Private Tours",
+    title: "Lanzarote Untold | Luxury Lanzarote Experiences & Private Tours",
     description:
       "Bespoke luxury travel experiences in Lanzarote, crafted by those who call this island home.",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Isla Dorada | Luxury Lanzarote Experiences",
+    title: "Lanzarote Untold | Luxury Lanzarote Experiences",
     description:
       "Bespoke luxury travel experiences in Lanzarote, crafted by those who call this island home.",
   },

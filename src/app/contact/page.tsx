@@ -4,7 +4,7 @@ import { StubPage } from "@/presentation/components/ui/StubPage";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Begin your bespoke Lanzarote experience. Contact Isla Dorada for a complimentary consultation.",
+    "Begin your bespoke Lanzarote experience. Contact Lanzarote Untold for a complimentary consultation.",
   keywords: ["book lanzarote experience"],
 };
 
