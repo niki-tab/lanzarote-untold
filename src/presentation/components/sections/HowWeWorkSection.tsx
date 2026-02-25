@@ -35,7 +35,7 @@ export function HowWeWorkSection({ steps }: HowWeWorkSectionProps) {
           return (
             <div
               key={step.id}
-              className="flex flex-1 flex-col gap-4 rounded-[16px] border border-[#5E3E3A] bg-gold p-6 lg:gap-6 lg:rounded-[20px] lg:p-10"
+              className="flex flex-1 flex-col gap-4 border border-[#5E3E3A] bg-gold p-6 lg:gap-6 lg:p-10"
             >
               <span className="font-cormorant text-4xl font-light leading-[0.85] text-[#221e1c] lg:text-[52px]">
                 {step.number}

@@ -36,14 +36,14 @@ export function HeroSection() {
           <SectionLabel withLine>LANZAROTE, CANARY ISLANDS</SectionLabel>
 
           <h1 className="font-cormorant text-[44px] font-light leading-[1.05] tracking-[-1px] text-text-primary lg:text-[72px]">
-            Your journey,
+            Private & exclusive
             <br />
-            entirely yours
+            experiences in Lanzarote
           </h1>
 
           <p className="w-full max-w-[300px] font-inter text-sm font-light leading-[1.8] text-text-secondary lg:max-w-[540px] lg:text-base">
-            Bespoke travel experiences crafted around your desires. Private
-            villas, hidden coves, volcanic trails, and Michelin-starred dining -
+            Luxury Lanzarote experiences crafted around your desires. Private
+            tours, hidden coves, volcanic trails, and Michelin-starred dining —
             all curated by those who call this island home.
           </p>
 

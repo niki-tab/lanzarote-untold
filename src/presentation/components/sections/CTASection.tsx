@@ -30,11 +30,11 @@ export function CTASection() {
             YOUR JOURNEY AWAITS
           </span>
           <h2 className="text-center font-cormorant text-[32px] font-light leading-[1.15] tracking-[-1px] text-text-primary lg:text-5xl">
-            Let us craft something unforgettable
+            Let Lanzarote Untold craft something unforgettable
           </h2>
           <p className="max-w-[280px] text-center font-inter text-sm font-light leading-[1.8] text-text-secondary lg:max-w-[440px] lg:text-base">
-            Begin with a complimentary consultation. Tell us your dreams, and we
-            will make them real.
+            Begin with a complimentary consultation. Tell us about your dream
+            Lanzarote experience, and we will make it real.
           </p>
           <Link
             href="/contact"
