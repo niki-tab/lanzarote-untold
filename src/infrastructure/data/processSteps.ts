@@ -3,7 +3,7 @@ import type { ProcessStep } from "@/domain/types";
 export const processSteps: ProcessStep[] = [
   {
     id: "step-consult",
-    number: "01",
+    number: "1",
     title: "Consult",
     description:
       "Share your vision with our travel architects. We want to know what excites you, what moves you, and what you dream about.",
@@ -11,7 +11,7 @@ export const processSteps: ProcessStep[] = [
   },
   {
     id: "step-curate",
-    number: "02",
+    number: "2",
     title: "Curate",
     description:
       "Our local experts design a bespoke itinerary - from private yacht charters to wine cave dinners - every detail considered.",
@@ -19,7 +19,7 @@ export const processSteps: ProcessStep[] = [
   },
   {
     id: "step-experience",
-    number: "03",
+    number: "3",
     title: "Experience",
     description:
       "Arrive and let go. Your dedicated concierge handles everything while you immerse yourself in the magic of Lanzarote.",

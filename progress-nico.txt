@@ -1,0 +1,54 @@
+# Isla Dorada Development Progress
+# Updated: 2026-02-23
+# Read this file at the start of every session. Update it after completing features.
+
+## COMPLETED
+- Homepage with hexagonal architecture (domain types, use cases, static repository)
+- Header with navigation (server component)
+- Footer with 3-column nav, brand section, bottom bar
+- HeroSection with Framer Motion animation, background image, gradient overlay
+- HowWeWorkSection with 3 gold step cards (Consult, Curate, Experience)
+- ExperiencesSection with asymmetric card grid (1 large + 2 stacked)
+- SocialProofSection with animated stats + testimonial cards
+- CTASection with background image and overlay
+- Reusable components: Button, SectionLabel, StubPage
+- 8 routes: /, /about, /contact, /experiences, /volcano-nature, /sea-adventure, /wine-gastronomy, /private-custom
+- Stub pages for all non-home routes
+- SEO: structured data (JSON-LD), metadata
+- Docker development environment
+- Unified header/footer background color with page content
+- Mobile responsive implementation (all components)
+
+## IN PROGRESS
+- (nothing currently in progress)
+
+## NEXT UP
+- (Add next features here)
+
+## RECENT CHANGES
+
+### Session 2026-02-23 (Mobile Responsive Implementation)
+- **Mobile-first responsive breakpoints** added to all 10 components
+- **New component: MobileNav** (`layout/MobileNav.tsx`) — client component with hamburger menu toggle, animated X icon, slide-down overlay nav
+- **Header**: mobile padding `px-5 py-4`, desktop nav hidden on mobile (`hidden md:flex`), hamburger visible on mobile (`md:hidden`)
+- **Footer**: single-column stack on mobile, `grid grid-cols-3` for nav columns, bottom bar centered then `md:flex-row`
+- **HeroSection**: `h-[520px]` mobile / `lg:h-[780px]` desktop, `text-[44px]` / `lg:text-[72px]`, full-width stacked CTAs on mobile
+- **HowWeWorkSection**: cards stack vertically on mobile (`flex-col` → `lg:flex-row`), smaller padding/gaps, gold background cards with dark text
+- **ExperiencesSection**: header stacks vertically, grid single-column with fixed heights, `text-[32px]` / `lg:text-5xl`
+- **SocialProofSection**: stats in 2-col grid on mobile, testimonials stack vertically, smaller text/padding
+- **CTASection**: `h-[420px]` / `lg:h-[500px]`, full-width content with `px-5` on mobile, `text-[32px]` / `lg:text-5xl`
+- **SectionLabel**: `text-[9px]` → `lg:text-[11px]`
+- **StubPage**: mobile padding/heading sizes
+- **Step card color fix**: Changed from dark `bg-card-bg` to `bg-gold` with dark text to match .pen design
+- Files created: MobileNav.tsx
+- Files modified: Header.tsx, Footer.tsx, HeroSection.tsx, HowWeWorkSection.tsx, ExperiencesSection.tsx, SocialProofSection.tsx, CTASection.tsx, SectionLabel.tsx, StubPage.tsx
+
+### Session 2026-02-22 (Initial Homepage Build)
+- **Hexagonal architecture setup**: domain types, application ports/use-cases, infrastructure adapters/data/config/seo
+- **All homepage sections**: Hero, How We Work, Experiences, Social Proof, CTA
+- **Layout**: Header with navigation, Footer with columns
+- **8 routes with stub pages**
+- **Docker + Tailwind v4 + Framer Motion setup**
+
+## KNOWN ISSUES
+- (none currently)
