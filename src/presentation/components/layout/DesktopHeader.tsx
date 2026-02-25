@@ -43,7 +43,7 @@ export function DesktopHeader({ navigation }: DesktopHeaderProps) {
         {cta && (
           <Link
             href={cta.href}
-            className="border border-gold px-7 py-3 font-inter text-[11px] font-medium tracking-[2px] text-gold transition-opacity hover:opacity-80"
+            className="border border-gold px-7 py-3 font-inter text-[11px] font-medium tracking-[2px] text-gold transition-opacity hover:bg-gold hover:text-white"
           >
             {cta.label}
           </Link>

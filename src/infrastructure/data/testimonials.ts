@@ -4,7 +4,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "testi-1",
     quote:
-      "Isla Dorada transformed what could have been a simple holiday into the most meaningful week of our lives. Every detail felt personal.",
+      "Lanzarote Untold transformed what could have been a simple holiday into the most meaningful week of our lives. Every detail felt personal.",
     authorName: "Victoria & James Ashworth",
     authorLocation: "London, United Kingdom",
   },

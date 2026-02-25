@@ -8,12 +8,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Isla Dorada | Bespoke Travel Lanzarote",
-    template: "%s | Isla Dorada",
+    default: "Lanzarote Untold | Bespoke Travel Lanzarote",
+    template: "%s | Lanzarote Untold",
   },
   description:
     "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
-  metadataBase: new URL("https://isladorda.com"),
+  metadataBase: new URL("https://lanzaroteuntold.com"),
 };
 
 const repository = new StaticContentRepository();
