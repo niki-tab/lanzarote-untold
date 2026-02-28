@@ -1,11 +1,16 @@
+import type { Locale } from "@/infrastructure/i18n/config";
 import { DesktopFooter } from "./DesktopFooter";
 import { MobileFooter } from "./MobileFooter";
 
-export function Footer() {
+interface FooterProps {
+  lang: Locale;
+}
+
+export function Footer({ lang }: FooterProps) {
   return (
     <>
-      <DesktopFooter />
-      <MobileFooter />
+      <DesktopFooter lang={lang} />
+      <MobileFooter lang={lang} />
     </>
   );
 }

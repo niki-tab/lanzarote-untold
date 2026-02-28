@@ -63,7 +63,12 @@ const features = [
   },
 ];
 
-export default function SeaAdventurePage() {
+export default async function SeaAdventurePage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   return (
     <main>
       <PageHero

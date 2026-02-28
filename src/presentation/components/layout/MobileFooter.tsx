@@ -1,5 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Locale } from "@/infrastructure/i18n/config";
+import { localizedPath } from "@/infrastructure/i18n/config";
+
+interface MobileFooterProps {
+  lang: Locale;
+}
 
 const footerColumns = [
   {
@@ -28,7 +34,7 @@ const footerColumns = [
   },
 ];
 
-export function MobileFooter() {
+export function MobileFooter({ lang }: MobileFooterProps) {
   return (
     <footer className="flex w-full flex-col gap-8 bg-dark-bg px-5 pt-10 pb-6 lg:hidden">
       {/* Brand */}
@@ -46,12 +52,12 @@ export function MobileFooter() {
               Lanzarote Untold
             </span>
             <span className="font-inter text-[8px] font-normal tracking-[3px] text-gold">
-              LUXURY EXPERIENCES
+              CURATED EXPERIENCES
             </span>
           </div>
         </div>
         <p className="font-inter text-[13px] font-light leading-[1.7] text-text-muted">
-          Bespoke luxury travel experiences in Lanzarote, Canary Islands.
+          Bespoke curated experiences in Lanzarote, Canary Islands.
           Crafted with local expertise and international elegance.
         </p>
       </div>
@@ -66,7 +72,7 @@ export function MobileFooter() {
             {col.links.map((link) => (
               <Link
                 key={link.label}
-                href={link.href}
+                href={localizedPath(link.href, lang)}
                 className="font-inter text-[12px] text-text-muted transition-colors hover:text-text-primary"
               >
                 {link.label}

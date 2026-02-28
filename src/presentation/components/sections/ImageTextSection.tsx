@@ -7,6 +7,7 @@ interface ImageTextSectionProps {
   image: string;
   imageAlt: string;
   reversed?: boolean;
+  className?: string;
 }
 
 export function ImageTextSection({
@@ -16,9 +17,10 @@ export function ImageTextSection({
   image,
   imageAlt,
   reversed = false,
+  className = "",
 }: ImageTextSectionProps) {
   return (
-    <section className="flex w-full flex-col gap-10 px-5 py-[60px] lg:flex-row lg:items-center lg:gap-20 lg:px-[120px] lg:py-[120px]">
+    <section className={`flex w-full flex-col gap-10 px-5 py-[60px] lg:flex-row lg:items-center lg:gap-20 lg:px-[120px] lg:py-[120px] ${className}`}>
       {/* Image */}
       <div
         className={`h-[280px] w-full flex-shrink-0 bg-cover bg-center lg:h-[480px] lg:w-1/2 ${reversed ? "lg:order-2" : ""}`}

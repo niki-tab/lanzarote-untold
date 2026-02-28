@@ -5,6 +5,8 @@ import { PageHero } from "@/presentation/components/sections/PageHero";
 import { SocialProofSection } from "@/presentation/components/sections/SocialProofSection";
 import { CTASection } from "@/presentation/components/sections/CTASection";
 import { StaticContentRepository } from "@/infrastructure/adapters/StaticContentRepository";
+import { localizedPath } from "@/infrastructure/i18n/config";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 export const metadata: Metadata = {
   title: "Things to Do in Lanzarote — Exclusive Experiences",
@@ -57,7 +59,7 @@ const categories = [
   },
   {
     title: "Private & Custom",
-    description: "Luxury Lanzarote private tours and bespoke itineraries designed around you",
+    description: "Exclusive Lanzarote private tours and bespoke itineraries designed around you",
     image:
       "https://images.unsplash.com/photo-1544957347-2c015a5024ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     href: "/private-experiences",
@@ -67,7 +69,14 @@ const categories = [
 
 const repository = new StaticContentRepository();
 
-export default async function ExperiencesPage() {
+export default async function ExperiencesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale = lang as Locale;
+
   const [stats, testimonials] = await Promise.all([
     repository.getStats(),
     repository.getTestimonials(),
@@ -91,7 +100,7 @@ export default async function ExperiencesPage() {
         {categories.map((cat) => (
           <Link
             key={cat.href}
-            href={cat.href}
+            href={localizedPath(cat.href, locale)}
             className="group relative flex h-[300px] overflow-hidden lg:h-[400px]"
           >
             <div

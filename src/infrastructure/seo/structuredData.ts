@@ -4,7 +4,7 @@ export function getTravelAgencyStructuredData() {
     "@type": "TravelAgency",
     name: "Lanzarote Untold",
     description:
-      "Bespoke luxury travel experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
+      "Bespoke curated experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
     url: "https://lanzaroteuntold.com",
     telephone: "+34 928 000 000",
     email: "hello@lanzaroteuntold.com",

@@ -62,7 +62,12 @@ const features = [
   },
 ];
 
-export default function VolcanoNaturePage() {
+export default async function VolcanoNaturePage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   return (
     <main>
       <PageHero

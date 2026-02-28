@@ -4,19 +4,24 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { NavigationItem } from "@/domain/types";
+import type { Locale } from "@/infrastructure/i18n/config";
+import { defaultLocale } from "@/infrastructure/i18n/config";
+import { LanguageSwitcher } from "@/presentation/components/ui/LanguageSwitcher";
 
 interface MobileHeaderProps {
   navigation: NavigationItem[];
+  lang: Locale;
 }
 
-export function MobileHeader({ navigation }: MobileHeaderProps) {
+export function MobileHeader({ navigation, lang }: MobileHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const links = navigation.filter((item) => !item.isCTA);
   const cta = navigation.find((item) => item.isCTA);
+  const logoHref = lang === defaultLocale ? "/" : `/${lang}`;
 
   return (
     <header className="relative flex w-full items-center justify-between bg-dark-bg px-5 py-4 md:hidden">
-      <Link href="/" className="flex items-center gap-3">
+      <Link href={logoHref} className="flex items-center gap-3">
         <Image
           src="/img/logo.png"
           alt="Lanzarote Untold"
@@ -29,7 +34,7 @@ export function MobileHeader({ navigation }: MobileHeaderProps) {
             Lanzarote Untold
           </span>
           <span className="font-inter text-[6px] font-normal tracking-[2px] text-gold">
-            LUXURY EXPERIENCES
+            CURATED EXPERIENCES
           </span>
         </div>
       </Link>
@@ -59,6 +64,11 @@ export function MobileHeader({ navigation }: MobileHeaderProps) {
               {item.label}
             </Link>
           ))}
+
+          <div className="border-t border-card-border pt-6">
+            <LanguageSwitcher lang={lang} />
+          </div>
+
           {cta && (
             <Link
               href={cta.href}
