@@ -8,33 +8,38 @@ import { SocialProofSection } from "@/presentation/components/sections/SocialPro
 import { CTASection } from "@/presentation/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Lanzarote Untold | Luxury Experiences & Private Tours",
+  title: "Lanzarote Untold | Curated Experiences & Private Tours",
   description:
-    "Bespoke luxury travel experiences in Lanzarote. Private tours, volcanic trails, wine caves, yacht charters — all curated by local experts. Enquire now.",
+    "Unique curated experiences in Lanzarote. Private tours, volcanic trails, wine caves, yacht charters — all designed by local experts. Enquire now.",
   keywords: [
     "lanzarote untold",
-    "luxury lanzarote experiences",
+    "lanzarote unique experiences",
     "lanzarote private tours",
     "bespoke travel lanzarote",
   ],
   openGraph: {
-    title: "Lanzarote Untold | Luxury Experiences & Private Tours",
+    title: "Lanzarote Untold | Curated Experiences & Private Tours",
     description:
-      "Bespoke luxury travel experiences in Lanzarote, crafted by those who call this island home.",
+      "Unique curated experiences in Lanzarote, crafted by those who call this island home.",
     type: "website",
     locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lanzarote Untold | Luxury Experiences & Private Tours",
+    title: "Lanzarote Untold | Curated Experiences & Private Tours",
     description:
-      "Bespoke luxury travel experiences in Lanzarote, crafted by those who call this island home.",
+      "Unique curated experiences in Lanzarote, crafted by those who call this island home.",
   },
 };
 
 const repository = new StaticContentRepository();
 
-export default async function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   const { experiences, testimonials, stats, processSteps } =
     await getHomePageContent(repository);
 

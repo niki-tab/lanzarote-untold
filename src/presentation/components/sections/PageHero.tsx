@@ -14,7 +14,7 @@ export function PageHero({
   backgroundImage,
 }: PageHeroProps) {
   return (
-    <section className="relative h-[340px] w-full overflow-hidden lg:h-[480px]">
+    <section className="relative h-[420px] w-full overflow-hidden lg:h-[600px]">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

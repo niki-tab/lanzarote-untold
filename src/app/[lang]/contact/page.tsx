@@ -59,7 +59,12 @@ const faqs = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   return (
     <main>
       <PageHero

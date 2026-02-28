@@ -1,18 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { NavigationItem } from "@/domain/types";
+import type { Locale } from "@/infrastructure/i18n/config";
+import { defaultLocale } from "@/infrastructure/i18n/config";
+import { LanguageSwitcher } from "@/presentation/components/ui/LanguageSwitcher";
 
 interface DesktopHeaderProps {
   navigation: NavigationItem[];
+  lang: Locale;
 }
 
-export function DesktopHeader({ navigation }: DesktopHeaderProps) {
+export function DesktopHeader({ navigation, lang }: DesktopHeaderProps) {
   const links = navigation.filter((item) => !item.isCTA);
   const cta = navigation.find((item) => item.isCTA);
+  const logoHref = lang === defaultLocale ? "/" : `/${lang}`;
 
   return (
     <header className="hidden w-full items-center justify-between bg-dark-bg px-20 py-6 md:flex">
-      <Link href="/" className="-ml-6 lg: flex items-center gap-3 ">
+      <Link href={logoHref} className="-ml-6 lg: flex items-center gap-3 ">
         <Image
           src="/img/logo.png"
           alt="Lanzarote Untold"
@@ -25,7 +30,7 @@ export function DesktopHeader({ navigation }: DesktopHeaderProps) {
             Lanzarote Untold
           </span>
           <span className="font-inter text-[7px] font-normal tracking-[3px] text-gold">
-            LUXURY EXPERIENCES
+            CURATED EXPERIENCES
           </span>
         </div>
       </Link>
@@ -48,6 +53,7 @@ export function DesktopHeader({ navigation }: DesktopHeaderProps) {
             {cta.label}
           </Link>
         )}
+        <LanguageSwitcher lang={lang} />
       </nav>
     </header>
   );

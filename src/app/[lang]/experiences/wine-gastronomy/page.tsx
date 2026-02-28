@@ -62,7 +62,12 @@ const features = [
   },
 ];
 
-export default function WineGastronomyPage() {
+export default async function WineGastronomyPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   return (
     <main>
       <PageHero
