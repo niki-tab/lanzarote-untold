@@ -4,6 +4,7 @@ import { ImageTextSection } from "@/presentation/components/sections/ImageTextSe
 import { FeatureGrid } from "@/presentation/components/sections/FeatureGrid";
 import { TestimonialStrip } from "@/presentation/components/sections/TestimonialStrip";
 import { CTASection } from "@/presentation/components/sections/CTASection";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 export const metadata: Metadata = {
   title: "Lanzarote Boat Trips, Diving & Sea Adventures",
@@ -68,7 +69,8 @@ export default async function SeaAdventurePage({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  await params;
+  const { lang } = await params;
+  const locale = lang as Locale;
   return (
     <main>
       <PageHero
@@ -113,7 +115,7 @@ export default async function SeaAdventurePage({
         location="Milan, Italy"
       />
 
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }

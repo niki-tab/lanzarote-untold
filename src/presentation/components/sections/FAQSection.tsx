@@ -11,6 +11,8 @@ interface FAQ {
 
 interface FAQSectionProps {
   faqs: FAQ[];
+  label?: string;
+  title?: string;
 }
 
 function FAQItem({ question, answer }: FAQ) {
@@ -40,13 +42,17 @@ function FAQItem({ question, answer }: FAQ) {
   );
 }
 
-export function FAQSection({ faqs }: FAQSectionProps) {
+export function FAQSection({
+  faqs,
+  label = "FREQUENTLY ASKED",
+  title = "Common questions",
+}: FAQSectionProps) {
   return (
     <section className="flex w-full flex-col gap-10 px-5 py-[60px] lg:gap-16 lg:px-[120px] lg:py-[120px]">
       <div className="flex flex-col gap-4 lg:gap-5">
-        <SectionLabel withLine>FREQUENTLY ASKED</SectionLabel>
+        <SectionLabel withLine>{label}</SectionLabel>
         <h2 className="font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
-          Common questions
+          {title}
         </h2>
       </div>
       <div className="flex flex-col border-t border-border">
