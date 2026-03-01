@@ -4,6 +4,7 @@ import { ImageTextSection } from "@/presentation/components/sections/ImageTextSe
 import { FeatureGrid } from "@/presentation/components/sections/FeatureGrid";
 import { TestimonialStrip } from "@/presentation/components/sections/TestimonialStrip";
 import { CTASection } from "@/presentation/components/sections/CTASection";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 export const metadata: Metadata = {
   title: "Lanzarote Wine Tour & Bodega Tasting — Private Experiences",
@@ -62,7 +63,13 @@ const features = [
   },
 ];
 
-export default function WineGastronomyPage() {
+export default async function WineGastronomyPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   return (
     <main>
       <PageHero
@@ -107,7 +114,7 @@ export default function WineGastronomyPage() {
         location="Zurich, Switzerland"
       />
 
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }

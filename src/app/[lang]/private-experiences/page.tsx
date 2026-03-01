@@ -5,6 +5,7 @@ import { FeatureGrid } from "@/presentation/components/sections/FeatureGrid";
 import { HowWeWorkSection } from "@/presentation/components/sections/HowWeWorkSection";
 import { TestimonialStrip } from "@/presentation/components/sections/TestimonialStrip";
 import { CTASection } from "@/presentation/components/sections/CTASection";
+import type { Locale } from "@/infrastructure/i18n/config";
 import { StaticContentRepository } from "@/infrastructure/adapters/StaticContentRepository";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     "Bespoke private experiences in Lanzarote. Custom itineraries, concierge-level service, exclusive access. Not found on TripAdvisor. Enquire now.",
   keywords: [
     "lanzarote private tour",
-    "lanzarote luxury experiences",
+    "lanzarote unique experiences",
     "lanzarote unique experiences",
     "lanzarote vip",
   ],
@@ -66,7 +67,13 @@ const features = [
 
 const repository = new StaticContentRepository();
 
-export default async function PrivateExperiencesPage() {
+export default async function PrivateExperiencesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const processSteps = await repository.getProcessSteps();
 
   return (
@@ -82,11 +89,11 @@ export default async function PrivateExperiencesPage() {
         label="YOUR JOURNEY"
         title="Travel designed around you"
         paragraphs={[
-          "Every traveller is different. Some want adventure, others want tranquility. Some arrive with a plan, others want to be surprised. Whatever your vision, our luxury Lanzarote experiences make it real.",
+          "Every traveller is different. Some want adventure, others want tranquility. Some arrive with a plan, others want to be surprised. Whatever your vision, our curated Lanzarote experiences make it real.",
           "A private tour with Lanzarote Untold goes beyond what any booking platform can offer. We create moments that are personal, meaningful, and impossible to replicate — because they're designed for you and you alone.",
         ]}
         image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-        imageAlt="Luxury private villa in Lanzarote"
+        imageAlt="Exclusive private villa in Lanzarote"
       />
 
       <FeatureGrid
@@ -103,7 +110,7 @@ export default async function PrivateExperiencesPage() {
         location="London, United Kingdom"
       />
 
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }

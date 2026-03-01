@@ -1,5 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Locale } from "@/infrastructure/i18n/config";
+import { localizedPath } from "@/infrastructure/i18n/config";
+
+interface DesktopFooterProps {
+  lang: Locale;
+}
 
 const footerColumns = [
   {
@@ -28,7 +34,7 @@ const footerColumns = [
   },
 ];
 
-export function DesktopFooter() {
+export function DesktopFooter({ lang }: DesktopFooterProps) {
   return (
     <footer className="hidden w-full flex-col gap-12 bg-dark-bg px-20 pt-[60px] pb-10 lg:flex">
       <div className="flex w-full flex-row justify-between">
@@ -47,12 +53,12 @@ export function DesktopFooter() {
                 Lanzarote Untold
               </span>
               <span className="font-inter text-[8px] font-normal tracking-[3px] text-gold">
-                LUXURY EXPERIENCES
+                CURATED EXPERIENCES
               </span>
             </div>
           </div>
           <p className="font-inter text-[13px] font-light leading-[1.7] text-text-muted">
-            Bespoke luxury travel experiences in Lanzarote, Canary Islands.
+            Bespoke curated experiences in Lanzarote, Canary Islands.
             Crafted with local expertise and international elegance.
           </p>
         </div>
@@ -67,7 +73,7 @@ export function DesktopFooter() {
               {col.links.map((link) => (
                 <Link
                   key={link.label}
-                  href={link.href}
+                  href={localizedPath(link.href, lang)}
                   className="font-inter text-[13px] text-text-muted transition-colors hover:text-text-primary"
                 >
                   {link.label}

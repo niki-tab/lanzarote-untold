@@ -12,7 +12,7 @@ const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const article = await convex.query(api.articles.getBySlug, { slug });
@@ -51,7 +51,7 @@ export const dynamic = "force-dynamic";
 export default async function ArticlePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }) {
   const { slug } = await params;
   const article = await convex.query(api.articles.getBySlug, { slug });

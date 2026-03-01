@@ -29,7 +29,12 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default async function BlogPage() {
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  await params;
   const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
   let initialData: any = { data: [], total: 0, page: 1, pageSize: 9, totalPages: 0 };
@@ -54,7 +59,9 @@ export default async function BlogPage() {
         label="THE JOURNAL"
         title="Stories from Lanzarote"
         subtitle="Local insights, hidden gems, and travel stories from those who call this island home."
-        backgroundImage="https://images.unsplash.com/photo-1630332458006-da1d94e4c2e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        backgroundImage="https://images.unsplash.com/photo-1706473841789-56f397f3f0ae"
+        imagePosition="center 60%"
+        imageSize="100% auto"
       />
 
       <section className="px-5 py-[60px] lg:px-[120px] lg:py-[100px]">

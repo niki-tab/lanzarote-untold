@@ -59,7 +59,7 @@ export function ExperiencesSection({ experiences }: ExperiencesSectionProps) {
             SIGNATURE EXPERIENCES
           </span>
           <h2 className="font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
-            Luxury Lanzarote experiences
+            Unique Lanzarote experiences
             <br />
             for the discerning traveller
           </h2>

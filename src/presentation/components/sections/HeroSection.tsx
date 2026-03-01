@@ -42,9 +42,9 @@ export function HeroSection() {
           </h1>
 
           <p className="w-full max-w-[300px] font-inter text-sm font-light leading-[1.8] text-text-secondary lg:max-w-[540px] lg:text-base">
-            Luxury Lanzarote experiences crafted around your desires. Private
+            Curated Lanzarote experiences crafted around your desires. Private
             tours, hidden coves, volcanic trails, and Michelin-starred dining —
-            all curated by those who call this island home.
+            all designed by those who call this island home.
           </p>
 
           <div className="flex flex-col gap-3 pr-5 md:flex-row md:items-center md:gap-5 md:pr-0">
