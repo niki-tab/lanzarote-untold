@@ -7,7 +7,9 @@ import { ArticleBody } from "@/presentation/components/blog/ArticleBody";
 import { RelatedArticles } from "@/presentation/components/blog/RelatedArticles";
 import { getBlogPostingStructuredData } from "@/infrastructure/seo/blogStructuredData";
 
-const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+function getConvex() {
+  return new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+}
 
 export async function generateMetadata({
   params,
@@ -15,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = await convex.query(api.articles.getBySlug, { slug });
+  const article = await getConvex().query(api.articles.getBySlug, { slug });
 
   if (!article) return {};
 
@@ -54,7 +56,7 @@ export default async function ArticlePage({
   params: Promise<{ lang: string; slug: string }>;
 }) {
   const { slug } = await params;
-  const article = await convex.query(api.articles.getBySlug, { slug });
+  const article = await getConvex().query(api.articles.getBySlug, { slug });
 
   if (!article || article.state !== "published") {
     notFound();
@@ -63,7 +65,7 @@ export default async function ArticlePage({
   // Fetch related articles from the same categories
   let relatedArticles: typeof article[] = [];
   if (article.categories && article.categories.length > 0) {
-    const result = await convex.query(api.articles.listPublished, {
+    const result = await getConvex().query(api.articles.listPublished, {
       categoryId: article.categories[0].id as any,
       pageSize: 4,
     });
