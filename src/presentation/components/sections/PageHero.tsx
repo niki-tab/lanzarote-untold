@@ -17,12 +17,25 @@ export function PageHero({
   imagePosition = "center",
   imageSize = "cover",
 }: PageHeroProps) {
+  // On mobile always use cover to fill the hero, custom size only on desktop
+  const mobileStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundPosition: imagePosition,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat" as const,
+  };
+
   return (
     <section className="relative h-[420px] w-full overflow-hidden lg:h-[600px]">
-      {/* Background Image */}
+      {/* Background Image - mobile (cover) */}
       <div
-        className="absolute inset-0"
-        style={{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: imagePosition, backgroundSize: imageSize }}
+        className="absolute inset-0 lg:hidden"
+        style={mobileStyle}
+      />
+      {/* Background Image - desktop (custom size) */}
+      <div
+        className="absolute inset-0 hidden lg:block"
+        style={{ ...mobileStyle, backgroundSize: imageSize }}
       />
 
       {/* Gradient Overlay */}

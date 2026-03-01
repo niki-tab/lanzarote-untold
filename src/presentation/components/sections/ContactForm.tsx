@@ -91,7 +91,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
     <section className="flex w-full flex-col gap-10 px-5 py-[60px] lg:flex-row lg:gap-20 lg:px-[120px] lg:py-[120px]">
       {/* Form */}
       <div className="flex w-full flex-col gap-8 lg:w-2/3">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <SectionLabel withLine>{t.sectionLabel}</SectionLabel>
           <h2 className="font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
             {t.heading}
@@ -152,7 +152,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
             />
             <button
               type="submit"
-              className="self-start bg-gold px-9 py-4 font-inter text-xs font-medium tracking-[2px] text-text-dark transition-opacity hover:opacity-80"
+              className="w-full bg-gold px-9 py-4 font-inter text-xs font-medium tracking-[2px] text-text-dark transition-opacity hover:opacity-80 md:w-auto md:self-start"
             >
               {t.submit}
             </button>
