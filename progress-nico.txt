@@ -1,5 +1,5 @@
 # Lanzarote Untold Development Progress
-# Updated: 2026-02-25
+# Updated: 2026-02-27
 # Read this file at the start of every session. Update it after completing features.
 
 ## COMPLETED
@@ -21,28 +21,76 @@
 - **Branding unified to "Lanzarote Untold"** (layout, metadata, structured data, testimonials, footers)
 - **6 new reusable section components**: PageHero, ImageTextSection, FeatureGrid, TestimonialStrip, ContactForm, FAQSection
 - **SEO metadata per page**: title with target keywords, description ≤155 chars, keywords array, openGraph + twitter
+- **Blog Admin Panel + Public Blog** (full CRUD for articles and categories)
 
-## ROUTES (10 total)
+## ROUTES (27 total)
+### Public (10)
 - `/` — Homepage
-- `/experiences` — Experiences overview (category grid + social proof + CTA)
+- `/experiences` — Experiences overview
 - `/experiences/wine-gastronomy` — Wine & Gastronomy detail
 - `/experiences/sea-adventure` — Sea & Adventure detail
 - `/experiences/volcano-nature` — Volcano & Nature detail
 - `/private-experiences` — Private & Custom experiences
 - `/about` — About us
 - `/contact` — Contact form + FAQ
-- `/blog` — Journal placeholder (coming soon)
+- `/blog` — Journal (dynamic, shows published articles or "coming soon" fallback)
+- `/blog/[slug]` — Article detail page (dynamic)
+
+### Admin (6)
+- `/admin` — Dashboard
+- `/admin/login` — Login page
+- `/admin/blog/categories` — Category list
+- `/admin/blog/categories/new` — Create category
+- `/admin/blog/categories/[id]/edit` — Edit category
+- `/admin/blog/articles` — Article list
+- `/admin/blog/articles/new` — Create article
+- `/admin/blog/articles/[id]/edit` — Edit article
+
+### API (7)
+- `/api/auth/[...nextauth]` — NextAuth authentication
+- `/api/admin/blog/categories` — GET (list) + POST (create)
+- `/api/admin/blog/categories/[id]` — GET + PUT + DELETE
+- `/api/admin/blog/articles` — GET (paginated) + POST
+- `/api/admin/blog/articles/[id]` — GET + PUT + DELETE
+- `/api/admin/upload` — POST (image upload)
+- `/api/blog` — GET (public published articles)
 
 ## IN PROGRESS
 - (nothing currently in progress)
 
 ## NEXT UP
-- Blog articles (actual content)
+- Run `docker compose up` and `npx prisma db push` + `npx prisma db seed` to initialize database
 - Multilingual (i18n) implementation
 - Experience detail pages with dynamic content
 - Real backend/form submission for contact form
 
 ## RECENT CHANGES
+
+### Session 2026-02-27 (Blog Admin Panel + Public Blog)
+- **Infrastructure**:
+  - PostgreSQL added to Docker Compose (postgres:16-alpine)
+  - Prisma v7 with driver adapter (@prisma/adapter-pg)
+  - NextAuth v4 with Credentials provider (JWT sessions)
+  - Middleware protecting /admin/* routes
+  - Route groups: `(public)` for existing pages, `(admin)` for admin panel
+- **Database models**: User, BlogCategory (hierarchical), BlogArticle (EN/ES bilingual), ArticleCategory (join)
+- **Domain**: Added blog types (BlogCategory, BlogArticle, TranslatableText, PaginatedResult, filters)
+- **Application**: IBlogRepository port + 13 use cases (CRUD for categories and articles, public queries)
+- **Infrastructure**: PrismaBlogRepository adapter with mapper functions (flat DB → domain objects)
+- **Admin Panel**:
+  - Login page (dark theme, gold accents)
+  - Dashboard with navigation cards
+  - Sidebar with collapsible navigation
+  - Category CRUD: list with search/toggle/delete, form with language tabs + slug auto-gen + color picker
+  - Article CRUD: list with search/filter/pagination, two-column form with TipTap rich text editor
+  - Shared UI components: AdminPageHeader, AdminTable, LanguageTabs, ConfirmModal, AdminInput, AdminSelect, AdminToggle, RichTextEditor, ImageUpload
+- **Public Blog**:
+  - Blog page with featured article + category filter + article grid + load more
+  - Article detail page with hero image, prose body, related articles, SEO structured data (BlogPosting JSON-LD)
+  - 7 blog components: BlogGrid, BlogFeatured, BlogCategoryFilter, BlogArticleCard, ArticleHero, ArticleBody, RelatedArticles
+- **Styles**: Blog prose styles (headings, links, lists, blockquotes, images) + TipTap editor styles
+- **Image upload**: Local storage to `public/uploads/blog/` with validation (type, size)
+- Build verified: `npx next build` passes with all 27 routes
 
 ### Session 2026-02-25 (Core Pages Build)
 - **6 new section components created**:
@@ -81,4 +129,6 @@
 
 ## KNOWN ISSUES
 - Contact form is UI-only (no backend submission)
-- Blog page is a "coming soon" placeholder
+- Database needs initialization: run `docker compose up`, then `npx prisma db push` + `npx prisma db seed`
+- Next.js 16 middleware deprecation warning (use "proxy" convention) — non-blocking
+- Default admin credentials: admin@lanzaroteuntold.com / admin123 (change in production)
