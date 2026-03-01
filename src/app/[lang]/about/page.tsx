@@ -208,17 +208,16 @@ export default async function AboutPage({ params }: AboutPageProps) {
       />
 
       <ImageTextSection
-        className="!pt-0 !lg:pt-0 -mt-8 lg:-mt-16"
         label={t.philosophy.label}
         title={t.philosophy.title}
         paragraphs={[...t.philosophy.paragraphs]}
-        image="https://images.unsplash.com/photo-1630332458006-da1d94e4c2e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        image="https://images.pexels.com/photos/8963240/pexels-photo-8963240.jpeg"
         imageAlt={t.philosophy.imageAlt}
         reversed
       />
 
-      <div className="-mt-8 lg:-mt-16">
-        <CTASection />
+      <div className="mt-10 lg:mt-16">
+        <CTASection lang={locale} />
       </div>
     </main>
   );

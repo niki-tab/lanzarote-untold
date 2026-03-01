@@ -134,7 +134,7 @@ export default async function ExperiencesPage({
       </section>
 
       <SocialProofSection stats={stats} testimonials={testimonials} />
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { FeatureGrid } from "@/presentation/components/sections/FeatureGrid";
 import { HowWeWorkSection } from "@/presentation/components/sections/HowWeWorkSection";
 import { TestimonialStrip } from "@/presentation/components/sections/TestimonialStrip";
 import { CTASection } from "@/presentation/components/sections/CTASection";
+import type { Locale } from "@/infrastructure/i18n/config";
 import { StaticContentRepository } from "@/infrastructure/adapters/StaticContentRepository";
 
 export const metadata: Metadata = {
@@ -71,7 +72,8 @@ export default async function PrivateExperiencesPage({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  await params;
+  const { lang } = await params;
+  const locale = lang as Locale;
   const processSteps = await repository.getProcessSteps();
 
   return (
@@ -108,7 +110,7 @@ export default async function PrivateExperiencesPage({
         location="London, United Kingdom"
       />
 
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }

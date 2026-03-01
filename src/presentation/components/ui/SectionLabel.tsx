@@ -11,7 +11,7 @@ export function SectionLabel({
 }: SectionLabelProps) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {withLine && <div className="h-px w-10 bg-gold" />}
+      {withLine && <div className="hidden h-px w-10 bg-gold lg:block" />}
       <span className="font-inter text-[9px] font-medium tracking-[3px] text-gold lg:text-[11px]">
         {children}
       </span>

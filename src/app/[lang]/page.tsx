@@ -6,6 +6,7 @@ import { HowWeWorkSection } from "@/presentation/components/sections/HowWeWorkSe
 import { ExperiencesSection } from "@/presentation/components/sections/ExperiencesSection";
 import { SocialProofSection } from "@/presentation/components/sections/SocialProofSection";
 import { CTASection } from "@/presentation/components/sections/CTASection";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 export const metadata: Metadata = {
   title: "Lanzarote Untold | Curated Experiences & Private Tours",
@@ -39,7 +40,8 @@ export default async function HomePage({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  await params;
+  const { lang } = await params;
+  const locale = lang as Locale;
   const { experiences, testimonials, stats, processSteps } =
     await getHomePageContent(repository);
 
@@ -49,7 +51,7 @@ export default async function HomePage({
       <HowWeWorkSection steps={processSteps} />
       <ExperiencesSection experiences={experiences} />
       <SocialProofSection stats={stats} testimonials={testimonials} />
-      <CTASection />
+      <CTASection lang={locale} />
     </main>
   );
 }
