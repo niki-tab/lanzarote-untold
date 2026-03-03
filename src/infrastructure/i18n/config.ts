@@ -35,6 +35,11 @@ export const routeSlugs: Record<string, Partial<Record<Locale, string>>> = {
     de: "/erlebnisse/wein-gastronomie",
     fr: "/experiences/vin-gastronomie",
   },
+  "/experiences/salt-flats": {
+    es: "/experiencias/salinas",
+    de: "/erlebnisse/salzgewinnung",
+    fr: "/experiences/salines",
+  },
   "/private-experiences": {
     es: "/experiencias-privadas",
     de: "/private-erlebnisse",

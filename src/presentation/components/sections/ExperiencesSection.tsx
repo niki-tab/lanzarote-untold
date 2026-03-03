@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Experience } from "@/domain/types";
@@ -23,9 +24,12 @@ function ExperienceCard({
       className="group relative flex min-h-[200px] overflow-hidden lg:min-h-0"
       style={{ height: "100%" }}
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-        style={{ backgroundImage: `url(${experience.image})` }}
+      <Image
+        src={experience.image}
+        alt={experience.title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
       />
       <div
         className="absolute inset-0"

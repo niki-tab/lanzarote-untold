@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/presentation/components/ui/SectionLabel";
 import { Button } from "@/presentation/components/ui/Button";
@@ -8,12 +9,13 @@ export function HeroSection() {
   return (
     <section className="relative h-[520px] w-full overflow-hidden lg:h-[780px]">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1588613877465-89cb8a91d363)",
-        }}
+      <Image
+        src="https://images.unsplash.com/photo-1588613877465-89cb8a91d363?w=1920&q=80"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
       />
 
       {/* Gradient Overlay */}

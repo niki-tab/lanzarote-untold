@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -48,12 +49,12 @@ export function CTASection({ lang = "en" }: CTASectionProps) {
   return (
     <section className="relative h-[420px] w-full overflow-hidden lg:h-[500px]">
       {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1544957347-2c015a5024ac)",
-        }}
+      <Image
+        src="https://images.unsplash.com/photo-1544957347-2c015a5024ac?w=1920&q=75"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-[#2A2624B0]" />
 
