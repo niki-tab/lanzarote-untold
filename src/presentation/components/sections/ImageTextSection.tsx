@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionLabel } from "@/presentation/components/ui/SectionLabel";
 
 interface ImageTextSectionProps {
@@ -23,11 +24,16 @@ export function ImageTextSection({
     <section className={`flex w-full flex-col gap-10 px-5 py-[30px] lg:flex-row lg:items-center lg:gap-20 lg:px-[120px] lg:py-[120px] ${className}`}>
       {/* Image */}
       <div
-        className={`h-[280px] w-full flex-shrink-0 bg-cover bg-center lg:h-[480px] lg:w-1/2 ${reversed ? "lg:order-2" : ""}`}
-        style={{ backgroundImage: `url(${image})` }}
-        role="img"
-        aria-label={imageAlt}
-      />
+        className={`relative h-[280px] w-full flex-shrink-0 lg:h-[480px] lg:w-1/2 ${reversed ? "lg:order-2" : ""}`}
+      >
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center"
+        />
+      </div>
 
       {/* Text */}
       <div className={`flex flex-col items-center gap-5 text-center lg:items-start lg:text-left lg:w-1/2 lg:gap-6 ${reversed ? "lg:order-1" : ""}`}>

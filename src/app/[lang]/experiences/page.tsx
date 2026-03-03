@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/presentation/components/sections/PageHero";
@@ -58,6 +59,14 @@ const categories = [
     label: "ADVENTURE",
   },
   {
+    title: "Salt & Heritage",
+    description: "Private tour of the Salinas de Janubio salt flats with Flor de Sal tasting",
+    image:
+      "https://images.pexels.com/photos/32781223/pexels-photo-32781223.jpeg",
+    href: "/experiences/salt-flats",
+    label: "HERITAGE",
+  },
+  {
     title: "Private & Custom",
     description: "Exclusive Lanzarote private tours and bespoke itineraries designed around you",
     image:
@@ -103,9 +112,12 @@ export default async function ExperiencesPage({
             href={localizedPath(cat.href, locale)}
             className="group relative flex h-[300px] overflow-hidden lg:h-[400px]"
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: `url(${cat.image})` }}
+            <Image
+              src={cat.image}
+              alt={cat.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div
               className="absolute inset-0"
