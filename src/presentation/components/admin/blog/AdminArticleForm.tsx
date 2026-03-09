@@ -27,16 +27,28 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
 
   const [titleEn, setTitleEn] = useState("");
   const [titleEs, setTitleEs] = useState("");
+  const [titleDe, setTitleDe] = useState("");
+  const [titleFr, setTitleFr] = useState("");
   const [slugEn, setSlugEn] = useState("");
   const [slugEs, setSlugEs] = useState("");
+  const [slugDe, setSlugDe] = useState("");
+  const [slugFr, setSlugFr] = useState("");
   const [excerptEn, setExcerptEn] = useState("");
   const [excerptEs, setExcerptEs] = useState("");
+  const [excerptDe, setExcerptDe] = useState("");
+  const [excerptFr, setExcerptFr] = useState("");
   const [bodyEn, setBodyEn] = useState("");
   const [bodyEs, setBodyEs] = useState("");
+  const [bodyDe, setBodyDe] = useState("");
+  const [bodyFr, setBodyFr] = useState("");
   const [seoTitleEn, setSeoTitleEn] = useState("");
   const [seoTitleEs, setSeoTitleEs] = useState("");
+  const [seoTitleDe, setSeoTitleDe] = useState("");
+  const [seoTitleFr, setSeoTitleFr] = useState("");
   const [seoDescriptionEn, setSeoDescriptionEn] = useState("");
   const [seoDescriptionEs, setSeoDescriptionEs] = useState("");
+  const [seoDescriptionDe, setSeoDescriptionDe] = useState("");
+  const [seoDescriptionFr, setSeoDescriptionFr] = useState("");
   const [featuredImageStorageId, setFeaturedImageStorageId] = useState<string | null>(null);
   const [featuredImageUrl, setFeaturedImageUrl] = useState<string | null>(null);
   const [state, setState] = useState<ArticleState>("draft");
@@ -55,16 +67,28 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
   if (article && !initialized) {
     setTitleEn(article.title.en);
     setTitleEs(article.title.es);
+    setTitleDe(article.title.de || "");
+    setTitleFr(article.title.fr || "");
     setSlugEn(article.slug.en);
     setSlugEs(article.slug.es);
+    setSlugDe(article.slug.de || "");
+    setSlugFr(article.slug.fr || "");
     setExcerptEn(article.excerpt?.en || "");
     setExcerptEs(article.excerpt?.es || "");
+    setExcerptDe(article.excerpt?.de || "");
+    setExcerptFr(article.excerpt?.fr || "");
     setBodyEn(article.body?.en || "");
     setBodyEs(article.body?.es || "");
+    setBodyDe(article.body?.de || "");
+    setBodyFr(article.body?.fr || "");
     setSeoTitleEn(article.seoTitle?.en || "");
     setSeoTitleEs(article.seoTitle?.es || "");
+    setSeoTitleDe(article.seoTitle?.de || "");
+    setSeoTitleFr(article.seoTitle?.fr || "");
     setSeoDescriptionEn(article.seoDescription?.en || "");
     setSeoDescriptionEs(article.seoDescription?.es || "");
+    setSeoDescriptionDe(article.seoDescription?.de || "");
+    setSeoDescriptionFr(article.seoDescription?.fr || "");
     setFeaturedImageUrl(article.featuredImage || null);
     setFeaturedImageStorageId(article.featuredImageStorageId || null);
     setState(article.state as ArticleState);
@@ -84,16 +108,28 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
     const data = {
       titleEn,
       titleEs,
+      titleDe: titleDe || undefined,
+      titleFr: titleFr || undefined,
       slugEn,
       slugEs,
+      slugDe: slugDe || undefined,
+      slugFr: slugFr || undefined,
       excerptEn: excerptEn || undefined,
       excerptEs: excerptEs || undefined,
+      excerptDe: excerptDe || undefined,
+      excerptFr: excerptFr || undefined,
       bodyEn: bodyEn || undefined,
       bodyEs: bodyEs || undefined,
+      bodyDe: bodyDe || undefined,
+      bodyFr: bodyFr || undefined,
       seoTitleEn: seoTitleEn || undefined,
       seoTitleEs: seoTitleEs || undefined,
+      seoTitleDe: seoTitleDe || undefined,
+      seoTitleFr: seoTitleFr || undefined,
       seoDescriptionEn: seoDescriptionEn || undefined,
       seoDescriptionEs: seoDescriptionEs || undefined,
+      seoDescriptionDe: seoDescriptionDe || undefined,
+      seoDescriptionFr: seoDescriptionFr || undefined,
       featuredImage: featuredImageStorageId
         ? (featuredImageStorageId as Id<"_storage">)
         : undefined,
@@ -118,101 +154,109 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
     );
   };
 
+  const langConfig: Record<Language, {
+    label: string;
+    title: string; setTitle: (v: string) => void;
+    slug: string; setSlug: (v: string) => void;
+    excerpt: string; setExcerpt: (v: string) => void;
+    body: string; setBody: (v: string) => void;
+    seoTitle: string; setSeoTitle: (v: string) => void;
+    seoDescription: string; setSeoDescription: (v: string) => void;
+    placeholders: { title: string; slug: string; excerpt: string; seoTitle: string; seoDescription: string };
+  }> = {
+    en: {
+      label: "English",
+      title: titleEn, setTitle: setTitleEn,
+      slug: slugEn, setSlug: setSlugEn,
+      excerpt: excerptEn, setExcerpt: setExcerptEn,
+      body: bodyEn, setBody: setBodyEn,
+      seoTitle: seoTitleEn, setSeoTitle: setSeoTitleEn,
+      seoDescription: seoDescriptionEn, setSeoDescription: setSeoDescriptionEn,
+      placeholders: { title: "Article title", slug: "article-slug", excerpt: "Brief summary...", seoTitle: "SEO title (max 60 chars)", seoDescription: "SEO description (max 155 chars)" },
+    },
+    es: {
+      label: "Español",
+      title: titleEs, setTitle: setTitleEs,
+      slug: slugEs, setSlug: setSlugEs,
+      excerpt: excerptEs, setExcerpt: setExcerptEs,
+      body: bodyEs, setBody: setBodyEs,
+      seoTitle: seoTitleEs, setSeoTitle: setSeoTitleEs,
+      seoDescription: seoDescriptionEs, setSeoDescription: setSeoDescriptionEs,
+      placeholders: { title: "Título del artículo", slug: "slug-del-articulo", excerpt: "Resumen breve...", seoTitle: "Título SEO (máx 60 caracteres)", seoDescription: "Descripción SEO (máx 155 caracteres)" },
+    },
+    de: {
+      label: "Deutsch",
+      title: titleDe, setTitle: setTitleDe,
+      slug: slugDe, setSlug: setSlugDe,
+      excerpt: excerptDe, setExcerpt: setExcerptDe,
+      body: bodyDe, setBody: setBodyDe,
+      seoTitle: seoTitleDe, setSeoTitle: setSeoTitleDe,
+      seoDescription: seoDescriptionDe, setSeoDescription: setSeoDescriptionDe,
+      placeholders: { title: "Artikeltitel", slug: "artikel-slug", excerpt: "Kurze Zusammenfassung...", seoTitle: "SEO-Titel (max 60 Zeichen)", seoDescription: "SEO-Beschreibung (max 155 Zeichen)" },
+    },
+    fr: {
+      label: "Français",
+      title: titleFr, setTitle: setTitleFr,
+      slug: slugFr, setSlug: setSlugFr,
+      excerpt: excerptFr, setExcerpt: setExcerptFr,
+      body: bodyFr, setBody: setBodyFr,
+      seoTitle: seoTitleFr, setSeoTitle: setSeoTitleFr,
+      seoDescription: seoDescriptionFr, setSeoDescription: setSeoDescriptionFr,
+      placeholders: { title: "Titre de l'article", slug: "slug-de-larticle", excerpt: "Bref résumé...", seoTitle: "Titre SEO (max 60 caractères)", seoDescription: "Description SEO (max 155 caractères)" },
+    },
+  };
+
+  const c = langConfig[lang];
+
   return (
     <div className="flex gap-6">
       {/* Left column: content */}
       <div className="flex-1 space-y-6 rounded-xl border border-border bg-footer-bg p-6">
         <LanguageTabs activeLanguage={lang} onChange={setLang} />
 
-        {lang === "en" ? (
-          <div className="space-y-5">
-            <AdminInput
-              label="Title (English)"
-              value={titleEn}
-              onChange={(v) => {
-                setTitleEn(v);
-                if (!isEdit) autoSlug(v, setSlugEn);
-              }}
-              required
-              placeholder="Article title"
-            />
-            <AdminInput
-              label="Slug (English)"
-              value={slugEn}
-              onChange={setSlugEn}
-              required
-              placeholder="article-slug"
-            />
-            <AdminInput
-              label="Excerpt (English)"
-              value={excerptEn}
-              onChange={setExcerptEn}
-              placeholder="Brief summary..."
-            />
-            <div>
-              <label className="mb-1.5 block font-inter text-xs font-medium tracking-wide text-text-muted">
-                BODY (ENGLISH)
-              </label>
-              <RichTextEditor content={bodyEn} onChange={setBodyEn} />
-            </div>
-            <AdminInput
-              label="SEO Title (English)"
-              value={seoTitleEn}
-              onChange={setSeoTitleEn}
-              placeholder="SEO title (max 60 chars)"
-            />
-            <AdminInput
-              label="SEO Description (English)"
-              value={seoDescriptionEn}
-              onChange={setSeoDescriptionEn}
-              placeholder="SEO description (max 155 chars)"
-            />
+        <div className="space-y-5">
+          <AdminInput
+            label={`Title (${c.label})`}
+            value={c.title}
+            onChange={(v) => {
+              c.setTitle(v);
+              if (!isEdit) autoSlug(v, c.setSlug);
+            }}
+            required={lang === "en" || lang === "es"}
+            placeholder={c.placeholders.title}
+          />
+          <AdminInput
+            label={`Slug (${c.label})`}
+            value={c.slug}
+            onChange={c.setSlug}
+            required={lang === "en" || lang === "es"}
+            placeholder={c.placeholders.slug}
+          />
+          <AdminInput
+            label={`Excerpt (${c.label})`}
+            value={c.excerpt}
+            onChange={c.setExcerpt}
+            placeholder={c.placeholders.excerpt}
+          />
+          <div>
+            <label className="mb-1.5 block font-inter text-xs font-medium tracking-wide text-text-muted">
+              BODY ({c.label.toUpperCase()})
+            </label>
+            <RichTextEditor content={c.body} onChange={c.setBody} language={lang} />
           </div>
-        ) : (
-          <div className="space-y-5">
-            <AdminInput
-              label="Title (Espanol)"
-              value={titleEs}
-              onChange={(v) => {
-                setTitleEs(v);
-                if (!isEdit) autoSlug(v, setSlugEs);
-              }}
-              required
-              placeholder="Titulo del articulo"
-            />
-            <AdminInput
-              label="Slug (Espanol)"
-              value={slugEs}
-              onChange={setSlugEs}
-              required
-              placeholder="slug-del-articulo"
-            />
-            <AdminInput
-              label="Excerpt (Espanol)"
-              value={excerptEs}
-              onChange={setExcerptEs}
-              placeholder="Resumen breve..."
-            />
-            <div>
-              <label className="mb-1.5 block font-inter text-xs font-medium tracking-wide text-text-muted">
-                BODY (ESPANOL)
-              </label>
-              <RichTextEditor content={bodyEs} onChange={setBodyEs} />
-            </div>
-            <AdminInput
-              label="SEO Title (Espanol)"
-              value={seoTitleEs}
-              onChange={setSeoTitleEs}
-              placeholder="Titulo SEO (max 60 caracteres)"
-            />
-            <AdminInput
-              label="SEO Description (Espanol)"
-              value={seoDescriptionEs}
-              onChange={setSeoDescriptionEs}
-              placeholder="Descripcion SEO (max 155 caracteres)"
-            />
-          </div>
-        )}
+          <AdminInput
+            label={`SEO Title (${c.label})`}
+            value={c.seoTitle}
+            onChange={c.setSeoTitle}
+            placeholder={c.placeholders.seoTitle}
+          />
+          <AdminInput
+            label={`SEO Description (${c.label})`}
+            value={c.seoDescription}
+            onChange={c.setSeoDescription}
+            placeholder={c.placeholders.seoDescription}
+          />
+        </div>
       </div>
 
       {/* Right column: meta */}

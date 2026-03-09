@@ -2,6 +2,13 @@
 
 import type { Language } from "@/domain/types";
 
+const languageLabels: Record<Language, string> = {
+  en: "English",
+  es: "Español",
+  de: "Deutsch",
+  fr: "Français",
+};
+
 interface LanguageTabsProps {
   activeLanguage: Language;
   onChange: (lang: Language) => void;
@@ -10,7 +17,7 @@ interface LanguageTabsProps {
 export function LanguageTabs({ activeLanguage, onChange }: LanguageTabsProps) {
   return (
     <div className="mb-6 flex gap-1 rounded-lg border border-border bg-dark-bg p-1">
-      {(["en", "es"] as Language[]).map((lang) => (
+      {(Object.keys(languageLabels) as Language[]).map((lang) => (
         <button
           key={lang}
           type="button"
@@ -21,7 +28,7 @@ export function LanguageTabs({ activeLanguage, onChange }: LanguageTabsProps) {
               : "text-text-muted hover:text-text-secondary"
           }`}
         >
-          {lang === "en" ? "English" : "Español"}
+          {languageLabels[lang]}
         </button>
       ))}
     </div>
