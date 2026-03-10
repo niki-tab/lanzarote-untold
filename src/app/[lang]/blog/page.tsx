@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ConvexHttpClient } from "convex/browser";
+import { api } from "../../../../convex/_generated/api";
 import { PageHero } from "@/presentation/components/sections/PageHero";
 import type { Locale } from "@/infrastructure/i18n/config";
 
