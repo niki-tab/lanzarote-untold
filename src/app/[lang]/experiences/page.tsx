@@ -34,13 +34,13 @@ const content = {
     testimonialsTitle: "What our guests say about their Lanzarote experiences",
     categories: [
       {
-        title: "Wine & Gastronomy",
-        description: "Private wine tours, local bodegas, and Michelin-starred dining in Lanzarote",
+        title: "Wine Tour: El Grifo & Bodega Vulcano",
+        description: "Private tasting at two iconic bodegas with a vineyard walk through La Geria",
         image:
-          "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/wine-gastronomy",
-        label: "GASTRONOMY",
-        alt: "Private wine tasting in Lanzarote volcanic vineyards",
+          "https://images.pexels.com/photos/15173378/pexels-photo-15173378.jpeg",
+        href: "/experiences/wine-tour",
+        label: "WINE TOUR",
+        alt: "Wine tasting at El Grifo bodega in Lanzarote La Geria",
       },
       {
         title: "Sea & Adventure",
@@ -52,15 +52,6 @@ const content = {
         alt: "Private boat trip along the coast of Lanzarote",
       },
       {
-        title: "Volcano & Nature",
-        description: "Lanzarote volcano tours, hidden hiking trails, and untouched landscapes",
-        image:
-          "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/volcano-nature",
-        label: "ADVENTURE",
-        alt: "Private volcano tour through Lanzarote fire mountains",
-      },
-      {
         title: "Salt & Heritage",
         description: "Private tour of the Salinas de Janubio salt flats with Flor de Sal tasting",
         image:
@@ -68,6 +59,15 @@ const content = {
         href: "/experiences/salt-flats",
         label: "HERITAGE",
         alt: "Salinas de Janubio artisanal salt flats in Lanzarote",
+      },
+      {
+        title: "North Trekking",
+        description: "Private hiking tour: La Corona volcano, Famara cliffs, and the valley of Haria",
+        image:
+          "https://images.pexels.com/photos/32381590/pexels-photo-32381590.jpeg",
+        href: "/experiences/north-trekking",
+        label: "TREKKING",
+        alt: "Hiking trail along Famara cliffs in northern Lanzarote",
       },
       {
         title: "Private & Custom",
@@ -82,12 +82,12 @@ const content = {
   },
   es: {
     meta: {
-      title: "Que Hacer en Lanzarote: Experiencias Exclusivas | Lanzarote Untold",
+      title: "Qué Hacer en Lanzarote: Experiencias Exclusivas | Lanzarote Untold",
       description:
-        "Descubre que hacer en Lanzarote. Tours privados al volcan, catas de vino, excursiones en barco, visitas a las salinas y mas. Todo con guias locales. Reserva ahora.",
+        "Descubre qué hacer en Lanzarote. Tours privados al volcán, catas de vino, excursiones en barco, visitas a las salinas y más. Todo con guías locales. Reserva ahora.",
       keywords: [
-        "que hacer en lanzarote",
-        "lanzarote que ver",
+        "qué hacer en lanzarote",
+        "lanzarote qué ver",
         "lanzarote excursiones",
         "lanzarote actividades",
         "lanzarote tours",
@@ -97,43 +97,34 @@ const content = {
     },
     hero: {
       label: "EXPERIENCIAS EXCLUSIVAS",
-      title: "Que Hacer en Lanzarote: Experiencias Exclusivas",
+      title: "Qué Hacer en Lanzarote: Experiencias Exclusivas",
       subtitle:
-        "Descubre las mejores actividades y excursiones en Lanzarote, pensadas para el viajero exigente. Cada experiencia se disena alrededor de ti, tu ritmo, tus pasiones, tu historia.",
+        "Descubre las mejores actividades y excursiones en Lanzarote, pensadas para el viajero exigente. Cada experiencia se diseña alrededor de ti, tu ritmo, tus pasiones, tu historia.",
     },
-    gridTitle: "Explora las excursiones en Lanzarote por categoria",
-    testimonialsTitle: "Lo que dicen nuestros huespedes sobre sus experiencias en Lanzarote",
+    gridTitle: "Explora las excursiones en Lanzarote por categoría",
+    testimonialsTitle: "Lo que dicen nuestros huéspedes sobre sus experiencias en Lanzarote",
     categories: [
       {
-        title: "Vino y Gastronomia",
-        description: "Catas de vino privadas, bodegas locales y alta gastronomia en Lanzarote",
+        title: "Ruta del Vino: El Grifo & Bodega Vulcano",
+        description: "Cata privada en dos bodegas icónicas con paseo por los viñedos de La Geria",
         image:
-          "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/wine-gastronomy",
-        label: "GASTRONOMIA",
-        alt: "Cata de vino privada en vinedos volcanicos de Lanzarote",
+          "https://images.pexels.com/photos/15173378/pexels-photo-15173378.jpeg",
+        href: "/experiences/wine-tour",
+        label: "RUTA DEL VINO",
+        alt: "Cata de vinos en la bodega El Grifo en La Geria, Lanzarote",
       },
       {
         title: "Mar y Aventura",
-        description: "Excursiones en barco, catamaran, buceo y pesca privada en Lanzarote",
+        description: "Excursiones en barco, catamarán, buceo y pesca privada en Lanzarote",
         image:
           "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
         href: "/experiences/sea-adventure",
-        label: "MARITIMO",
-        alt: "Excursion privada en barco por la costa de Lanzarote",
-      },
-      {
-        title: "Volcan y Naturaleza",
-        description: "Tours al volcan de Lanzarote, rutas de senderismo y paisajes virgenes",
-        image:
-          "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/volcano-nature",
-        label: "AVENTURA",
-        alt: "Tour privado por los volcanes de Lanzarote",
+        label: "MARÍTIMO",
+        alt: "Excursión privada en barco por la costa de Lanzarote",
       },
       {
         title: "Sal y Patrimonio",
-        description: "Visita privada a las Salinas de Janubio con degustacion de Flor de Sal",
+        description: "Visita privada a las Salinas de Janubio con degustación de Flor de Sal",
         image:
           "https://images.pexels.com/photos/32781223/pexels-photo-32781223.jpeg",
         href: "/experiences/salt-flats",
@@ -141,8 +132,17 @@ const content = {
         alt: "Salinas de Janubio, salinas artesanales en Lanzarote",
       },
       {
+        title: "Trekking Norte",
+        description: "Senderismo privado: volcán La Corona, acantilados de Famara y el valle de Haría",
+        image:
+          "https://images.pexels.com/photos/32381590/pexels-photo-32381590.jpeg",
+        href: "/experiences/north-trekking",
+        label: "TREKKING",
+        alt: "Ruta de senderismo por los acantilados de Famara en el norte de Lanzarote",
+      },
+      {
         title: "Privado y a Medida",
-        description: "Tours privados exclusivos e itinerarios a medida disenados para ti",
+        description: "Tours privados exclusivos e itinerarios a medida diseñados para ti",
         image:
           "https://images.unsplash.com/photo-1544957347-2c015a5024ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         href: "/private-experiences",
@@ -153,13 +153,13 @@ const content = {
   },
   de: {
     meta: {
-      title: "Lanzarote Ausfluge & Sehenswurdigkeiten: Exklusive Erlebnisse | Lanzarote Untold",
+      title: "Lanzarote Ausflüge & Sehenswürdigkeiten: Exklusive Erlebnisse | Lanzarote Untold",
       description:
-        "Entdecke die besten Lanzarote Ausfluge und Sehenswurdigkeiten. Private Vulkantouren, Weinproben, Bootstouren, Salinenbesuche und mehr. Mit lokalen Experten. Jetzt anfragen.",
+        "Entdecke die besten Lanzarote Ausflüge und Sehenswürdigkeiten. Private Vulkantouren, Weinproben, Bootstouren, Salinenbesuche und mehr. Mit lokalen Experten. Jetzt anfragen.",
       keywords: [
-        "lanzarote ausfluge",
-        "lanzarote sehenswurdigkeiten",
-        "lanzarote aktivitaten",
+        "lanzarote ausflüge",
+        "lanzarote sehenswürdigkeiten",
+        "lanzarote aktivitäten",
         "lanzarote touren",
         "lanzarote geheimtipps",
         "lanzarote erlebnisse",
@@ -168,21 +168,21 @@ const content = {
     },
     hero: {
       label: "EXKLUSIVE ERLEBNISSE",
-      title: "Lanzarote Ausfluge & Sehenswurdigkeiten: Exklusive Erlebnisse",
+      title: "Lanzarote Ausflüge & Sehenswürdigkeiten: Exklusive Erlebnisse",
       subtitle:
-        "Entdecke die besten Aktivitaten und Ausfluge auf Lanzarote, kuratiert fur anspruchsvolle Reisende. Jedes Erlebnis wird um dich herum gestaltet, dein Tempo, deine Leidenschaften, deine Geschichte.",
+        "Entdecke die besten Aktivitäten und Ausflüge auf Lanzarote, kuratiert für anspruchsvolle Reisende. Jedes Erlebnis wird um dich herum gestaltet, dein Tempo, deine Leidenschaften, deine Geschichte.",
     },
-    gridTitle: "Entdecke Lanzarote Ausfluge nach Kategorie",
-    testimonialsTitle: "Was unsere Gaste uber ihre Lanzarote Erlebnisse sagen",
+    gridTitle: "Entdecke Lanzarote Ausflüge nach Kategorie",
+    testimonialsTitle: "Was unsere Gäste über ihre Lanzarote Erlebnisse sagen",
     categories: [
       {
-        title: "Wein & Gastronomie",
-        description: "Private Weinproben, lokale Bodegas und Spitzengastronomie auf Lanzarote",
+        title: "Weintour: El Grifo & Bodega Vulcano",
+        description: "Private Verkostung in zwei ikonischen Bodegas mit Weinbergwanderung durch La Geria",
         image:
-          "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/wine-gastronomy",
-        label: "GASTRONOMIE",
-        alt: "Private Weinverkostung in den vulkanischen Weinbergen von Lanzarote",
+          "https://images.pexels.com/photos/15173378/pexels-photo-15173378.jpeg",
+        href: "/experiences/wine-tour",
+        label: "WEINTOUR",
+        alt: "Weinverkostung in der Bodega El Grifo in La Geria, Lanzarote",
       },
       {
         title: "Meer & Abenteuer",
@@ -191,20 +191,11 @@ const content = {
           "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
         href: "/experiences/sea-adventure",
         label: "MARITIM",
-        alt: "Private Bootstour entlang der Kuste von Lanzarote",
-      },
-      {
-        title: "Vulkan & Natur",
-        description: "Lanzarote Vulkantouren, versteckte Wanderwege und unberuhrte Landschaften",
-        image:
-          "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/volcano-nature",
-        label: "ABENTEUER",
-        alt: "Private Vulkantour durch die Feuerberge von Lanzarote",
+        alt: "Private Bootstour entlang der Küste von Lanzarote",
       },
       {
         title: "Salz & Kulturerbe",
-        description: "Private Fuhrung durch die Salinas de Janubio mit Flor de Sal Verkostung",
+        description: "Private Führung durch die Salinas de Janubio mit Flor de Sal Verkostung",
         image:
           "https://images.pexels.com/photos/32781223/pexels-photo-32781223.jpeg",
         href: "/experiences/salt-flats",
@@ -212,84 +203,93 @@ const content = {
         alt: "Salinas de Janubio handwerkliche Salzgewinnung auf Lanzarote",
       },
       {
-        title: "Privat & Massgeschneidert",
-        description: "Exklusive private Touren und massgeschneiderte Reiserouten fur dich",
+        title: "Nord-Trekking",
+        description: "Private Wanderung: Vulkan La Corona, Famara-Klippen und das Tal von Haría",
+        image:
+          "https://images.pexels.com/photos/32381590/pexels-photo-32381590.jpeg",
+        href: "/experiences/north-trekking",
+        label: "TREKKING",
+        alt: "Wanderweg entlang der Famara-Klippen im Norden von Lanzarote",
+      },
+      {
+        title: "Privat & Maßgeschneidert",
+        description: "Exklusive private Touren und maßgeschneiderte Reiserouten für dich",
         image:
           "https://images.unsplash.com/photo-1544957347-2c015a5024ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         href: "/private-experiences",
         label: "EXKLUSIV",
-        alt: "Massgeschneidertes privates Erlebnis auf Lanzarote",
+        alt: "Maßgeschneidertes privates Erlebnis auf Lanzarote",
       },
     ],
   },
   fr: {
     meta: {
-      title: "Que Faire a Lanzarote: Experiences Exclusives | Lanzarote Untold",
+      title: "Que Faire à Lanzarote: Expériences Exclusives | Lanzarote Untold",
       description:
-        "Decouvrez que faire a Lanzarote. Visites privees du volcan, degustations de vin, excursions en bateau, salines et plus. Guides locaux experts. Reservez maintenant.",
+        "Découvrez que faire à Lanzarote. Visites privées du volcan, dégustations de vin, excursions en bateau, salines et plus. Guides locaux experts. Réservez maintenant.",
       keywords: [
         "lanzarote que faire",
         "lanzarote excursions",
-        "lanzarote activites",
+        "lanzarote activités",
         "lanzarote visite",
         "lanzarote incontournables",
         "lanzarote voyage",
-        "lanzarote experiences",
+        "lanzarote expériences",
       ],
     },
     hero: {
-      label: "EXPERIENCES EXCLUSIVES",
-      title: "Que Faire a Lanzarote: Experiences Exclusives",
+      label: "EXPÉRIENCES EXCLUSIVES",
+      title: "Que Faire à Lanzarote: Expériences Exclusives",
       subtitle:
-        "Decouvrez les meilleures activites et excursions a Lanzarote, pensees pour le voyageur exigeant. Chaque experience est concue autour de vous, votre rythme, vos passions, votre histoire.",
+        "Découvrez les meilleures activités et excursions à Lanzarote, pensées pour le voyageur exigeant. Chaque expérience est conçue autour de vous, votre rythme, vos passions, votre histoire.",
     },
-    gridTitle: "Explorez les excursions a Lanzarote par categorie",
-    testimonialsTitle: "Ce que disent nos hotes de leurs experiences a Lanzarote",
+    gridTitle: "Explorez les excursions à Lanzarote par catégorie",
+    testimonialsTitle: "Ce que disent nos hôtes de leurs expériences à Lanzarote",
     categories: [
       {
-        title: "Vin & Gastronomie",
-        description: "Degustations de vin privees, caves locales et haute gastronomie a Lanzarote",
+        title: "Route des Vins: El Grifo & Bodega Vulcano",
+        description: "Dégustation privée dans deux caves emblématiques avec balade dans les vignobles de La Geria",
         image:
-          "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/wine-gastronomy",
-        label: "GASTRONOMIE",
-        alt: "Degustation de vin privee dans les vignobles volcaniques de Lanzarote",
+          "https://images.pexels.com/photos/15173378/pexels-photo-15173378.jpeg",
+        href: "/experiences/wine-tour",
+        label: "ROUTE DES VINS",
+        alt: "Dégustation de vin à la cave El Grifo dans La Geria, Lanzarote",
       },
       {
         title: "Mer & Aventure",
-        description: "Excursions en bateau, catamaran, plongee et peche privee a Lanzarote",
+        description: "Excursions en bateau, catamaran, plongée et pêche privée à Lanzarote",
         image:
           "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
         href: "/experiences/sea-adventure",
         label: "MARITIME",
-        alt: "Excursion privee en bateau le long de la cote de Lanzarote",
-      },
-      {
-        title: "Volcan & Nature",
-        description: "Visites du volcan de Lanzarote, sentiers de randonnee et paysages preserves",
-        image:
-          "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/volcano-nature",
-        label: "AVENTURE",
-        alt: "Visite privee des volcans et montagnes de feu de Lanzarote",
+        alt: "Excursion privée en bateau le long de la côte de Lanzarote",
       },
       {
         title: "Sel & Patrimoine",
-        description: "Visite privee des Salinas de Janubio avec degustation de Flor de Sal",
+        description: "Visite privée des Salinas de Janubio avec dégustation de Flor de Sal",
         image:
           "https://images.pexels.com/photos/32781223/pexels-photo-32781223.jpeg",
         href: "/experiences/salt-flats",
         label: "PATRIMOINE",
-        alt: "Salinas de Janubio, salines artisanales a Lanzarote",
+        alt: "Salinas de Janubio, salines artisanales à Lanzarote",
       },
       {
-        title: "Prive & Sur Mesure",
-        description: "Visites privees exclusives et itineraires sur mesure concus pour vous",
+        title: "Trek Nord",
+        description: "Randonnée privée: volcan La Corona, falaises de Famara et la vallée de Haría",
+        image:
+          "https://images.pexels.com/photos/32381590/pexels-photo-32381590.jpeg",
+        href: "/experiences/north-trekking",
+        label: "TREKKING",
+        alt: "Sentier de randonnée le long des falaises de Famara au nord de Lanzarote",
+      },
+      {
+        title: "Privé & Sur Mesure",
+        description: "Visites privées exclusives et itinéraires sur mesure conçus pour vous",
         image:
           "https://images.unsplash.com/photo-1544957347-2c015a5024ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         href: "/private-experiences",
         label: "SUR MESURE",
-        alt: "Experience privee sur mesure a Lanzarote",
+        alt: "Expérience privée sur mesure à Lanzarote",
       },
     ],
   },

@@ -25,20 +25,20 @@ export const routeSlugs: Record<string, Partial<Record<Locale, string>>> = {
     de: "/erlebnisse/meer-abenteuer",
     fr: "/experiences/aventure-maritime",
   },
-  "/experiences/volcano-nature": {
-    es: "/experiencias/volcan-naturaleza",
-    de: "/erlebnisse/vulkan-natur",
-    fr: "/experiences/volcan-nature",
-  },
-  "/experiences/wine-gastronomy": {
-    es: "/experiencias/vino-gastronomia",
-    de: "/erlebnisse/wein-gastronomie",
-    fr: "/experiences/vin-gastronomie",
-  },
   "/experiences/salt-flats": {
     es: "/experiencias/salinas",
     de: "/erlebnisse/salzgewinnung",
     fr: "/experiences/salines",
+  },
+  "/experiences/north-trekking": {
+    es: "/experiencias/trekking-norte",
+    de: "/erlebnisse/nord-trekking",
+    fr: "/experiences/trek-nord",
+  },
+  "/experiences/wine-tour": {
+    es: "/experiencias/ruta-del-vino",
+    de: "/erlebnisse/weintour",
+    fr: "/experiences/route-des-vins",
   },
   "/private-experiences": {
     es: "/experiencias-privadas",
