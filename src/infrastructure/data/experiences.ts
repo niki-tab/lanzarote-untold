@@ -2,12 +2,12 @@ import type { Experience } from "@/domain/types";
 
 export const experiences: Experience[] = [
   {
-    id: "exp-volcanic",
-    title: "Volcanic Trails & Fire Mountains",
-    category: "ADVENTURE",
+    id: "exp-wine-tour",
+    title: "Wine Tour: El Grifo & Bodega Vulcano",
+    category: "WINE TOUR",
     image:
-      "https://images.unsplash.com/photo-1652040287142-de0541acb2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-    slug: "/experiences/volcano-nature",
+      "https://images.pexels.com/photos/15173378/pexels-photo-15173378.jpeg",
+    slug: "/experiences/wine-tour",
   },
   {
     id: "exp-yacht",
@@ -18,11 +18,11 @@ export const experiences: Experience[] = [
     slug: "/experiences/sea-adventure",
   },
   {
-    id: "exp-wine",
-    title: "Wine Caves & Private Dining",
-    category: "GASTRONOMY",
+    id: "exp-salt",
+    title: "Salinas de Janubio Private Tour",
+    category: "HERITAGE",
     image:
-      "https://images.unsplash.com/photo-1572935041470-cef27cedab8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0OTU3OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-    slug: "/experiences/wine-gastronomy",
+      "https://images.pexels.com/photos/32781223/pexels-photo-32781223.jpeg",
+    slug: "/experiences/salt-flats",
   },
 ];

@@ -7,7 +7,7 @@ import type { Locale } from "@/infrastructure/i18n/config";
 const content = {
   en: {
     meta: {
-      title: "Contact & Book Your Lanzarote Experience",
+      title: "Contact & Book Your Lanzarote Experience | Lanzarote Untold",
       description:
         "Book a private tour or experience in Lanzarote. Complimentary consultation via WhatsApp, email, or phone. We respond within 24 hours.",
       keywords: [
@@ -60,9 +60,9 @@ const content = {
   },
   es: {
     meta: {
-      title: "Contacto | Reserva Tu Experiencia en Lanzarote",
+      title: "Contacto | Lanzarote Untold",
       description:
-        "Reserva un tour privado o experiencia en Lanzarote. Consulta gratuita por WhatsApp, email o telefono. Respondemos en 24 horas.",
+        "Reserva un tour privado o experiencia en Lanzarote. Consulta gratuita por WhatsApp, email o teléfono. Respondemos en 24 horas.",
       keywords: [
         "reservar experiencia lanzarote",
         "lanzarote tours",
@@ -74,25 +74,25 @@ const content = {
       label: "CONTACTO",
       title: "Reserva tu experiencia en Lanzarote",
       subtitle:
-        "Cuentanos tu tour privado o experiencia ideal en Lanzarote. Respondemos a cada consulta en 24 horas.",
+        "Cuéntanos tu tour privado o experiencia ideal en Lanzarote. Respondemos a cada consulta en 24 horas.",
     },
     faqLabel: "PREGUNTAS FRECUENTES",
     faqTitle: "Preguntas habituales",
     faqs: [
       {
-        question: "¿Con cuanta antelacion debo reservar?",
+        question: "¿Con cuánta antelación debo reservar?",
         answer:
-          "Recomendamos contactar al menos 2-4 semanas antes de tu viaje para mejor disponibilidad. Sin embargo, a menudo podemos acomodar solicitudes con menor antelacion. No dudes en contactarnos incluso para peticiones de ultimo momento.",
+          "Recomendamos contactar al menos 2-4 semanas antes de tu viaje para mejor disponibilidad. Sin embargo, a menudo podemos acomodar solicitudes con menor antelación. No dudes en contactarnos incluso para peticiones de último momento.",
       },
       {
-        question: "¿Que incluye la consulta?",
+        question: "¿Qué incluye la consulta?",
         answer:
-          "Nuestra consulta gratuita es una conversacion sobre tu estilo de viaje, intereses, fechas y presupuesto. No hay compromiso. Simplemente queremos entender que haria tu experiencia en Lanzarote perfecta.",
+          "Nuestra consulta gratuita es una conversación sobre tu estilo de viaje, intereses, fechas y presupuesto. No hay compromiso. Simplemente queremos entender qué haría tu experiencia en Lanzarote perfecta.",
       },
       {
-        question: "¿Podeis organizar alojamiento?",
+        question: "¿Podéis organizar alojamiento?",
         answer:
-          "Si. Tenemos acceso a una seleccion de villas privadas, hoteles boutique y propiedades exclusivas en Lanzarote. Te recomendaremos opciones que se ajusten a tus preferencias y presupuesto.",
+          "Sí. Tenemos acceso a una selección de villas privadas, hoteles boutique y propiedades exclusivas en Lanzarote. Te recomendaremos opciones que se ajusten a tus preferencias y presupuesto.",
       },
       {
         question: "¿Las experiencias son adecuadas para familias?",
@@ -100,25 +100,25 @@ const content = {
           "Por supuesto. Muchas de nuestras experiencias se pueden adaptar para familias, incluyendo paseos en barco privados, rutas por la naturaleza y experiencias culinarias. Ajustamos el ritmo y contenido para todas las edades.",
       },
       {
-        question: "¿Cual es vuestra politica de cancelacion?",
+        question: "¿Cuál es vuestra política de cancelación?",
         answer:
-          "Entendemos que los planes pueden cambiar. La mayoria de experiencias se pueden reprogramar o cancelar hasta 48 horas antes con reembolso completo. Los terminos especificos varian segun la experiencia y se confirman al reservar.",
+          "Entendemos que los planes pueden cambiar. La mayoría de experiencias se pueden reprogramar o cancelar hasta 48 horas antes con reembolso completo. Los términos específicos varían según la experiencia y se confirman al reservar.",
       },
       {
-        question: "¿Ofreceis experiencias para grupos?",
+        question: "¿Ofrecéis experiencias para grupos?",
         answer:
-          "Nos especializamos en experiencias privadas y de grupos reducidos. Para grupos mas grandes como eventos corporativos o celebraciones, creamos programas a medida. Contacta con nosotros para hablar de tus necesidades.",
+          "Nos especializamos en experiencias privadas y de grupos reducidos. Para grupos más grandes como eventos corporativos o celebraciones, creamos programas a medida. Contacta con nosotros para hablar de tus necesidades.",
       },
     ],
   },
   de: {
     meta: {
-      title: "Kontakt | Buche Dein Lanzarote Erlebnis",
+      title: "Kontakt | Lanzarote Untold",
       description:
         "Buche eine private Tour oder ein Erlebnis auf Lanzarote. Kostenlose Beratung per WhatsApp, E-Mail oder Telefon. Wir antworten innerhalb von 24 Stunden.",
       keywords: [
         "lanzarote touren",
-        "lanzarote ausfluge",
+        "lanzarote ausflüge",
         "lanzarote reise buchen",
         "kontakt lanzarote untold",
       ],
@@ -127,93 +127,93 @@ const content = {
       label: "KONTAKT",
       title: "Buche dein Lanzarote Erlebnis",
       subtitle:
-        "Erzahl uns von deiner Traum-Tour oder deinem Wunscherlebnis auf Lanzarote. Wir antworten auf jede Anfrage innerhalb von 24 Stunden.",
+        "Erzähl uns von deiner Traum-Tour oder deinem Wunscherlebnis auf Lanzarote. Wir antworten auf jede Anfrage innerhalb von 24 Stunden.",
     },
-    faqLabel: "HAUFIG GEFRAGT",
-    faqTitle: "Haufige Fragen",
+    faqLabel: "HÄUFIG GEFRAGT",
+    faqTitle: "Häufige Fragen",
     faqs: [
       {
         question: "Wie weit im Voraus sollte ich buchen?",
         answer:
-          "Wir empfehlen, mindestens 2-4 Wochen vor deiner Reise Kontakt aufzunehmen. Wir konnen aber oft auch kurzfristige Anfragen berucksichtigen. Zogere nicht, uns auch fur Last-Minute-Wunsche zu kontaktieren.",
+          "Wir empfehlen, mindestens 2-4 Wochen vor deiner Reise Kontakt aufzunehmen. Wir können aber oft auch kurzfristige Anfragen berücksichtigen. Zögere nicht, uns auch für Last-Minute-Wünsche zu kontaktieren.",
       },
       {
         question: "Was beinhaltet die Beratung?",
         answer:
-          "Unsere kostenlose Beratung ist ein Gesprach uber deinen Reisestil, Interessen, Termine und Budget. Es gibt keine Verpflichtung. Wir mochten einfach verstehen, was dein Lanzarote-Erlebnis perfekt machen wurde.",
+          "Unsere kostenlose Beratung ist ein Gespräch über deinen Reisestil, Interessen, Termine und Budget. Es gibt keine Verpflichtung. Wir möchten einfach verstehen, was dein Lanzarote-Erlebnis perfekt machen würde.",
       },
       {
-        question: "Konnt ihr Unterkunfte organisieren?",
+        question: "Könnt ihr Unterkünfte organisieren?",
         answer:
           "Ja. Wir haben Zugang zu einer Auswahl an privaten Villen, Boutique-Hotels und exklusiven Unterkünften auf Lanzarote. Wir empfehlen Optionen, die zu deinen Vorstellungen und deinem Budget passen.",
       },
       {
-        question: "Sind die Erlebnisse fur Familien geeignet?",
+        question: "Sind die Erlebnisse für Familien geeignet?",
         answer:
-          "Auf jeden Fall. Viele unserer Erlebnisse konnen fur Familien angepasst werden, darunter private Bootstouren, Naturwanderungen und Kocherlebnisse. Wir passen Tempo und Inhalt fur alle Altersgruppen an.",
+          "Auf jeden Fall. Viele unserer Erlebnisse können für Familien angepasst werden, darunter private Bootstouren, Naturwanderungen und Kocherlebnisse. Wir passen Tempo und Inhalt für alle Altersgruppen an.",
       },
       {
         question: "Wie ist eure Stornierungspolitik?",
         answer:
-          "Wir verstehen, dass sich Plane andern konnen. Die meisten Erlebnisse konnen bis 48 Stunden vorher umgebucht oder storniert werden mit voller Ruckerstattung. Genaue Bedingungen variieren je nach Erlebnis und werden bei der Buchung bestatigt.",
+          "Wir verstehen, dass sich Pläne ändern können. Die meisten Erlebnisse können bis 48 Stunden vorher umgebucht oder storniert werden mit voller Rückerstattung. Genaue Bedingungen variieren je nach Erlebnis und werden bei der Buchung bestätigt.",
       },
       {
         question: "Bietet ihr Gruppenerlebnisse an?",
         answer:
-          "Wir sind auf private Erlebnisse und kleine Gruppen spezialisiert. Fur grossere Gruppen wie Firmenevents oder Feiern erstellen wir massgeschneiderte Programme. Kontaktiere uns, um deine Anforderungen zu besprechen.",
+          "Wir sind auf private Erlebnisse und kleine Gruppen spezialisiert. Für größere Gruppen wie Firmenevents oder Feiern erstellen wir maßgeschneiderte Programme. Kontaktiere uns, um deine Anforderungen zu besprechen.",
       },
     ],
   },
   fr: {
     meta: {
-      title: "Contact | Reservez Votre Experience a Lanzarote",
+      title: "Contact | Lanzarote Untold",
       description:
-        "Reservez une visite privee ou une experience a Lanzarote. Consultation gratuite par WhatsApp, email ou telephone. Reponse sous 24 heures.",
+        "Réservez une visite privée ou une expérience à Lanzarote. Consultation gratuite par WhatsApp, email ou téléphone. Réponse sous 24 heures.",
       keywords: [
         "lanzarote excursions",
         "lanzarote voyage",
-        "reserver experience lanzarote",
+        "réserver expérience lanzarote",
         "contact lanzarote untold",
       ],
     },
     hero: {
       label: "CONTACT",
-      title: "Reservez votre experience a Lanzarote",
+      title: "Réservez votre expérience à Lanzarote",
       subtitle:
-        "Parlez-nous de votre visite privee ou experience ideale a Lanzarote. Nous repondons a chaque demande sous 24 heures.",
+        "Parlez-nous de votre visite privée ou expérience idéale à Lanzarote. Nous répondons à chaque demande sous 24 heures.",
     },
-    faqLabel: "QUESTIONS FREQUENTES",
+    faqLabel: "QUESTIONS FRÉQUENTES",
     faqTitle: "Questions courantes",
     faqs: [
       {
-        question: "Combien de temps a l'avance dois-je reserver ?",
+        question: "Combien de temps à l'avance dois-je réserver ?",
         answer:
-          "Nous recommandons de nous contacter au moins 2 a 4 semaines avant votre voyage pour la meilleure disponibilite. Cependant, nous pouvons souvent accueillir des demandes de derniere minute. N'hesitez pas a nous contacter.",
+          "Nous recommandons de nous contacter au moins 2 à 4 semaines avant votre voyage pour la meilleure disponibilité. Cependant, nous pouvons souvent accueillir des demandes de dernière minute. N'hésitez pas à nous contacter.",
       },
       {
         question: "Que comprend la consultation ?",
         answer:
-          "Notre consultation gratuite est une conversation sur votre style de voyage, vos interets, vos dates et votre budget. Il n'y a aucun engagement. Nous voulons simplement comprendre ce qui rendrait votre experience a Lanzarote parfaite.",
+          "Notre consultation gratuite est une conversation sur votre style de voyage, vos intérêts, vos dates et votre budget. Il n'y a aucun engagement. Nous voulons simplement comprendre ce qui rendrait votre expérience à Lanzarote parfaite.",
       },
       {
-        question: "Pouvez-vous organiser l'hebergement ?",
+        question: "Pouvez-vous organiser l'hébergement ?",
         answer:
-          "Oui. Nous avons acces a une selection de villas privees, d'hotels boutique et de proprietes exclusives a Lanzarote. Nous vous recommanderons des options adaptees a vos preferences et a votre budget.",
+          "Oui. Nous avons accès à une sélection de villas privées, d'hôtels boutique et de propriétés exclusives à Lanzarote. Nous vous recommanderons des options adaptées à vos préférences et à votre budget.",
       },
       {
-        question: "Les experiences conviennent-elles aux familles ?",
+        question: "Les expériences conviennent-elles aux familles ?",
         answer:
-          "Absolument. Beaucoup de nos experiences peuvent etre adaptees aux familles, notamment les sorties en bateau privees, les promenades nature et les experiences culinaires. Nous ajustons le rythme et le contenu pour tous les ages.",
+          "Absolument. Beaucoup de nos expériences peuvent être adaptées aux familles, notamment les sorties en bateau privées, les promenades nature et les expériences culinaires. Nous ajustons le rythme et le contenu pour tous les âges.",
       },
       {
         question: "Quelle est votre politique d'annulation ?",
         answer:
-          "Nous comprenons que les plans peuvent changer. La plupart des experiences peuvent etre reprogrammees ou annulees jusqu'a 48 heures a l'avance avec un remboursement complet. Les conditions specifiques varient selon l'experience et seront confirmees lors de la reservation.",
+          "Nous comprenons que les plans peuvent changer. La plupart des expériences peuvent être reprogrammées ou annulées jusqu'à 48 heures à l'avance avec un remboursement complet. Les conditions spécifiques varient selon l'expérience et seront confirmées lors de la réservation.",
       },
       {
-        question: "Proposez-vous des experiences de groupe ?",
+        question: "Proposez-vous des expériences de groupe ?",
         answer:
-          "Nous sommes specialises dans les experiences privees et en petit groupe. Pour les groupes plus importants comme les evenements d'entreprise ou les celebrations, nous creons des programmes sur mesure. Contactez-nous pour discuter de vos besoins.",
+          "Nous sommes spécialisés dans les expériences privées et en petit groupe. Pour les groupes plus importants comme les événements d'entreprise ou les célébrations, nous créons des programmes sur mesure. Contactez-nous pour discuter de vos besoins.",
       },
     ],
   },

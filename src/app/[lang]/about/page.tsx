@@ -7,7 +7,7 @@ import type { Locale } from "@/infrastructure/i18n/config";
 const content = {
   en: {
     meta: {
-      title: "About Us | Lanzarote's Local Travel Experts",
+      title: "About Us | Lanzarote Untold",
       description:
         "Lanzarote locals who travelled the world and came back. We are the concierge and travel agency that knows every corner of this island. Meet the team.",
       keywords: [
@@ -44,9 +44,9 @@ const content = {
   },
   es: {
     meta: {
-      title: "Sobre Nosotros | Expertos Locales en Lanzarote",
+      title: "Sobre Nosotros | Lanzarote Untold",
       description:
-        "Nacimos en Lanzarote, viajamos por el mundo y volvimos. Somos la agencia de viajes y concierge que conoce cada rincon de esta isla. Conoce al equipo.",
+        "Nacimos en Lanzarote, viajamos por el mundo y volvimos. Somos la agencia de viajes y concierge que conoce cada rincón de esta isla. Conoce al equipo.",
       keywords: [
         "agencia de viajes lanzarote",
         "concierge lanzarote",
@@ -58,52 +58,52 @@ const content = {
       label: "SOBRE NOSOTROS",
       title: "Expertos locales de Lanzarote, hechos para el mundo",
       subtitle:
-        "Somos un equipo pequeno de locales y viajeros unidos por una idea: Lanzarote merece ser vivida, no solo visitada.",
+        "Somos un equipo pequeño de locales y viajeros unidos por una idea: Lanzarote merece ser vivida, no solo visitada.",
     },
     whoWeAre: {
-      label: "QUIENES SOMOS",
-      title: "Raices locales, perspectiva global",
+      label: "QUIÉNES SOMOS",
+      title: "Raíces locales, perspectiva global",
       paragraphs: [
-        "Nacimos y crecimos en Lanzarote, pero no nos quedamos quietos. Pasamos anos viviendo por el mundo, absorbiendo otras culturas y formas de ver las cosas. Luego volvimos, porque Lanzarote no te suelta.",
-        "Esa mezcla es lo que hace diferente a Lanzarote Untold. Tenemos las raices locales, las conexiones familiares, los pescadores y bodegueros que nos conocen desde que eramos pequenos. Pero tambien entendemos lo que busca el viajero internacional, porque nosotros mismos hemos sido viajeros.",
+        "Nacimos y crecimos en Lanzarote, pero no nos quedamos quietos. Pasamos años viviendo por el mundo, absorbiendo otras culturas y formas de ver las cosas. Luego volvimos, porque Lanzarote no te suelta.",
+        "Esa mezcla es lo que hace diferente a Lanzarote Untold. Tenemos las raíces locales, las conexiones familiares, los pescadores y bodegueros que nos conocen desde que éramos pequeños. Pero también entendemos lo que busca el viajero internacional, porque nosotros mismos hemos sido viajeros.",
       ],
-      imageAlt: "Paisaje volcanico de Lanzarote",
+      imageAlt: "Paisaje volcánico de Lanzarote",
     },
     philosophy: {
-      label: "NUESTRA FILOSOFIA",
-      title: "Menos es mas, siempre",
+      label: "NUESTRA FILOSOFÍA",
+      title: "Menos es más, siempre",
       paragraphs: [
-        "Creemos que las mejores experiencias de viaje son intimas, sin prisas y profundamente personales. Por eso trabajamos con un numero limitado de huespedes, para que cada viaje reciba toda nuestra atencion.",
-        "No vendemos paquetes. No hacemos tours en grupo. Escuchamos lo que te importa y creamos algo que no podria existir para nadie mas. Asi es como debe ser viajar.",
+        "Creemos que las mejores experiencias de viaje son íntimas, sin prisas y profundamente personales. Por eso trabajamos con un número limitado de huéspedes, para que cada viaje reciba toda nuestra atención.",
+        "No vendemos paquetes. No hacemos tours en grupo. Escuchamos lo que te importa y creamos algo que no podría existir para nadie más. Así es como debe ser viajar.",
       ],
-      imageAlt: "Momento de calma en el paisaje volcanico de Lanzarote",
+      imageAlt: "Momento de calma en el paisaje volcánico de Lanzarote",
     },
   },
   de: {
     meta: {
-      title: "Uber Uns | Lokale Reiseexperten auf Lanzarote",
+      title: "Über Uns | Lanzarote Untold",
       description:
-        "Auf Lanzarote geboren, durch die Welt gereist und zuruckgekehrt. Wir sind die Reiseagentur und der Concierge, der jeden Winkel dieser Insel kennt.",
+        "Auf Lanzarote geboren, durch die Welt gereist und zurückgekehrt. Wir sind die Reiseagentur und der Concierge, der jeden Winkel dieser Insel kennt.",
       keywords: [
         "lanzarote reise",
         "lanzarote touren",
-        "lanzarote ausfluge",
+        "lanzarote ausflüge",
         "lanzarote geheimtipps",
         "lanzarote untold",
       ],
     },
     hero: {
-      label: "UBER UNS",
-      title: "Lanzarotes lokale Experten, gemacht fur die Welt",
+      label: "ÜBER UNS",
+      title: "Lanzarotes lokale Experten, gemacht für die Welt",
       subtitle:
-        "Wir sind ein kleines Team aus Einheimischen und Reisenden, vereint durch eine Uberzeugung: Lanzarote verdient es, erlebt zu werden, nicht nur besucht.",
+        "Wir sind ein kleines Team aus Einheimischen und Reisenden, vereint durch eine Überzeugung: Lanzarote verdient es, erlebt zu werden, nicht nur besucht.",
     },
     whoWeAre: {
       label: "WER WIR SIND",
       title: "Lokale Wurzeln, globale Perspektive",
       paragraphs: [
-        "Wir sind auf Lanzarote geboren und aufgewachsen, aber wir sind nicht geblieben. Wir haben Jahre in der Welt gelebt, andere Kulturen aufgenommen und neue Blickwinkel gewonnen. Dann sind wir zuruckgekommen, weil Lanzarote einen nicht loslasst.",
-        "Diese Mischung macht Lanzarote Untold besonders. Wir haben die lokalen Wurzeln, die familiaren Verbindungen, die Fischer und Winzer, die uns seit unserer Kindheit kennen. Aber wir verstehen auch, was internationale Reisende suchen, weil wir selbst Reisende waren.",
+        "Wir sind auf Lanzarote geboren und aufgewachsen, aber wir sind nicht geblieben. Wir haben Jahre in der Welt gelebt, andere Kulturen aufgenommen und neue Blickwinkel gewonnen. Dann sind wir zurückgekommen, weil Lanzarote einen nicht loslässt.",
+        "Diese Mischung macht Lanzarote Untold besonders. Wir haben die lokalen Wurzeln, die familiären Verbindungen, die Fischer und Winzer, die uns seit unserer Kindheit kennen. Aber wir verstehen auch, was internationale Reisende suchen, weil wir selbst Reisende waren.",
       ],
       imageAlt: "Vulkanlandschaft auf Lanzarote",
     },
@@ -111,17 +111,17 @@ const content = {
       label: "UNSERE PHILOSOPHIE",
       title: "Weniger ist mehr, immer",
       paragraphs: [
-        "Wir glauben, dass die besten Reiseerlebnisse intim, ohne Eile und zutiefst personlich sind. Deshalb arbeiten wir mit einer begrenzten Anzahl von Gasten, damit jede Reise unsere volle Aufmerksamkeit bekommt.",
-        "Wir verkaufen keine Pakete. Wir machen keine Gruppentouren. Wir horen zu, was euch wichtig ist, und erschaffen etwas, das fur niemand anderen existieren konnte. So sollte Reisen sein.",
+        "Wir glauben, dass die besten Reiseerlebnisse intim, ohne Eile und zutiefst persönlich sind. Deshalb arbeiten wir mit einer begrenzten Anzahl von Gästen, damit jede Reise unsere volle Aufmerksamkeit bekommt.",
+        "Wir verkaufen keine Pakete. Wir machen keine Gruppentouren. Wir hören zu, was euch wichtig ist, und erschaffen etwas, das für niemand anderen existieren könnte. So sollte Reisen sein.",
       ],
       imageAlt: "Ruhiger Moment in der Vulkanlandschaft von Lanzarote",
     },
   },
   fr: {
     meta: {
-      title: "A Propos | Experts Locaux a Lanzarote",
+      title: "À Propos | Lanzarote Untold",
       description:
-        "Nes a Lanzarote, nous avons voyage a travers le monde avant de revenir. Agence de voyage et concierge qui connait chaque recoin de cette ile.",
+        "Nés à Lanzarote, nous avons voyagé à travers le monde avant de revenir. Agence de voyage et concierge qui connaît chaque recoin de cette île.",
       keywords: [
         "agence de voyage lanzarote",
         "lanzarote voyage",
@@ -131,17 +131,17 @@ const content = {
       ],
     },
     hero: {
-      label: "A PROPOS",
+      label: "À PROPOS",
       title: "Les experts locaux de Lanzarote, faits pour le monde",
       subtitle:
-        "Nous sommes une petite equipe de locaux et de voyageurs unis par une conviction : Lanzarote merite d'etre vecue, pas seulement visitee.",
+        "Nous sommes une petite équipe de locaux et de voyageurs unis par une conviction : Lanzarote mérite d'être vécue, pas seulement visitée.",
     },
     whoWeAre: {
       label: "QUI SOMMES-NOUS",
       title: "Racines locales, regard sur le monde",
       paragraphs: [
-        "Nous sommes nes et avons grandi a Lanzarote, mais nous ne sommes pas restes. Nous avons passe des annees a vivre a travers le monde, a decouvrir d'autres cultures et d'autres facons de voir les choses. Puis nous sommes revenus, parce que Lanzarote ne vous lache jamais.",
-        "Ce melange est ce qui rend Lanzarote Untold different. Nous avons les racines locales, les liens familiaux, les pecheurs et vignerons qui nous connaissent depuis notre enfance. Mais nous comprenons aussi ce que recherchent les voyageurs internationaux, parce que nous avons ete voyageurs nous-memes.",
+        "Nous sommes nés et avons grandi à Lanzarote, mais nous ne sommes pas restés. Nous avons passé des années à vivre à travers le monde, à découvrir d'autres cultures et d'autres façons de voir les choses. Puis nous sommes revenus, parce que Lanzarote ne vous lâche jamais.",
+        "Ce mélange est ce qui rend Lanzarote Untold différent. Nous avons les racines locales, les liens familiaux, les pêcheurs et vignerons qui nous connaissent depuis notre enfance. Mais nous comprenons aussi ce que recherchent les voyageurs internationaux, parce que nous avons été voyageurs nous-mêmes.",
       ],
       imageAlt: "Paysage volcanique de Lanzarote",
     },
@@ -149,8 +149,8 @@ const content = {
       label: "NOTRE PHILOSOPHIE",
       title: "Moins c'est plus, toujours",
       paragraphs: [
-        "Nous croyons que les meilleures experiences de voyage sont intimes, sans precipitation et profondement personnelles. C'est pourquoi nous travaillons avec un nombre limite de voyageurs, pour que chaque sejour recoive toute notre attention.",
-        "Nous ne vendons pas de forfaits. Nous ne faisons pas de visites en groupe. Nous ecoutons ce qui compte pour vous, puis nous creons quelque chose qui ne pourrait exister pour personne d'autre. C'est comme ca que le voyage devrait etre.",
+        "Nous croyons que les meilleures expériences de voyage sont intimes, sans précipitation et profondément personnelles. C'est pourquoi nous travaillons avec un nombre limité de voyageurs, pour que chaque séjour reçoive toute notre attention.",
+        "Nous ne vendons pas de forfaits. Nous ne faisons pas de visites en groupe. Nous écoutons ce qui compte pour vous, puis nous créons quelque chose qui ne pourrait exister pour personne d'autre. C'est comme ça que le voyage devrait être.",
       ],
       imageAlt: "Moment de calme dans le paysage volcanique de Lanzarote",
     },
