@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import { PageHero } from "@/presentation/components/sections/PageHero";
+import { BlogGrid } from "@/presentation/components/blog/BlogGrid";
 import type { Locale } from "@/infrastructure/i18n/config";
 
 const content = {
@@ -9,7 +10,7 @@ const content = {
     meta: {
       title: "The Journal - Stories from Lanzarote | Lanzarote Untold",
       description:
-        "Discover hidden gems, local insights, and travel stories from Lanzarote. The Lanzarote Untold journal - coming soon.",
+        "Discover hidden gems, local insights, and travel stories from Lanzarote. The Lanzarote Untold journal.",
       keywords: [
         "lanzarote blog",
         "lanzarote hidden gems",
@@ -33,7 +34,7 @@ const content = {
     meta: {
       title: "El Diario - Historias de Lanzarote | Lanzarote Untold",
       description:
-        "Descubre rincones secretos, consejos locales e historias de viaje de Lanzarote. El diario de Lanzarote Untold - muy pronto.",
+        "Descubre rincones secretos, consejos locales e historias de viaje de Lanzarote. El diario de Lanzarote Untold.",
       keywords: [
         "blog lanzarote",
         "lanzarote secretos",
@@ -57,7 +58,7 @@ const content = {
     meta: {
       title: "Das Journal - Geschichten aus Lanzarote | Lanzarote Untold",
       description:
-        "Entdecke Geheimtipps, lokale Einblicke und Reisegeschichten aus Lanzarote. Das Lanzarote Untold Journal - bald verfügbar.",
+        "Entdecke Geheimtipps, lokale Einblicke und Reisegeschichten aus Lanzarote. Das Lanzarote Untold Journal.",
       keywords: [
         "lanzarote blog",
         "lanzarote geheimtipps",
@@ -81,7 +82,7 @@ const content = {
     meta: {
       title: "Le Journal - Histoires de Lanzarote | Lanzarote Untold",
       description:
-        "Découvrez les trésors cachés, les conseils locaux et les récits de voyage de Lanzarote. Le journal de Lanzarote Untold - bientôt disponible.",
+        "Découvrez les trésors cachés, les conseils locaux et les récits de voyage de Lanzarote. Le journal de Lanzarote Untold.",
       keywords: [
         "blog lanzarote",
         "lanzarote secrets",
@@ -131,10 +132,30 @@ export async function generateMetadata({
   };
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function BlogPage({ params }: BlogPageProps) {
   const { lang } = await params;
   const locale = (lang as Locale) || "en";
   const t = content[locale];
+
+  const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+
+  let initialData: any = { data: [], total: 0, page: 1, pageSize: 9, totalPages: 0 };
+  let featured: any = null;
+  let categories: any[] = [];
+
+  try {
+    [initialData, featured, categories] = await Promise.all([
+      convex.query(api.articles.listPublished, { page: 1, pageSize: 9 }),
+      convex.query(api.articles.getFeatured, {}),
+      convex.query(api.categories.list, { isActive: true }),
+    ]);
+  } catch {
+    // Convex not available yet — show empty state
+  }
+
+  const hasContent = initialData.data.length > 0 || featured;
 
   return (
     <main>
@@ -147,16 +168,27 @@ export default async function BlogPage({ params }: BlogPageProps) {
         imageSize="100% auto"
       />
 
-      <section className="flex min-h-[40vh] flex-col items-center justify-center gap-6 px-5 py-[60px] lg:px-[120px] lg:py-[120px]">
-        <span className="font-inter text-[11px] font-medium tracking-[3px] text-gold">
-          {t.comingSoon.label}
-        </span>
-        <h2 className="text-center font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
-          {t.comingSoon.title}
-        </h2>
-        <p className="max-w-[500px] text-center font-inter text-sm font-light leading-[1.8] text-text-secondary lg:text-base">
-          {t.comingSoon.body}
-        </p>
+      <section className="px-5 py-[60px] lg:px-[120px] lg:py-[100px]">
+        {hasContent ? (
+          <BlogGrid
+            initialData={initialData}
+            featured={featured}
+            categories={categories}
+            lang={locale}
+          />
+        ) : (
+          <div className="flex min-h-[30vh] flex-col items-center justify-center gap-6">
+            <span className="font-inter text-[11px] font-medium tracking-[3px] text-gold">
+              {t.comingSoon.label}
+            </span>
+            <h2 className="text-center font-cormorant text-[32px] font-light leading-[1.1] tracking-[-1px] text-text-primary lg:text-5xl">
+              {t.comingSoon.title}
+            </h2>
+            <p className="max-w-[500px] text-center font-inter text-sm font-light leading-[1.8] text-text-secondary lg:text-base">
+              {t.comingSoon.body}
+            </p>
+          </div>
+        )}
       </section>
     </main>
   );

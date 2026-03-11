@@ -1,17 +1,32 @@
 "use client";
 
 import type { BlogCategory } from "@/domain/types";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 interface BlogCategoryFilterProps {
   categories: BlogCategory[];
   activeId: string | null;
   onChange: (id: string | null) => void;
+  lang?: Locale;
 }
+
+function t(field: Record<string, string> | undefined, lang: string): string {
+  if (!field) return "";
+  return field[lang] || field.en || "";
+}
+
+const allLabels: Record<string, string> = {
+  en: "All",
+  es: "Todos",
+  de: "Alle",
+  fr: "Tous",
+};
 
 export function BlogCategoryFilter({
   categories,
   activeId,
   onChange,
+  lang = "en",
 }: BlogCategoryFilterProps) {
   return (
     <div className="flex flex-wrap gap-2">
@@ -23,7 +38,7 @@ export function BlogCategoryFilter({
             : "border-border text-text-muted hover:border-gold/30 hover:text-text-secondary"
         }`}
       >
-        All
+        {allLabels[lang] || "All"}
       </button>
       {categories.map((cat) => (
         <button
@@ -35,7 +50,7 @@ export function BlogCategoryFilter({
               : "border-border text-text-muted hover:border-gold/30 hover:text-text-secondary"
           }`}
         >
-          {cat.name.en}
+          {t(cat.name, lang)}
         </button>
       ))}
     </div>
