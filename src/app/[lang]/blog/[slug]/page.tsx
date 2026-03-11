@@ -6,9 +6,16 @@ import { ArticleHero } from "@/presentation/components/blog/ArticleHero";
 import { ArticleBody } from "@/presentation/components/blog/ArticleBody";
 import { RelatedArticles } from "@/presentation/components/blog/RelatedArticles";
 import { getBlogPostingStructuredData } from "@/infrastructure/seo/blogStructuredData";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 function getConvex() {
   return new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+}
+
+/** Pick a translated field with fallback to English */
+function t(field: Record<string, string> | undefined, lang: string): string {
+  if (!field) return "";
+  return field[lang] || field.en || "";
 }
 
 export async function generateMetadata({
@@ -16,16 +23,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const article = await getConvex().query(api.articles.getBySlug, { slug });
+  const { lang, slug } = await params;
+  const article = await getConvex().query(api.articles.getBySlug, { slug, lang });
 
   if (!article) return {};
 
-  const title = article.seoTitle?.en || article.title.en;
+  const title = t(article.seoTitle, lang) || t(article.title, lang);
   const description =
-    article.seoDescription?.en ||
-    article.excerpt?.en ||
-    `Read "${article.title.en}" on Lanzarote Untold`;
+    t(article.seoDescription, lang) ||
+    t(article.excerpt, lang) ||
+    `Read "${t(article.title, lang)}" on Lanzarote Untold`;
 
   return {
     title,
@@ -55,8 +62,9 @@ export default async function ArticlePage({
 }: {
   params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const article = await getConvex().query(api.articles.getBySlug, { slug });
+  const { lang, slug } = await params;
+  const locale = lang as Locale;
+  const article = await getConvex().query(api.articles.getBySlug, { slug, lang });
 
   if (!article || article.state !== "published") {
     notFound();
@@ -75,6 +83,7 @@ export default async function ArticlePage({
   }
 
   const structuredData = getBlogPostingStructuredData(article);
+  const body = t(article.body, lang);
 
   return (
     <main>
@@ -82,9 +91,9 @@ export default async function ArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <ArticleHero article={article} />
-      {article.body?.en && <ArticleBody html={article.body.en} />}
-      <RelatedArticles articles={relatedArticles} />
+      <ArticleHero article={article} lang={locale} />
+      {body && <ArticleBody html={body} />}
+      <RelatedArticles articles={relatedArticles} lang={locale} />
     </main>
   );
 }

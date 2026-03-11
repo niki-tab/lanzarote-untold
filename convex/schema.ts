@@ -64,6 +64,8 @@ export default defineSchema({
   })
     .index("by_slugEn", ["slugEn"])
     .index("by_slugEs", ["slugEs"])
+    .index("by_slugDe", ["slugDe"])
+    .index("by_slugFr", ["slugFr"])
     .index("by_state", ["state"])
     .index("by_state_publishedAt", ["state", "publishedAt"])
     .index("by_isFeatured", ["isFeatured"]),

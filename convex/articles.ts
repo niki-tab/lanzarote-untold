@@ -87,11 +87,23 @@ export const getById = query({
 export const getBySlug = query({
   args: { slug: v.string(), lang: v.optional(v.string()) },
   handler: async (ctx, args) => {
-    let article;
+    let article = null;
+
+    // Try the requested language first
     if (args.lang === "es") {
       article = await ctx.db
         .query("blogArticles")
         .withIndex("by_slugEs", (q) => q.eq("slugEs", args.slug))
+        .first();
+    } else if (args.lang === "de") {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugDe", (q) => q.eq("slugDe", args.slug))
+        .first();
+    } else if (args.lang === "fr") {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugFr", (q) => q.eq("slugFr", args.slug))
         .first();
     } else {
       article = await ctx.db
@@ -99,6 +111,33 @@ export const getBySlug = query({
         .withIndex("by_slugEn", (q) => q.eq("slugEn", args.slug))
         .first();
     }
+
+    // Fallback: search all languages if not found
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugEn", (q) => q.eq("slugEn", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugEs", (q) => q.eq("slugEs", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugDe", (q) => q.eq("slugDe", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugFr", (q) => q.eq("slugFr", args.slug))
+        .first();
+    }
+
     if (!article) return null;
     return await enrichArticle(ctx, article);
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import { useMutation } from "convex/react";
 import { api } from "../../../../../convex/_generated/api";
@@ -23,11 +23,43 @@ import {
   Check,
   X,
 } from "lucide-react";
+import { diffWords, htmlToPlainText, type DiffSegment } from "./diff-words";
 
 interface RichTextEditorProps {
   content: string;
   onChange: (html: string) => void;
   language?: string;
+}
+
+function DiffView({ segments }: { segments: DiffSegment[] }) {
+  return (
+    <div className="whitespace-pre-wrap font-inter text-sm leading-relaxed">
+      {segments.map((seg, i) => {
+        if (seg.type === "equal") {
+          return (
+            <span key={i} className="text-text-secondary">
+              {seg.value}
+            </span>
+          );
+        }
+        if (seg.type === "removed") {
+          return (
+            <span
+              key={i}
+              className="bg-red-500/20 text-red-400 line-through"
+            >
+              {seg.value}
+            </span>
+          );
+        }
+        return (
+          <span key={i} className="bg-green-500/20 text-green-400">
+            {seg.value}
+          </span>
+        );
+      })}
+    </div>
+  );
 }
 
 export function RichTextEditor({ content, onChange, language }: RichTextEditorProps) {
@@ -55,6 +87,13 @@ export function RichTextEditor({ content, onChange, language }: RichTextEditorPr
     },
   });
 
+  const diffSegments = useMemo(() => {
+    if (!originalHtml.current || !pendingHtml) return null;
+    const oldText = htmlToPlainText(originalHtml.current);
+    const newText = htmlToPlainText(pendingHtml);
+    return diffWords(oldText, newText);
+  }, [pendingHtml]);
+
   if (!editor) return null;
 
   const addImage = async () => {
@@ -74,8 +113,6 @@ export function RichTextEditor({ content, onChange, language }: RichTextEditorPr
         });
         const { storageId } = await result.json();
 
-        // Use object URL as a temporary preview in the editor
-        // In production, you'd resolve the storageId to a Convex URL
         const previewUrl = URL.createObjectURL(file);
         editor.chain().focus().setImage({ src: previewUrl }).run();
       } catch {
@@ -238,12 +275,15 @@ export function RichTextEditor({ content, onChange, language }: RichTextEditorPr
         </div>
       )}
 
-      {pendingHtml && (
+      {pendingHtml && diffSegments && (
         <div className="border-b border-gold/30 bg-gold/5">
           <div className="flex items-center justify-between border-b border-gold/20 px-3 py-2">
             <span className="flex items-center gap-1.5 font-inter text-xs font-medium text-gold">
               <Sparkles size={14} />
-              AI Suggestion — Review changes below
+              AI Changes —{" "}
+              <span className="bg-red-500/20 px-1 text-red-400 line-through">removed</span>
+              {" "}
+              <span className="bg-green-500/20 px-1 text-green-400">added</span>
             </span>
             <div className="flex gap-2">
               <button
@@ -264,10 +304,9 @@ export function RichTextEditor({ content, onChange, language }: RichTextEditorPr
               </button>
             </div>
           </div>
-          <div
-            className="prose-invert max-h-[400px] max-w-none overflow-y-auto px-4 py-3 font-inter text-sm text-text-primary"
-            dangerouslySetInnerHTML={{ __html: pendingHtml }}
-          />
+          <div className="max-h-[500px] overflow-y-auto px-4 py-3">
+            <DiffView segments={diffSegments} />
+          </div>
         </div>
       )}
 
