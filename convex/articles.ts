@@ -189,15 +189,28 @@ export const create = mutation({
     articleData.state = articleData.state ?? "draft";
     articleData.isFeatured = articleData.isFeatured ?? false;
 
-    const articleId = await ctx.db.insert("blogArticles", articleData as any);
-
-    if (categoryIds?.length) {
-      for (const categoryId of categoryIds) {
-        await ctx.db.insert("articleCategories", { articleId, categoryId });
-      }
+    // Debug: log keys and sizes
+    const debugInfo: Record<string, number> = {};
+    for (const [key, value] of Object.entries(articleData)) {
+      debugInfo[key] = typeof value === "string" ? value.length : 0;
     }
+    console.log("articles:create keys & sizes:", JSON.stringify(debugInfo));
+    console.log("articles:create categoryIds:", categoryIds);
 
-    return articleId;
+    try {
+      const articleId = await ctx.db.insert("blogArticles", articleData as any);
+
+      if (categoryIds?.length) {
+        for (const categoryId of categoryIds) {
+          await ctx.db.insert("articleCategories", { articleId, categoryId });
+        }
+      }
+
+      return articleId;
+    } catch (error) {
+      console.error("articles:create FAILED:", String(error));
+      throw error;
+    }
   },
 });
 
