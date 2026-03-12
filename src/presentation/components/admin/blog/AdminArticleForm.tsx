@@ -249,7 +249,7 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
             <label className="mb-1.5 block font-inter text-xs font-medium tracking-wide text-text-muted">
               BODY ({c.label.toUpperCase()})
             </label>
-            <RichTextEditor content={c.body} onChange={c.setBody} language={lang} />
+            <RichTextEditor key={`${lang}-${initialized}`} content={c.body} onChange={c.setBody} language={lang} />
           </div>
           <AdminInput
             label={`SEO Title (${c.label})`}
