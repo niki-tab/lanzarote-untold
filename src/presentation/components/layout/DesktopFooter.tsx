@@ -4,7 +4,7 @@ import type { Locale } from "@/infrastructure/i18n/config";
 import { localizedPath } from "@/infrastructure/i18n/config";
 
 interface DesktopFooterProps {
-  lang: Locale;
+  lang?: Locale;
 }
 
 const footerColumns = [
@@ -34,7 +34,7 @@ const footerColumns = [
   },
 ];
 
-export function DesktopFooter({ lang }: DesktopFooterProps) {
+export function DesktopFooter({ lang = "en" }: DesktopFooterProps) {
   return (
     <footer className="hidden w-full flex-col gap-12 bg-dark-bg px-20 pt-[60px] pb-10 lg:flex">
       <div className="flex w-full flex-row justify-between">

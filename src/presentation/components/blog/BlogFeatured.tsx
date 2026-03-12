@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { BlogArticle } from "@/domain/types";
+import type { BlogArticle, TranslatableText } from "@/domain/types";
 import type { Locale } from "@/infrastructure/i18n/config";
 
 interface BlogFeaturedProps {
@@ -7,9 +7,9 @@ interface BlogFeaturedProps {
   lang?: Locale;
 }
 
-function t(field: Record<string, string> | undefined, lang: string): string {
+function t(field: TranslatableText | undefined, lang: string): string {
   if (!field) return "";
-  return field[lang] || field.en || "";
+  return field[lang as keyof TranslatableText] || field.en || "";
 }
 
 const dateLocales: Record<string, string> = {

@@ -13,9 +13,9 @@ function getConvex() {
 }
 
 /** Pick a translated field with fallback to English */
-function t(field: Record<string, string> | undefined, lang: string): string {
+function t(field: Record<string, string | undefined> | undefined, lang: string): string {
   if (!field) return "";
-  return field[lang] || field.en || "";
+  return field[lang] || field["en"] || "";
 }
 
 export async function generateMetadata({

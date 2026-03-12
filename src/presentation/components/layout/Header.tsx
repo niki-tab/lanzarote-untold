@@ -5,10 +5,10 @@ import { MobileHeader } from "./MobileHeader";
 
 interface HeaderProps {
   navigation: NavigationItem[];
-  lang: Locale;
+  lang?: Locale;
 }
 
-export function Header({ navigation, lang }: HeaderProps) {
+export function Header({ navigation, lang = "en" }: HeaderProps) {
   return (
     <>
       <DesktopHeader navigation={navigation} lang={lang} />

@@ -1,6 +1,6 @@
 "use client";
 
-import type { BlogCategory } from "@/domain/types";
+import type { BlogCategory, TranslatableText } from "@/domain/types";
 import type { Locale } from "@/infrastructure/i18n/config";
 
 interface BlogCategoryFilterProps {
@@ -10,9 +10,9 @@ interface BlogCategoryFilterProps {
   lang?: Locale;
 }
 
-function t(field: Record<string, string> | undefined, lang: string): string {
+function t(field: TranslatableText | undefined, lang: string): string {
   if (!field) return "";
-  return field[lang] || field.en || "";
+  return field[lang as keyof TranslatableText] || field.en || "";
 }
 
 const allLabels: Record<string, string> = {
