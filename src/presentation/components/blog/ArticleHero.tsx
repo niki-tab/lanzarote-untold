@@ -1,17 +1,34 @@
-import type { BlogArticle } from "@/domain/types";
+import type { BlogArticle, TranslatableText } from "@/domain/types";
+import type { Locale } from "@/infrastructure/i18n/config";
 
 interface ArticleHeroProps {
   article: BlogArticle;
+  lang?: Locale;
 }
 
-export function ArticleHero({ article }: ArticleHeroProps) {
+function t(field: TranslatableText | undefined, lang: string): string {
+  if (!field) return "";
+  return field[lang as keyof TranslatableText] || field.en || "";
+}
+
+const dateLocales: Record<string, string> = {
+  en: "en-US",
+  es: "es-ES",
+  de: "de-DE",
+  fr: "fr-FR",
+};
+
+export function ArticleHero({ article, lang = "en" }: ArticleHeroProps) {
+  const title = t(article.title, lang);
+  const dateLocale = dateLocales[lang] || "en-US";
+
   return (
     <section className="relative">
       {article.featuredImage && (
         <div className="relative h-[300px] lg:h-[480px]">
           <img
             src={article.featuredImage}
-            alt={article.title.en}
+            alt={title}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent" />
@@ -30,18 +47,18 @@ export function ArticleHero({ article }: ArticleHeroProps) {
                 className="font-inter text-[10px] font-medium tracking-[3px] uppercase"
                 style={{ color: cat.color }}
               >
-                {cat.name.en}
+                {t(cat.name, lang)}
               </span>
             ))}
           </div>
         )}
         <h1 className="mb-4 font-cormorant text-[36px] font-light leading-[1.1] text-text-primary lg:text-[52px]">
-          {article.title.en}
+          {title}
         </h1>
         <div className="flex items-center gap-3 font-inter text-sm text-text-muted">
           {article.publishedAt && (
             <time>
-              {new Date(article.publishedAt).toLocaleDateString("en-US", {
+              {new Date(article.publishedAt).toLocaleDateString(dateLocale, {
                 month: "long",
                 day: "numeric",
                 year: "numeric",

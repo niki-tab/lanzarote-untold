@@ -16,6 +16,12 @@ const STATE_COLORS: Record<ArticleState, string> = {
   archived: "bg-zinc-500/10 text-zinc-400",
 };
 
+/** Pick the first non-empty value from a translatable field */
+function t(field: Record<string, string> | undefined): string {
+  if (!field) return "";
+  return field.en || field.es || field.de || field.fr || "";
+}
+
 export function AdminArticleList() {
   const [search, setSearch] = useState("");
   const [stateFilter, setStateFilter] = useState("");
@@ -105,7 +111,7 @@ export function AdminArticleList() {
             <td className="px-5 py-3.5">
               <div>
                 <span className="font-inter text-sm text-text-primary">
-                  {article.title.en}
+                  {t(article.title)}
                 </span>
                 {article.isFeatured && (
                   <span className="ml-2 rounded bg-gold/10 px-1.5 py-0.5 font-inter text-[10px] font-medium text-gold">
@@ -114,7 +120,7 @@ export function AdminArticleList() {
                 )}
               </div>
               <span className="font-inter text-xs text-text-muted">
-                {article.slug.en}
+                {t(article.slug)}
               </span>
             </td>
             <td className="px-5 py-3.5">

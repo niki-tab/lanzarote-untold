@@ -10,10 +10,10 @@ import { LanguageSwitcher } from "@/presentation/components/ui/LanguageSwitcher"
 
 interface MobileHeaderProps {
   navigation: NavigationItem[];
-  lang: Locale;
+  lang?: Locale;
 }
 
-export function MobileHeader({ navigation, lang }: MobileHeaderProps) {
+export function MobileHeader({ navigation, lang = "en" }: MobileHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const links = navigation.filter((item) => !item.isCTA);
   const cta = navigation.find((item) => item.isCTA);

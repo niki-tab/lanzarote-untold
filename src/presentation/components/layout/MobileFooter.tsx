@@ -4,7 +4,7 @@ import type { Locale } from "@/infrastructure/i18n/config";
 import { localizedPath } from "@/infrastructure/i18n/config";
 
 interface MobileFooterProps {
-  lang: Locale;
+  lang?: Locale;
 }
 
 const footerColumns = [
@@ -34,7 +34,7 @@ const footerColumns = [
   },
 ];
 
-export function MobileFooter({ lang }: MobileFooterProps) {
+export function MobileFooter({ lang = "en" }: MobileFooterProps) {
   return (
     <footer className="flex w-full flex-col gap-8 bg-dark-bg px-5 pt-10 pb-6 lg:hidden">
       {/* Brand */}

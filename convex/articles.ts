@@ -50,7 +50,9 @@ export const list = query({
       articles = articles.filter(
         (a) =>
           a.titleEn.toLowerCase().includes(s) ||
-          a.titleEs.toLowerCase().includes(s)
+          a.titleEs.toLowerCase().includes(s) ||
+          (a.titleDe && a.titleDe.toLowerCase().includes(s)) ||
+          (a.titleFr && a.titleFr.toLowerCase().includes(s))
       );
     }
 
@@ -85,11 +87,23 @@ export const getById = query({
 export const getBySlug = query({
   args: { slug: v.string(), lang: v.optional(v.string()) },
   handler: async (ctx, args) => {
-    let article;
+    let article = null;
+
+    // Try the requested language first
     if (args.lang === "es") {
       article = await ctx.db
         .query("blogArticles")
         .withIndex("by_slugEs", (q) => q.eq("slugEs", args.slug))
+        .first();
+    } else if (args.lang === "de") {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugDe", (q) => q.eq("slugDe", args.slug))
+        .first();
+    } else if (args.lang === "fr") {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugFr", (q) => q.eq("slugFr", args.slug))
         .first();
     } else {
       article = await ctx.db
@@ -97,6 +111,33 @@ export const getBySlug = query({
         .withIndex("by_slugEn", (q) => q.eq("slugEn", args.slug))
         .first();
     }
+
+    // Fallback: search all languages if not found
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugEn", (q) => q.eq("slugEn", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugEs", (q) => q.eq("slugEs", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugDe", (q) => q.eq("slugDe", args.slug))
+        .first();
+    }
+    if (!article) {
+      article = await ctx.db
+        .query("blogArticles")
+        .withIndex("by_slugFr", (q) => q.eq("slugFr", args.slug))
+        .first();
+    }
+
     if (!article) return null;
     return await enrichArticle(ctx, article);
   },
@@ -106,16 +147,28 @@ export const create = mutation({
   args: {
     titleEn: v.string(),
     titleEs: v.string(),
+    titleDe: v.optional(v.string()),
+    titleFr: v.optional(v.string()),
     slugEn: v.string(),
     slugEs: v.string(),
+    slugDe: v.optional(v.string()),
+    slugFr: v.optional(v.string()),
     excerptEn: v.optional(v.string()),
     excerptEs: v.optional(v.string()),
+    excerptDe: v.optional(v.string()),
+    excerptFr: v.optional(v.string()),
     bodyEn: v.optional(v.string()),
     bodyEs: v.optional(v.string()),
+    bodyDe: v.optional(v.string()),
+    bodyFr: v.optional(v.string()),
     seoTitleEn: v.optional(v.string()),
     seoTitleEs: v.optional(v.string()),
+    seoTitleDe: v.optional(v.string()),
+    seoTitleFr: v.optional(v.string()),
     seoDescriptionEn: v.optional(v.string()),
     seoDescriptionEs: v.optional(v.string()),
+    seoDescriptionDe: v.optional(v.string()),
+    seoDescriptionFr: v.optional(v.string()),
     featuredImage: v.optional(v.id("_storage")),
     state: v.optional(v.string()),
     isFeatured: v.optional(v.boolean()),
@@ -146,16 +199,28 @@ export const update = mutation({
     id: v.id("blogArticles"),
     titleEn: v.optional(v.string()),
     titleEs: v.optional(v.string()),
+    titleDe: v.optional(v.string()),
+    titleFr: v.optional(v.string()),
     slugEn: v.optional(v.string()),
     slugEs: v.optional(v.string()),
+    slugDe: v.optional(v.string()),
+    slugFr: v.optional(v.string()),
     excerptEn: v.optional(v.string()),
     excerptEs: v.optional(v.string()),
+    excerptDe: v.optional(v.string()),
+    excerptFr: v.optional(v.string()),
     bodyEn: v.optional(v.string()),
     bodyEs: v.optional(v.string()),
+    bodyDe: v.optional(v.string()),
+    bodyFr: v.optional(v.string()),
     seoTitleEn: v.optional(v.string()),
     seoTitleEs: v.optional(v.string()),
+    seoTitleDe: v.optional(v.string()),
+    seoTitleFr: v.optional(v.string()),
     seoDescriptionEn: v.optional(v.string()),
     seoDescriptionEs: v.optional(v.string()),
+    seoDescriptionDe: v.optional(v.string()),
+    seoDescriptionFr: v.optional(v.string()),
     featuredImage: v.optional(v.id("_storage")),
     state: v.optional(v.string()),
     isFeatured: v.optional(v.boolean()),

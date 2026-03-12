@@ -37,11 +37,13 @@ export interface ProcessStep {
 // Blog types
 
 export type ArticleState = "draft" | "published" | "archived";
-export type Language = "en" | "es";
+export type Language = "en" | "es" | "de" | "fr";
 
 export interface TranslatableText {
   en: string;
   es: string;
+  de?: string;
+  fr?: string;
 }
 
 export interface BlogCategory {

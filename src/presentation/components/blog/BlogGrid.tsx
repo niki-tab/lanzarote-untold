@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
-import type { BlogArticle, BlogCategory } from "@/domain/types";
 import type { Id } from "../../../../convex/_generated/dataModel";
+import type { Locale } from "@/infrastructure/i18n/config";
 import { BlogArticleCard } from "./BlogArticleCard";
 import { BlogFeatured } from "./BlogFeatured";
 import { BlogCategoryFilter } from "./BlogCategoryFilter";
@@ -13,9 +13,10 @@ interface BlogGridProps {
   initialData: { data: any[]; total: number; page: number; pageSize: number; totalPages: number };
   featured: any;
   categories: any[];
+  lang?: Locale;
 }
 
-export function BlogGrid({ initialData, featured, categories }: BlogGridProps) {
+export function BlogGrid({ initialData, featured, categories, lang = "en" }: BlogGridProps) {
   const [page, setPage] = useState(1);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
@@ -40,7 +41,7 @@ export function BlogGrid({ initialData, featured, categories }: BlogGridProps) {
     <div>
       {featured && !categoryFilter && (
         <div className="mb-10">
-          <BlogFeatured article={featured} />
+          <BlogFeatured article={featured} lang={lang} />
         </div>
       )}
 
@@ -53,6 +54,7 @@ export function BlogGrid({ initialData, featured, categories }: BlogGridProps) {
               setCategoryFilter(id);
               setPage(1);
             }}
+            lang={lang}
           />
         </div>
       )}
@@ -66,7 +68,7 @@ export function BlogGrid({ initialData, featured, categories }: BlogGridProps) {
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article: any) => (
-            <BlogArticleCard key={article.id} article={article} />
+            <BlogArticleCard key={article.id} article={article} lang={lang} />
           ))}
         </div>
       )}
