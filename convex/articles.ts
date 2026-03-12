@@ -177,12 +177,19 @@ export const create = mutation({
     categoryIds: v.optional(v.array(v.id("blogCategories"))),
   },
   handler: async (ctx, args) => {
-    const { categoryIds, ...articleData } = args;
-    const articleId = await ctx.db.insert("blogArticles", {
-      ...articleData,
-      state: articleData.state ?? "draft",
-      isFeatured: articleData.isFeatured ?? false,
-    });
+    const { categoryIds, ...rest } = args;
+
+    // Strip undefined values to avoid schema validation issues
+    const articleData: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(rest)) {
+      if (value !== undefined) {
+        articleData[key] = value;
+      }
+    }
+    articleData.state = articleData.state ?? "draft";
+    articleData.isFeatured = articleData.isFeatured ?? false;
+
+    const articleId = await ctx.db.insert("blogArticles", articleData as any);
 
     if (categoryIds?.length) {
       for (const categoryId of categoryIds) {
