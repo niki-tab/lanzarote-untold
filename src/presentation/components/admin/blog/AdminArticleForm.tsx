@@ -139,6 +139,19 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
       categoryIds: selectedCategoryIds as Id<"blogCategories">[],
     };
 
+    // Debug: log all fields being sent
+    const debugFields: Record<string, string> = {};
+    for (const [key, value] of Object.entries(data)) {
+      if (value === undefined) debugFields[key] = "undefined";
+      else if (typeof value === "string") debugFields[key] = `string(${value.length})`;
+      else if (Array.isArray(value)) debugFields[key] = `array(${value.length}): ${JSON.stringify(value)}`;
+      else debugFields[key] = `${typeof value}: ${JSON.stringify(value)}`;
+    }
+    console.log("=== ARTICLE CREATE DEBUG ===");
+    console.log("Fields:", JSON.stringify(debugFields, null, 2));
+    console.log("categoryIds raw:", selectedCategoryIds);
+    console.log("featuredImage raw:", featuredImageStorageId);
+
     try {
       if (isEdit) {
         await updateArticle({ id: articleId as Id<"blogArticles">, ...data });
