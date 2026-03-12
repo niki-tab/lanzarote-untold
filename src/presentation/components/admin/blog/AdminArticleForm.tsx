@@ -139,13 +139,20 @@ export function AdminArticleForm({ articleId }: AdminArticleFormProps) {
       categoryIds: selectedCategoryIds as Id<"blogCategories">[],
     };
 
-    if (isEdit) {
-      await updateArticle({ id: articleId as Id<"blogArticles">, ...data });
-    } else {
-      await createArticle(data);
+    try {
+      if (isEdit) {
+        await updateArticle({ id: articleId as Id<"blogArticles">, ...data });
+      } else {
+        await createArticle(data);
+      }
+      router.push("/admin/blog/articles");
+    } catch (error) {
+      console.error("Article save error:", error);
+      console.error("Payload size (approx):", JSON.stringify(data).length, "bytes");
+      alert(`Error saving article: ${error instanceof Error ? error.message : "Unknown error"}`);
+    } finally {
+      setLoading(false);
     }
-
-    router.push("/admin/blog/articles");
   };
 
   const toggleCategory = (id: string) => {
