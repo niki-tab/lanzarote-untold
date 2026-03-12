@@ -7,8 +7,6 @@ import {
   type HumanizeLanguage,
 } from "@/infrastructure/data/ai/humanize-prompt";
 
-const openai = new OpenAI();
-
 const validLanguages: HumanizeLanguage[] = ["en", "es", "de", "fr"];
 
 export async function POST(request: NextRequest) {
@@ -35,6 +33,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    const openai = new OpenAI();
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
       temperature: 0.7,
