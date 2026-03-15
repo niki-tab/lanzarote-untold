@@ -5,6 +5,13 @@ import type { Locale } from "@/infrastructure/i18n/config";
 import { defaultLocale } from "@/infrastructure/i18n/config";
 import { LanguageSwitcher } from "@/presentation/components/ui/LanguageSwitcher";
 
+const tagline = {
+  en: "CURATED EXPERIENCES",
+  es: "EXPERIENCIAS EXCLUSIVAS",
+  de: "EXKLUSIVE ERLEBNISSE",
+  fr: "EXPÉRIENCES EXCLUSIVES",
+};
+
 interface DesktopHeaderProps {
   navigation: NavigationItem[];
   lang?: Locale;
@@ -30,7 +37,7 @@ export function DesktopHeader({ navigation, lang = "en" }: DesktopHeaderProps) {
             Lanzarote Untold
           </span>
           <span className="font-inter text-[7px] font-normal tracking-[3px] text-gold">
-            CURATED EXPERIENCES
+            {tagline[lang]}
           </span>
         </div>
       </Link>

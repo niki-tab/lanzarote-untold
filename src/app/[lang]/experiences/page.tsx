@@ -43,13 +43,13 @@ const content = {
         alt: "Wine tasting at El Grifo bodega in Lanzarote La Geria",
       },
       {
-        title: "Sea & Adventure",
-        description: "Lanzarote boat trips, catamaran charters, diving, and private fishing",
+        title: "Shore Fishing",
+        description: "Private guided fishing on Lanzarote's volcanic coast with all gear included",
         image:
-          "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/sea-adventure",
-        label: "MARITIME",
-        alt: "Private boat trip along the coast of Lanzarote",
+          "https://images.unsplash.com/photo-1768855531535-6570e2c00cf1?w=800&h=400&fit=crop&q=80",
+        href: "/experiences/shore-fishing",
+        label: "FISHING",
+        alt: "Shore fishing on Lanzarote volcanic coastline at sunrise",
       },
       {
         title: "Salt & Heritage",
@@ -114,13 +114,13 @@ const content = {
         alt: "Cata de vinos en la bodega El Grifo en La Geria, Lanzarote",
       },
       {
-        title: "Mar y Aventura",
-        description: "Excursiones en barco, catamarán, buceo y pesca privada en Lanzarote",
+        title: "Pesca Costera",
+        description: "Pesca guiada y privada en la costa volcánica de Lanzarote con todo el equipo incluido",
         image:
-          "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/sea-adventure",
-        label: "MARÍTIMO",
-        alt: "Excursión privada en barco por la costa de Lanzarote",
+          "https://images.unsplash.com/photo-1768855531535-6570e2c00cf1?w=800&h=400&fit=crop&q=80",
+        href: "/experiences/shore-fishing",
+        label: "PESCA",
+        alt: "Pesca costera en la costa volcánica de Lanzarote al amanecer",
       },
       {
         title: "Sal y Patrimonio",
@@ -185,13 +185,13 @@ const content = {
         alt: "Weinverkostung in der Bodega El Grifo in La Geria, Lanzarote",
       },
       {
-        title: "Meer & Abenteuer",
-        description: "Bootstouren, Katamaran, Tauchen und privates Angeln auf Lanzarote",
+        title: "Küstenangeln",
+        description: "Privates geführtes Angeln an Lanzarotes Vulkanküste mit kompletter Ausrüstung",
         image:
-          "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/sea-adventure",
-        label: "MARITIM",
-        alt: "Private Bootstour entlang der Küste von Lanzarote",
+          "https://images.unsplash.com/photo-1768855531535-6570e2c00cf1?w=800&h=400&fit=crop&q=80",
+        href: "/experiences/shore-fishing",
+        label: "ANGELN",
+        alt: "Küstenangeln an der Vulkanküste von Lanzarote bei Sonnenaufgang",
       },
       {
         title: "Salz & Kulturerbe",
@@ -256,13 +256,13 @@ const content = {
         alt: "Dégustation de vin à la cave El Grifo dans La Geria, Lanzarote",
       },
       {
-        title: "Mer & Aventure",
-        description: "Excursions en bateau, catamaran, plongée et pêche privée à Lanzarote",
+        title: "Pêche Côtière",
+        description: "Sortie de pêche privée et guidée sur la côte volcanique de Lanzarote, tout l'équipement inclus",
         image:
-          "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-        href: "/experiences/sea-adventure",
-        label: "MARITIME",
-        alt: "Excursion privée en bateau le long de la côte de Lanzarote",
+          "https://images.unsplash.com/photo-1768855531535-6570e2c00cf1?w=800&h=400&fit=crop&q=80",
+        href: "/experiences/shore-fishing",
+        label: "PÊCHE",
+        alt: "Pêche côtière sur la côte volcanique de Lanzarote au lever du soleil",
       },
       {
         title: "Sel & Patrimoine",

@@ -7,34 +7,144 @@ interface MobileFooterProps {
   lang?: Locale;
 }
 
-const footerColumns = [
-  {
-    title: "EXPLORE",
-    links: [
-      { label: "Experiences", href: "/experiences" },
-      { label: "Private Experiences", href: "/private-experiences" },
-      { label: "Journal", href: "/blog" },
+const content = {
+  en: {
+    tagline: "CURATED EXPERIENCES",
+    description:
+      "Bespoke curated experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
+    columns: [
+      {
+        title: "EXPLORE",
+        links: [
+          { label: "Experiences", href: "/experiences" },
+          { label: "Private Experiences", href: "/private-experiences" },
+          { label: "Journal", href: "/blog" },
+        ],
+      },
+      {
+        title: "COMPANY",
+        links: [
+          { label: "About Us", href: "/about" },
+          { label: "Contact", href: "/contact" },
+        ],
+      },
+      {
+        title: "CONTACT",
+        links: [
+          { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
+          { label: "+34 928 000 000", href: "tel:+34928000000" },
+          { label: "Arrecife, Lanzarote", href: "/contact" },
+          { label: "Canary Islands, Spain", href: "/contact" },
+        ],
+      },
     ],
+    legal: "2026 Lanzarote Untold. All rights reserved.",
+    legalLinks: ["Privacy", "Terms", "Cookies"],
   },
-  {
-    title: "COMPANY",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Contact", href: "/contact" },
+  es: {
+    tagline: "EXPERIENCIAS EXCLUSIVAS",
+    description:
+      "Experiencias exclusivas en Lanzarote, Islas Canarias. Creadas con conocimiento local y elegancia internacional.",
+    columns: [
+      {
+        title: "EXPLORAR",
+        links: [
+          { label: "Experiencias", href: "/experiences" },
+          { label: "Experiencias privadas", href: "/private-experiences" },
+          { label: "Blog", href: "/blog" },
+        ],
+      },
+      {
+        title: "EMPRESA",
+        links: [
+          { label: "Nosotros", href: "/about" },
+          { label: "Contacto", href: "/contact" },
+        ],
+      },
+      {
+        title: "CONTACTO",
+        links: [
+          { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
+          { label: "+34 928 000 000", href: "tel:+34928000000" },
+          { label: "Arrecife, Lanzarote", href: "/contact" },
+          { label: "Islas Canarias, España", href: "/contact" },
+        ],
+      },
     ],
+    legal: "2026 Lanzarote Untold. Todos los derechos reservados.",
+    legalLinks: ["Privacidad", "Términos", "Cookies"],
   },
-  {
-    title: "CONTACT",
-    links: [
-      { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
-      { label: "+34 928 000 000", href: "tel:+34928000000" },
-      { label: "Arrecife, Lanzarote", href: "/contact" },
-      { label: "Canary Islands, Spain", href: "/contact" },
+  de: {
+    tagline: "EXKLUSIVE ERLEBNISSE",
+    description:
+      "Exklusive Erlebnisse auf Lanzarote, Kanarische Inseln. Gestaltet mit lokaler Expertise und internationaler Eleganz.",
+    columns: [
+      {
+        title: "ENTDECKEN",
+        links: [
+          { label: "Erlebnisse", href: "/experiences" },
+          { label: "Private Erlebnisse", href: "/private-experiences" },
+          { label: "Blog", href: "/blog" },
+        ],
+      },
+      {
+        title: "UNTERNEHMEN",
+        links: [
+          { label: "Über uns", href: "/about" },
+          { label: "Kontakt", href: "/contact" },
+        ],
+      },
+      {
+        title: "KONTAKT",
+        links: [
+          { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
+          { label: "+34 928 000 000", href: "tel:+34928000000" },
+          { label: "Arrecife, Lanzarote", href: "/contact" },
+          { label: "Kanarische Inseln, Spanien", href: "/contact" },
+        ],
+      },
     ],
+    legal: "2026 Lanzarote Untold. Alle Rechte vorbehalten.",
+    legalLinks: ["Datenschutz", "AGB", "Cookies"],
   },
-];
+  fr: {
+    tagline: "EXPÉRIENCES EXCLUSIVES",
+    description:
+      "Expériences exclusives à Lanzarote, îles Canaries. Conçues avec une expertise locale et une élégance internationale.",
+    columns: [
+      {
+        title: "EXPLORER",
+        links: [
+          { label: "Expériences", href: "/experiences" },
+          { label: "Expériences privées", href: "/private-experiences" },
+          { label: "Blog", href: "/blog" },
+        ],
+      },
+      {
+        title: "ENTREPRISE",
+        links: [
+          { label: "À propos", href: "/about" },
+          { label: "Contact", href: "/contact" },
+        ],
+      },
+      {
+        title: "CONTACT",
+        links: [
+          { label: "hello@lanzaroteuntold.com", href: "mailto:hello@lanzaroteuntold.com" },
+          { label: "+34 928 000 000", href: "tel:+34928000000" },
+          { label: "Arrecife, Lanzarote", href: "/contact" },
+          { label: "Îles Canaries, Espagne", href: "/contact" },
+        ],
+      },
+    ],
+    legal: "2026 Lanzarote Untold. Tous droits réservés.",
+    legalLinks: ["Confidentialité", "Conditions", "Cookies"],
+  },
+};
 
-export function MobileFooter({ lang = "en" }: MobileFooterProps) {
+export function MobileFooter({ lang }: MobileFooterProps) {
+  const t = content[lang];
+
   return (
     <footer className="flex w-full flex-col gap-8 bg-dark-bg px-5 pt-10 pb-6 lg:hidden">
       {/* Brand */}
@@ -52,19 +162,18 @@ export function MobileFooter({ lang = "en" }: MobileFooterProps) {
               Lanzarote Untold
             </span>
             <span className="font-inter text-[8px] font-normal tracking-[3px] text-gold">
-              CURATED EXPERIENCES
+              {t.tagline}
             </span>
           </div>
         </div>
         <p className="font-inter text-[13px] font-light leading-[1.7] text-text-muted">
-          Bespoke curated experiences in Lanzarote, Canary Islands.
-          Crafted with local expertise and international elegance.
+          {t.description}
         </p>
       </div>
 
       {/* Nav Columns */}
       <div className="grid grid-cols-3 gap-4">
-        {footerColumns.map((col) => (
+        {t.columns.map((col) => (
           <div key={col.title} className="flex flex-col gap-4">
             <span className="font-inter text-[10px] font-medium tracking-[2px] text-gold">
               {col.title}
@@ -88,10 +197,10 @@ export function MobileFooter({ lang = "en" }: MobileFooterProps) {
       {/* Bottom Bar */}
       <div className="flex w-full flex-col items-center gap-4">
         <span className="font-inter text-xs text-footer-legal">
-          2026 Lanzarote Untold. All rights reserved.
+          {t.legal}
         </span>
         <div className="flex gap-6">
-          {["Privacy", "Terms", "Cookies"].map((item) => (
+          {t.legalLinks.map((item) => (
             <Link
               key={item}
               href="#"

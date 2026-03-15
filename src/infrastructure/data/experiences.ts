@@ -10,12 +10,12 @@ export const experiences: Experience[] = [
     slug: "/experiences/wine-tour",
   },
   {
-    id: "exp-yacht",
-    title: "Private Fishing Trips",
-    category: "MARITIME",
+    id: "exp-shore-fishing",
+    title: "Shore Fishing on the Volcanic Coast",
+    category: "SEA & FISHING",
     image:
-      "https://images.unsplash.com/photo-1638829570198-347823e74d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0Mzc4Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
-    slug: "/experiences/sea-adventure",
+      "https://images.unsplash.com/photo-1768855531535-6570e2c00cf1?w=1080&q=80",
+    slug: "/experiences/shore-fishing",
   },
   {
     id: "exp-salt",

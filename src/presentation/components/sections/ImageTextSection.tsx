@@ -9,6 +9,7 @@ interface ImageTextSectionProps {
   imageAlt: string;
   reversed?: boolean;
   className?: string;
+  imagePosition?: string;
 }
 
 export function ImageTextSection({
@@ -19,6 +20,7 @@ export function ImageTextSection({
   imageAlt,
   reversed = false,
   className = "",
+  imagePosition,
 }: ImageTextSectionProps) {
   return (
     <section className={`flex w-full flex-col gap-10 px-5 py-[30px] lg:flex-row lg:items-center lg:gap-20 lg:px-[120px] lg:py-[120px] ${className}`}>
@@ -31,7 +33,8 @@ export function ImageTextSection({
           alt={imageAlt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center"
+          className="object-cover"
+          style={imagePosition ? { objectPosition: imagePosition } : { objectPosition: "center" }}
         />
       </div>
 

@@ -6,7 +6,6 @@ import { HowWeWorkSection } from "@/presentation/components/sections/HowWeWorkSe
 import { TestimonialStrip } from "@/presentation/components/sections/TestimonialStrip";
 import { CTASection } from "@/presentation/components/sections/CTASection";
 import type { Locale } from "@/infrastructure/i18n/config";
-import { StaticContentRepository } from "@/infrastructure/adapters/StaticContentRepository";
 
 export const metadata: Metadata = {
   title: "Private & Bespoke Experiences in Lanzarote",
@@ -65,8 +64,6 @@ const features = [
   },
 ];
 
-const repository = new StaticContentRepository();
-
 export default async function PrivateExperiencesPage({
   params,
 }: {
@@ -74,7 +71,6 @@ export default async function PrivateExperiencesPage({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const processSteps = await repository.getProcessSteps();
 
   return (
     <main>
@@ -102,7 +98,7 @@ export default async function PrivateExperiencesPage({
         features={features}
       />
 
-      <HowWeWorkSection steps={processSteps} />
+      <HowWeWorkSection lang={locale} />
 
       <TestimonialStrip
         quote="Lanzarote Untold transformed what could have been a simple holiday into the most meaningful week of our lives. Every detail felt personal."

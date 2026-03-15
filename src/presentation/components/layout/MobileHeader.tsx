@@ -8,6 +8,13 @@ import type { Locale } from "@/infrastructure/i18n/config";
 import { defaultLocale } from "@/infrastructure/i18n/config";
 import { LanguageSwitcher } from "@/presentation/components/ui/LanguageSwitcher";
 
+const tagline = {
+  en: "CURATED EXPERIENCES",
+  es: "EXPERIENCIAS EXCLUSIVAS",
+  de: "EXKLUSIVE ERLEBNISSE",
+  fr: "EXPÉRIENCES EXCLUSIVES",
+};
+
 interface MobileHeaderProps {
   navigation: NavigationItem[];
   lang?: Locale;
@@ -34,7 +41,7 @@ export function MobileHeader({ navigation, lang = "en" }: MobileHeaderProps) {
             Lanzarote Untold
           </span>
           <span className="font-inter text-[6px] font-normal tracking-[2px] text-gold">
-            CURATED EXPERIENCES
+            {tagline[lang]}
           </span>
         </div>
       </Link>
