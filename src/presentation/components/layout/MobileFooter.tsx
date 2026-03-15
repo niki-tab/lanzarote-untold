@@ -142,7 +142,7 @@ const content = {
   },
 };
 
-export function MobileFooter({ lang }: MobileFooterProps) {
+export function MobileFooter({ lang = "en" }: MobileFooterProps) {
   const t = content[lang];
 
   return (
