@@ -142,7 +142,7 @@ const content = {
   },
 };
 
-export function DesktopFooter({ lang }: DesktopFooterProps) {
+export function DesktopFooter({ lang = "en" }: DesktopFooterProps) {
   const t = content[lang];
 
   return (
