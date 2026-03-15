@@ -35,13 +35,13 @@ export const metadata: Metadata = {
 const repository = new StaticContentRepository();
 
 export default async function HomePage() {
-  const { experiences, testimonials, stats, processSteps } =
+  const { experiences, testimonials, stats } =
     await getHomePageContent(repository);
 
   return (
     <main>
       <HeroSection />
-      <HowWeWorkSection steps={processSteps} />
+      <HowWeWorkSection />
       <ExperiencesSection experiences={experiences} />
       <SocialProofSection stats={stats} testimonials={testimonials} />
       <CTASection />
