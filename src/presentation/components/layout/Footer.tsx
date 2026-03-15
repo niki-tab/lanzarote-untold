@@ -3,10 +3,10 @@ import { DesktopFooter } from "./DesktopFooter";
 import { MobileFooter } from "./MobileFooter";
 
 interface FooterProps {
-  lang: Locale;
+  lang?: Locale;
 }
 
-export function Footer({ lang }: FooterProps) {
+export function Footer({ lang = "en" }: FooterProps) {
   return (
     <>
       <DesktopFooter lang={lang} />

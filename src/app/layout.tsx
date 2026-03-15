@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { cormorant, inter } from "@/infrastructure/config/fonts";
+import { ConvexClientProvider } from "@/presentation/components/providers/ConvexClientProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
   description:
     "Bespoke curated experiences in Lanzarote, Canary Islands. Crafted with local expertise and international elegance.",
   metadataBase: new URL("https://lanzaroteuntold.com"),
+  icons: {
+    icon: "/img/logo.png",
+    apple: "/img/logo.png",
+  },
 };
 
 export default async function RootLayout({
@@ -27,7 +32,7 @@ export default async function RootLayout({
         className={`${cormorant.variable} ${inter.variable} bg-dark-bg text-text-primary antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );

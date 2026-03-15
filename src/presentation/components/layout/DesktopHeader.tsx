@@ -14,10 +14,10 @@ const tagline = {
 
 interface DesktopHeaderProps {
   navigation: NavigationItem[];
-  lang: Locale;
+  lang?: Locale;
 }
 
-export function DesktopHeader({ navigation, lang }: DesktopHeaderProps) {
+export function DesktopHeader({ navigation, lang = "en" }: DesktopHeaderProps) {
   const links = navigation.filter((item) => !item.isCTA);
   const cta = navigation.find((item) => item.isCTA);
   const logoHref = lang === defaultLocale ? "/" : `/${lang}`;

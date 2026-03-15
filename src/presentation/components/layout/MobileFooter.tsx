@@ -4,7 +4,7 @@ import type { Locale } from "@/infrastructure/i18n/config";
 import { localizedPath } from "@/infrastructure/i18n/config";
 
 interface MobileFooterProps {
-  lang: Locale;
+  lang?: Locale;
 }
 
 const content = {
