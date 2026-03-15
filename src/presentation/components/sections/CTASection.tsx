@@ -19,21 +19,21 @@ const content = {
     label: "TU VIAJE TE ESPERA",
     title: "Deja que Lanzarote Untold cree algo inolvidable",
     description:
-      "Empieza con una consulta gratuita. Cuentanos la experiencia que suenas en Lanzarote y la haremos realidad.",
+      "Empieza con una consulta gratuita. Cuéntanos la experiencia que sueñas en Lanzarote y la haremos realidad.",
     cta: "CONTACTAR",
   },
   de: {
     label: "DEINE REISE WARTET",
-    title: "Lass Lanzarote Untold etwas Unvergessliches fur dich schaffen",
+    title: "Lass Lanzarote Untold etwas Unvergessliches für dich schaffen",
     description:
-      "Beginne mit einer kostenlosen Beratung. Erzahl uns von deinem Traum-Erlebnis auf Lanzarote und wir machen es wahr.",
+      "Beginne mit einer kostenlosen Beratung. Erzähl uns von deinem Traum-Erlebnis auf Lanzarote und wir machen es wahr.",
     cta: "JETZT ANFRAGEN",
   },
   fr: {
     label: "VOTRE VOYAGE VOUS ATTEND",
-    title: "Laissez Lanzarote Untold creer quelque chose d'inoubliable",
+    title: "Laissez Lanzarote Untold créer quelque chose d'inoubliable",
     description:
-      "Commencez par une consultation gratuite. Parlez-nous de votre experience de reve a Lanzarote et nous la rendrons reelle.",
+      "Commencez par une consultation gratuite. Parlez-nous de votre expérience de rêve à Lanzarote et nous la rendrons réelle.",
     cta: "NOUS CONTACTER",
   },
 };

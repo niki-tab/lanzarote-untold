@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { cormorant, inter } from "@/infrastructure/config/fonts";
 import "./globals.css";
 
@@ -12,13 +13,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lanzaroteuntold.com"),
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const locale = headersList.get("x-locale") || "en";
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${cormorant.variable} ${inter.variable} bg-dark-bg text-text-primary antialiased`}
         suppressHydrationWarning

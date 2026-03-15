@@ -46,13 +46,6 @@ export function SocialProofSection({
 }: SocialProofSectionProps) {
   return (
     <section className="flex w-full flex-col items-center gap-10 px-8 py-[60px] md:px-20 lg:gap-20 lg:px-20 lg:py-[120px]">
-      {/* Stats Row */}
-      <div className="grid w-full grid-cols-2 gap-6 border-y border-border py-8 lg:flex lg:justify-around lg:py-10">
-        {stats.map((stat) => (
-          <AnimatedStat key={stat.id} stat={stat} />
-        ))}
-      </div>
-
       {/* Testimonials */}
       <div className="flex w-full flex-col gap-4 lg:flex-row lg:gap-8">
         {testimonials.map((t) => (
@@ -60,7 +53,7 @@ export function SocialProofSection({
             key={t.id}
             className="flex flex-1 flex-col gap-4 border border-border bg-dark-bg p-6 lg:gap-6 lg:p-10"
           >
-            <p className="font-cormorant text-lg italic leading-[1.6] text-text-primary lg:text-xl">
+            <p lang="en" className="font-cormorant text-lg italic leading-[1.6] text-text-primary lg:text-xl">
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="flex flex-col gap-1">

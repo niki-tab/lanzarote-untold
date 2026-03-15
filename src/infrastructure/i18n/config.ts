@@ -40,6 +40,11 @@ export const routeSlugs: Record<string, Partial<Record<Locale, string>>> = {
     de: "/erlebnisse/weintour",
     fr: "/experiences/route-des-vins",
   },
+  "/experiences/shore-fishing": {
+    es: "/experiencias/pesca-costera",
+    de: "/erlebnisse/kuestenangeln",
+    fr: "/experiences/peche-cotiere",
+  },
   "/private-experiences": {
     es: "/experiencias-privadas",
     de: "/private-erlebnisse",
